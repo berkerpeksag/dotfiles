@@ -13,7 +13,7 @@ PATH=$PATH:/usr/local/maven/bin
 export PATH
 
 # set path for Google App Engine for Python
-PATH=$PATH:/home/berkerpeksag/google/google_appengine
+PATH=$PATH:/home/berkerpeksag/hacking/google/appengine/python
 export PATH
 
 # set path for Google App Engine for Java
