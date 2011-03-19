@@ -17,7 +17,7 @@ PATH=$PATH:/home/berkerpeksag/google/google_appengine
 export PATH
 
 # set path for Google App Engine for Java
-PATH=$PATH:/home/berkerpeksag/google/google_appengine_java/bin
+PATH=$PATH:/home/berkerpeksag/hacking/google/appengine/java/bin
 export PATH
 
 # set path for Google Web Toolkit
