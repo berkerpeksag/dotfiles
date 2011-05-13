@@ -110,3 +110,6 @@
 
 (require 'rvm)
 (rvm-use-default)
+
+(add-to-list 'load-path "~/.emacs.d/go-mode-load.el" t)
+(require 'go-mode-load)
