@@ -3,10 +3,13 @@
 # for examples
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+if [[ -n "$PS1" ]] ; then
 
 # Google Chrome
 export PATH=$PATH:/home/berkerpeksag/hacking/google/depot_tools
+
+# Node.js
+export PATH=$PATH:/home/berkerpeksag/hacking/node/build/default/node
 
 # Maven
 PATH=$PATH:/usr/local/maven/bin
@@ -146,4 +149,6 @@ alias ...='cd ../..'
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
+fi
+
 fi
