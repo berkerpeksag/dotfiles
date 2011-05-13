@@ -152,3 +152,5 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 fi
+
+[[ -s "/home/berkerpeksag/.rvm/scripts/rvm" ]] && source "/home/berkerpeksag/.rvm/scripts/rvm"  # This loads RVM into a shell session.
