@@ -107,3 +107,6 @@
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 (provide 'init_python)
+
+(require 'rvm)
+(rvm-use-default)
