@@ -30,10 +30,10 @@ export PATH
 export GAE_PATH=/home/berkerpeksag/google/google_appengine_java
 
 # set path for Google Go
-export GOROOT=/home/berkerpeksag/go/hg
+export GOROOT=/home/berkerpeksag/hacking/google/go
 export GOOS=linux
 export GOARCH=386
-export GOBIN=/home/berkerpeksag/go/bin
+export GOBIN=/home/berkerpeksag/hacking/google/go/bin
 export PATH=$PATH:$GOBIN
 
 # set path for scala
