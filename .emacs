@@ -114,5 +114,6 @@
 (add-to-list 'load-path "~/.emacs.d/go-mode-load.el" t)
 (require 'go-mode-load)
 
+(require 'whitespace)
 (autoload 'whitespace-mode           "whitespace" "Toggle whitespace visualization."        t)
 (autoload 'whitespace-toggle-options "whitespace" "Toggle local `whitespace-mode' options." t)
