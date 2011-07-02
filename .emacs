@@ -115,5 +115,8 @@
 (require 'go-mode-load)
 
 (require 'whitespace)
-(autoload 'whitespace-mode           "whitespace" "Toggle whitespace visualization."        t)
-(autoload 'whitespace-toggle-options "whitespace" "Toggle local `whitespace-mode' options." t)
+(global-set-key "\C-c_w" 'whitespace-mode)
+(global-set-key "\C-c_t" 'whitespace-toggle-options)
+(global-set-key "\C-c=w" 'global-whitespace-mode)
+(global-set-key "\C-c=t" 'global-whitespace-toggle-options)
+
