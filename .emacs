@@ -120,3 +120,4 @@
 (global-set-key "\C-c=w" 'global-whitespace-mode)
 (global-set-key "\C-c=t" 'global-whitespace-toggle-options)
 
+(setq inhibit-startup-message t)
