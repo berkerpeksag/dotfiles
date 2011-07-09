@@ -53,7 +53,7 @@ export JAVA_HOME=/usr/lib/jvm/java-6-sun
 export PATH=$PATH:$JAVA_HOME/bin:$ANT_HOME/bin
 
 # for Android
-export PATH=$PATH:/home/berkerpeksag/android/android-sdk-linux_86/tools
+export PATH=$PATH:/home/berkerpeksag/hacking/google/android/platform-tools
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # don't overwrite GNU Midnight Commander's setting of `ignorespace'.
