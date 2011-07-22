@@ -147,3 +147,11 @@
 ;;; Scala mode
 (add-to-list 'load-path "~/.emacs.d/scala-mode")
 (require 'scala-mode-auto)
+
+;;; Ensime
+;;;(add-to-list 'load-path "~/ensime/elisp/")
+;;;(require 'ensime)
+
+;;; Google Emacs Navigation
+(add-to-list 'load-path "~/.emacs.d/emacs-nav")
+(require 'nav)
