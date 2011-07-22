@@ -145,3 +145,7 @@
   "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
       (cons '("\\.md" . markdown-mode) auto-mode-alist))
+
+;;; Clojure
+(add-to-list 'load-path "~/.emacs.d/clojure-mode.el")
+(require 'clojure-mode)
