@@ -153,3 +153,5 @@
 (require 'ido)
 (ido-mode t)
 (setq ido-enable-flex-matching t)
+
+(setq frame-title-format '("emacs@" system-name ": %b %+%+ %f"))
