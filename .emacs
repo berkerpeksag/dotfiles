@@ -149,3 +149,7 @@
 ;;; Clojure
 (add-to-list 'load-path "~/.emacs.d/clojure-mode.el")
 (require 'clojure-mode)
+
+(require 'ido)
+(ido-mode t)
+(setq ido-enable-flex-matching t)
