@@ -27,8 +27,6 @@ export PATH
 PATH=$PATH:/home/berkerpeksag/google/gwt
 export PATH
 
-export GAE_PATH=/home/berkerpeksag/google/google_appengine_java
-
 # set path for Google Go
 export GOROOT=/home/berkerpeksag/hacking/google/go
 export GOOS=linux
@@ -36,16 +34,9 @@ export GOARCH=386
 export GOBIN=/home/berkerpeksag/hacking/google/go/bin
 export PATH=$PATH:$GOBIN
 
-# set path for scala
-export SCALA_HOME=/home/berkerpeksag/scala
-export PATH=$PATH:$SCALA_HOME/bin
-
 # set path for Play!
 export PLAY_HOME=/home/berkerpeksag/hacking/play/
 export PATH=$PATH:$PLAY_HOME
-
-#export PATH=$PATH:/opt/ZendFramework/bin
-#export ZEND_TOOL_INCLUDE_PATH_PREPEND=/opt/ZendFramework/library
 
 # set path for Apache Ant
 export ANT_HOME=/usr/share/ant
