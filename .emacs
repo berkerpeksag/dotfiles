@@ -157,3 +157,5 @@
 (setq frame-title-format '("emacs@" system-name ": %b %+%+ %f"))
 
 (require 'linum)
+
+(require 'cl)
