@@ -159,3 +159,7 @@
 (require 'linum)
 
 (require 'cl)
+
+;;; PHP
+(add-to-list 'load-path "~/.emacs.d/php-mode.el")
+(require 'php-mode)
