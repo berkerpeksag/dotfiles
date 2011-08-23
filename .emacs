@@ -111,7 +111,6 @@
 (require 'rvm)
 (rvm-use-default)
 
-(add-to-list 'load-path "~/.emacs.d/go-mode-load.el" t)
 (require 'go-mode-load)
 
 (require 'whitespace)
@@ -132,10 +131,6 @@
 (add-to-list 'load-path "~/.emacs.d/scala-mode")
 (require 'scala-mode-auto)
 
-;;; Ensime
-;;;(add-to-list 'load-path "~/ensime/elisp/")
-;;;(require 'ensime)
-
 ;;; Google Emacs Navigation
 (add-to-list 'load-path "~/.emacs.d/emacs-nav")
 (require 'nav)
@@ -147,7 +142,6 @@
       (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
 ;;; Clojure
-(add-to-list 'load-path "~/.emacs.d/clojure-mode.el")
 (require 'clojure-mode)
 
 (require 'ido)
@@ -161,5 +155,4 @@
 (require 'cl)
 
 ;;; PHP
-(add-to-list 'load-path "~/.emacs.d/php-mode.el")
 (require 'php-mode)
