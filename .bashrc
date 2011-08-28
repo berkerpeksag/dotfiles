@@ -46,6 +46,12 @@ export PATH=$PATH:$JAVA_HOME/bin:$ANT_HOME/bin
 # for Android
 export PATH=$PATH:/home/berkerpeksag/hacking/google/android/platform-tools
 
+# virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+source /usr/local/bin/virtualenvwrapper.sh
+
 # don't put duplicate lines in the history. See bash(1) for more options
 # don't overwrite GNU Midnight Commander's setting of `ignorespace'.
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
