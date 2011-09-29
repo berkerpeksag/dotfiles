@@ -156,3 +156,5 @@
 
 ;;; PHP
 (require 'php-mode)
+
+(require 'gist)
