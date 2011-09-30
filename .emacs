@@ -158,3 +158,7 @@
 (require 'php-mode)
 
 (require 'gist)
+
+;;; See: http://www.emacswiki.org/cgi-bin/wiki/CopyAndPaste#toc5
+(setq x-select-enable-clipboard t)
+(setq inter-program-paste-function 'x-cut-buffer-or-selection-value)
