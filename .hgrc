@@ -1,5 +1,6 @@
 [extensions]
 color =
+progress =
 
 [diff]
 git = True
