@@ -1,2 +1,5 @@
 [extensions]
 color =
+
+[diff]
+git = True
