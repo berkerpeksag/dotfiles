@@ -1,3 +1,7 @@
+[ui]
+username = Berker Peksag <berker.peksag@gmail.com>
+verbose = True
+
 [extensions]
 color =
 progress =
