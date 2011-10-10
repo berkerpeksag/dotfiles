@@ -45,6 +45,7 @@ export PATH=$PATH:$JAVA_HOME/bin:$ANT_HOME/bin
 
 # for Android
 export PATH=$PATH:/home/berkerpeksag/hacking/google/android/platform-tools
+export PATH=$PATH:/home/berkerpeksag/hacking/google/android/tools
 
 # virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
