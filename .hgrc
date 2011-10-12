@@ -5,6 +5,7 @@ verbose = True
 [extensions]
 color =
 progress =
+hgext.mg =
 
 [diff]
 git = True
