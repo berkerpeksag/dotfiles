@@ -128,11 +128,11 @@
 (add-hook 'find-file-hook 'add-mode-line-dirtrack)
 
 ;;; Scala mode
-(add-to-list 'load-path "~/.emacs.d/scala-mode")
+(add-to-list 'load-path "scala-mode")
 (require 'scala-mode-auto)
 
 ;;; Google Emacs Navigation
-(add-to-list 'load-path "~/.emacs.d/emacs-nav")
+(add-to-list 'load-path "emacs-nav")
 (require 'nav)
 
 ;;; Markdown
