@@ -5,6 +5,7 @@ verbose = True
 [extensions]
 color =
 progress =
+mq =
 
 [diff]
 git = True
