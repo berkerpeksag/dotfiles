@@ -185,4 +185,4 @@
 (setq color-theme-is-global t)
 (color-theme-clarity)
 
-(set-default-font "Monospace-10")
+(set-default-font "Monospace-11")
