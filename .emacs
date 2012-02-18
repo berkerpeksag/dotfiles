@@ -172,6 +172,8 @@
   ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
+ '(fringe-mode (quote (nil . 0)) nil (fringe))
+ '(indicate-empty-lines t)
  '(save-place t nil (saveplace))
  '(scroll-bar-mode (quote right)))
 (custom-set-faces
