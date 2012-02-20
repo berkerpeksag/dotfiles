@@ -111,8 +111,6 @@
 (require 'rvm)
 (rvm-use-default)
 
-(require 'go-mode-load)
-
 (require 'whitespace)
 (global-set-key "\C-c_w" 'whitespace-mode)
 (global-set-key "\C-c_t" 'whitespace-toggle-options)
