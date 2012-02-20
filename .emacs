@@ -188,3 +188,5 @@
 (color-theme-clarity)
 
 (set-default-font "Monospace-11")
+
+(require 'smooth-scrolling)
