@@ -141,9 +141,6 @@
 (setq auto-mode-alist
       (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
-;;; Clojure
-(require 'clojure-mode)
-
 (require 'ido)
 (ido-mode t)
 (setq ido-enable-flex-matching t)
