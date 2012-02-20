@@ -108,9 +108,6 @@
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 (provide 'init_python)
 
-(require 'rvm)
-(rvm-use-default)
-
 (require 'whitespace)
 (global-set-key "\C-c_w" 'whitespace-mode)
 (global-set-key "\C-c_t" 'whitespace-toggle-options)
