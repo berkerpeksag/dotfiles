@@ -25,3 +25,7 @@
  '(save-place t nil (saveplace))
  '(scroll-bar-mode (quote right))
  '(tool-bar-mode nil))
+
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
