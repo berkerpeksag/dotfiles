@@ -133,6 +133,15 @@
 
 ;;; See: https://developer.mozilla.org/En/Developer_Guide/Coding_Style#Naming_and_formatting_code
 (c-set-offset 'innamespace 0)
+
+(require 'color-theme)
+(setq color-theme-is-global t)
+(color-theme-clarity)
+
+(set-default-font "Monospace-11")
+
+(require 'smooth-scrolling)
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -143,18 +152,11 @@
  '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(indicate-empty-lines t)
  '(save-place t nil (saveplace))
- '(scroll-bar-mode (quote right)))
+ '(scroll-bar-mode (quote right))
+ '(tool-bar-mode nil))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  )
-
-(require 'color-theme)
-(setq color-theme-is-global t)
-(color-theme-clarity)
-
-(set-default-font "Monospace-11")
-
-(require 'smooth-scrolling)
