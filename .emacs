@@ -12,12 +12,8 @@
 (yas/load-directory "~/.emacs.d/snippets")
 
 (require 'whitespace)
-(global-set-key "\C-c_w" 'whitespace-mode)
-(global-set-key "\C-c_t" 'whitespace-toggle-options)
-(global-set-key "\C-c=w" 'global-whitespace-mode)
-(global-set-key "\C-c=t" 'global-whitespace-toggle-options)
+(global-set-key (kbd "\C-c w") 'whitespace-mode)
 
-;;; Markdown
 (autoload 'markdown-mode "markdown-mode.el"
   "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
