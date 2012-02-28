@@ -80,3 +80,5 @@ Emacs buffers are those whose name starts with *."
 (global-set-key (kbd "<C-S-next>") 'next-emacs-buffer) ; Ctrl+Shift+PageDown
 
 (global-hl-line-mode 1) ; turn on highlighting current line
+
+(global-linum-mode 1) ; display line numbers in margin.
