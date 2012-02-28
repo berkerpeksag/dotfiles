@@ -85,3 +85,7 @@ Emacs buffers are those whose name starts with *."
 
 (setq make-backup-files nil) ; stop creating those backup~ files
 (setq auto-save-default nil) ; stop creating those #autosave# files
+
+(recentf-mode 1) ; keep a list of recently opened files
+
+(global-visual-line-mode 1) ; 1 for on, 0 for off.
