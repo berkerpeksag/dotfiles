@@ -29,3 +29,8 @@
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
+
+(global-set-key (kbd "M-3") 'delete-other-windows) ; expand current pane
+(global-set-key (kbd "M-4") 'split-window-vertically) ; split pane top/bottom
+(global-set-key (kbd "M-s") 'other-window) ; cursor to other pane
+(global-set-key (kbd "M-0") 'delete-window) ; close current pane
