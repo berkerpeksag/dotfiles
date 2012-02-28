@@ -78,3 +78,5 @@ Emacs buffers are those whose name starts with *."
 (global-set-key (kbd "<C-next>") 'next-user-buffer) ; Ctrl+PageDown
 (global-set-key (kbd "<C-S-prior>") 'previous-emacs-buffer) ; Ctrl+Shift+PageUp
 (global-set-key (kbd "<C-S-next>") 'next-emacs-buffer) ; Ctrl+Shift+PageDown
+
+(global-hl-line-mode 1) ; turn on highlighting current line
