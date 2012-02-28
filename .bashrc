@@ -143,7 +143,8 @@ fi
 #alias l='ls -CF'
 
 alias ..='cd ..' 
-alias ...='cd ../..' 
+alias ...='cd ../..'
+alias gsu='git submodule update --init --recursive' 
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
