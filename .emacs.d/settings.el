@@ -82,3 +82,6 @@ Emacs buffers are those whose name starts with *."
 (global-hl-line-mode 1) ; turn on highlighting current line
 
 (global-linum-mode 1) ; display line numbers in margin.
+
+(setq make-backup-files nil) ; stop creating those backup~ files
+(setq auto-save-default nil) ; stop creating those #autosave# files
