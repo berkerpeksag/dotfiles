@@ -5,34 +5,12 @@
 # If not running interactively, don't do anything
 if [[ -n "$PS1" ]] ; then
 
-# Google Chrome
-export PATH=$PATH:/home/berkerpeksag/hacking/google/depot_tools
-
 # Node.js
 export PATH=$PATH:/home/berkerpeksag/hacking/node/build/default/node
-
-# Maven
-PATH=$PATH:/usr/local/maven/bin
-export PATH
 
 # set path for Google App Engine for Python
 PATH=$PATH:/home/berkerpeksag/hacking/google/appengine/python
 export PATH
-
-# set path for Google App Engine for Java
-PATH=$PATH:/home/berkerpeksag/hacking/google/appengine/java/bin
-export PATH
-
-# set path for Google Web Toolkit
-PATH=$PATH:/home/berkerpeksag/google/gwt
-export PATH
-
-# set path for Google Go
-export GOROOT=/home/berkerpeksag/hacking/google/go
-export GOOS=linux
-export GOARCH=386
-export GOBIN=/home/berkerpeksag/hacking/google/go/bin
-export PATH=$PATH:$GOBIN
 
 # set path for Play!
 export PLAY_HOME=/home/berkerpeksag/hacking/play/
