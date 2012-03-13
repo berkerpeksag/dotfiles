@@ -6,6 +6,7 @@ verbose = True
 color =
 progress =
 mq =
+churn =
 
 [diff]
 git = True
