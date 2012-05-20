@@ -4,4 +4,11 @@ alias l='ls -CF'
 
 alias ..='cd ..' 
 alias ...='cd ../..'
-alias gsu='git submodule update --init --recursive' 
+
+# Mercurial
+alias hs='hg status'
+alias hsum='hg summary'
+alias hcm='hg commit -m'
+
+# Git
+alias gsu='git submodule update --init --recursive'
