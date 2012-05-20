@@ -22,4 +22,8 @@ alias hsum='hg summary'
 alias hcm='hg commit -m'
 
 # Git
+alias gs='git status'
+alias gss='git status -s'
+alias gl='git pull'
+alias gb='git branch'
 alias gsu='git submodule update --init --recursive'
