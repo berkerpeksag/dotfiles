@@ -14,7 +14,7 @@ alias l1='ls -1'
 alias ..='cd ..' # Go up one directory
 alias ...='cd ../..' # Go up two directories
 alias ....='cd ../../..' # Go up two directories
-alias --="cd -" # Go back
+alias ..-="cd -" # Go back
 
 # Mercurial
 alias hs='hg status'
