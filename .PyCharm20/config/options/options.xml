@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="DimensionService">
+    <location key="OptionsEditor.0.0.1920.1080" x="343" y="112" />
+    <location key="OptionsEditor" x="357" y="110" />
+    <location key="OptionsEditor.0.24.1280.752" x="40" y="24" />
+    <location key="#com.intellij.openapi.editor.actions.MultiplePasteAction.Chooser.0.24.1920.1032" x="714" y="159" />
+    <location key="FileChooserDialogImpl.0.24.1920.1032" x="747" y="275" />
+    <location key="git4idea.vfs.GitFixRootsDialog.0.24.1280.752" x="368" y="267" />
+    <location key="findTextDialog.0.24.1280.752" x="456" y="184" />
+    <location key="com.intellij.ide.passwordSafe.impl.providers.masterKey.MasterPasswordDialog.0.24.1920.1032" x="588" y="467" />
+    <location key="git4idea.vfs.GitFixRootsDialog.0.24.1920.1032" x="748" y="403" />
+    <location key="scopes.0.24.1280.752" x="230" y="50" />
+    <location key="findTextDialog.0.24.1920.1032" x="795" y="324" />
+    <location key="#com.intellij.fileTypes.FileTypeChooser.0.24.1280.752" x="332" y="205" />
+    <location key="#com.intellij.ide.actions.ChooseComponentsToExportDialog.0.0.1920.1080" x="804" y="406" />
+    <location key="FileChooserDialogImpl.0.0.1920.1080" x="692" y="260" />
+    <location key="ProcessPopupWindow" x="737" y="623" />
+    <location key="#com.intellij.openapi.editor.actions.MultiplePasteAction.Chooser.0.24.1280.752" x="434" y="24" />
+    <location key="OptionsEditor.0.24.1920.1032" x="468" y="106" />
+    <location key="DiffWindow.0.24.1280.752" x="107" y="124" />
+    <size key="ProcessPopupWindow" width="484" height="188" />
+    <size key="OptionsEditor.0.0.1920.1080" width="1240" height="871" />
+    <size key="OptionsEditor" width="1226" height="861" />
+    <size key="OptionsEditor.0.24.1280.752" width="1240" height="752" />
+    <size key="#com.intellij.openapi.editor.actions.MultiplePasteAction.Chooser.0.24.1920.1032" width="506" height="754" />
+    <size key="git4idea.vfs.GitFixRootsDialog.0.24.1280.752" width="545" height="267" />
+    <size key="OptionsEditor.0.24.1920.1032" width="1226" height="861" />
+    <size key="findTextDialog.0.24.1280.752" width="424" height="444" />
+    <size key="DiffWindow.0.24.1280.752" width="1080" height="552" />
+    <size key="git4idea.vfs.GitFixRootsDialog.0.24.1920.1032" width="545" height="267" />
+    <size key="findTextDialog.0.24.1920.1032" width="424" height="432" />
+    <size key="scopes.0.24.1280.752" width="840" height="700" />
+    <extendedState key="DiffWindow" state="0" />
+  </component>
+  <component name="LafManager">
+    <laf class-name="com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Non-Project Files" value="Yellow" />
+    <property name="installation.uid" value="a088ed98-b598-4963-84df-5b2ba03137ba" />
+    <property name="export.settings.path" value="$USER_HOME$/.PyCharm20/config/settings.jar" />
+    <property name="PyCharm.InitialConfiguration" value="true" />
+    <property name="file.colors.enable.tests" value="Green" />
+    <property name="file.colors.enable.non.project" value="Yellow" />
+    <property name="SingleInspectionProfilePanel.HORIZONTAL_DIVIDER_PROPORTION" value="0.5" />
+    <property name="evlsprt3.2" value="19" />
+    <property name="SingleInspectionProfilePanel.VERTICAL_DIVIDER_PROPORTION" value="0.5" />
+    <property name="Tests" value="Green" />
+    <property name="PyCharm.initialConfigurationShown" value="true" />
+    <property name="PyCharm.InitialConfiguration.V3" value="true" />
+    <property name="PyCharm.InitialConfiguration.V2" value="true" />
+    <property name="OpenOrAttachDialog.OpenMode" value="new" />
+  </component>
+</application>
+

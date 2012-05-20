@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="ProjectJdkTable">
+    <jdk version="2">
+      <name value="Python 2.7.1+ (/usr/bin/python2.7)" />
+      <type value="Python SDK" />
+      <version value="Python 2.7.1+" />
+      <homePath value="/usr/bin/python2.7" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root type="simple" url="file:///usr/local/lib/python2.7/dist-packages/virtualenv-1.6-py2.6.egg" />
+            <root type="simple" url="file:///usr/local/lib/python2.7/dist-packages/pip-1.0-py2.6.egg" />
+            <root type="simple" url="file:///usr/local/lib/python2.7/dist-packages/rope-0.9.3-py2.6.egg" />
+            <root type="simple" url="file:///usr/local/lib/python2.7/dist-packages/ropemacs-0.6-py2.6.egg" />
+            <root type="simple" url="file:///usr/local/lib/python2.7/dist-packages/ropemode-0.1_rc2-py2.6.egg" />
+            <root type="simple" url="file:///usr/local/lib/python2.7/dist-packages/oauth2-1.5.170-py2.6.egg" />
+            <root type="simple" url="file:///usr/local/lib/python2.7/dist-packages/tornado-2.0git-py2.6.egg" />
+            <root type="simple" url="file:///usr/local/lib/python2.7/dist-packages/gunicorn-0.13.4-py2.7.egg" />
+            <root type="simple" url="file:///usr/lib/python2.7" />
+            <root type="simple" url="file:///usr/lib/python2.7/plat-linux2" />
+            <root type="simple" url="file:///usr/lib/python2.7/lib-tk" />
+            <root type="simple" url="file:///usr/lib/python2.7/lib-dynload" />
+            <root type="simple" url="file:///usr/local/lib/python2.7/dist-packages" />
+            <root type="simple" url="file:///usr/lib/python2.7/dist-packages" />
+            <root type="simple" url="file:///usr/lib/python2.7/dist-packages/PIL" />
+            <root type="simple" url="file:///usr/lib/pymodules/python2.7/gtk-2.0" />
+            <root type="simple" url="file:///usr/lib/python2.7/dist-packages/gst-0.10" />
+            <root type="simple" url="file:///usr/lib/python2.7/dist-packages/gtk-2.0" />
+            <root type="simple" url="file:///usr/lib/pymodules/python2.7" />
+            <root type="simple" url="file://$USER_HOME$/.PyCharm20/system/python_stubs/-1247972723" />
+            <root type="simple" url="file://$USER_HOME$/hacking/requests" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional>
+        <PATHS_REMOVED_BY_USER_ROOT PATH_REMOVED_BY_USER="/usr/local/lib/python2.7/dist-packages/oauth2-1.5.170-py2.6.egg" />
+        <PATHS_REMOVED_BY_USER_ROOT PATH_REMOVED_BY_USER="/usr/local/lib/python2.7/dist-packages/tornado-2.0git-py2.6.egg" />
+        <PATHS_REMOVED_BY_USER_ROOT PATH_REMOVED_BY_USER="/usr/local/lib/python2.7/dist-packages/ropemacs-0.6-py2.6.egg" />
+        <PATHS_REMOVED_BY_USER_ROOT PATH_REMOVED_BY_USER="/usr/local/lib/python2.7/dist-packages/ropemode-0.1_rc2-py2.6.egg" />
+        <PATHS_REMOVED_BY_USER_ROOT PATH_REMOVED_BY_USER="/usr/local/lib/python2.7/dist-packages/pip-1.0-py2.6.egg" />
+        <PATHS_REMOVED_BY_USER_ROOT PATH_REMOVED_BY_USER="/usr/local/lib/python2.7/dist-packages/rope-0.9.3-py2.6.egg" />
+        <PATHS_REMOVED_BY_USER_ROOT PATH_REMOVED_BY_USER="/usr/local/lib/python2.7/dist-packages/virtualenv-1.6-py2.6.egg" />
+        <PATHS_REMOVED_BY_USER_ROOT PATH_REMOVED_BY_USER="/usr/lib/python2.7/dist-packages/PIL" />
+        <PATHS_REMOVED_BY_USER_ROOT PATH_REMOVED_BY_USER="/usr/lib/python2.7/lib-dynload" />
+        <PATHS_REMOVED_BY_USER_ROOT PATH_REMOVED_BY_USER="/usr/lib/python2.7/lib-tk" />
+        <PATHS_REMOVED_BY_USER_ROOT PATH_REMOVED_BY_USER="/usr/lib/python2.7/plat-linux2" />
+        <PATHS_REMOVED_BY_USER_ROOT PATH_REMOVED_BY_USER="/usr/local/lib/python2.7/dist-packages/gunicorn-0.13.4-py2.7.egg" />
+        <PATHS_REMOVED_BY_USER_ROOT PATH_REMOVED_BY_USER="/usr/lib/python2.7/dist-packages/gtk-2.0" />
+        <PATHS_REMOVED_BY_USER_ROOT PATH_REMOVED_BY_USER="/usr/lib/python2.7/dist-packages/gst-0.10" />
+        <PATHS_REMOVED_BY_USER_ROOT PATH_REMOVED_BY_USER="/usr/lib/pymodules/python2.7/gtk-2.0" />
+      </additional>
+    </jdk>
+  </component>
+</application>
+

@@ -1,0 +1,2435 @@
+<?xml version="1.0" encoding="UTF-8"?><plugin-repository><ff>"Build"</ff><category name="Build"><idea-plugin downloads="16904" size="163797" date="1335451065000" url=""><name>NodeJS</name><id>NodeJS</id><description><![CDATA[
+    
+    NodeJS support:
+    <ul>
+      <li>navigation from require arguments</li>
+      <li>javascript symbols specific to NodeJS</li>
+      <li>understanding of Node modules</li>
+      <li>Run / debug Node applications via run configuration (with terminal colors in Run / Debug toolwindow)</li>
+      <li>nodeunit support</li>
+    </ul>
+    
+  ]]></description><version>117.257</version><vendor email="" url="">JetBrains</vendor><idea-version min="n/a" max="n/a" since-build="117.123" until-build="118.0"/><change-notes><![CDATA[
+    ]]></change-notes><depends>JavaScript</depends><depends>JavaScriptDebugger</depends><depends>com.intellij.modules.lang</depends><rating>3.7</rating></idea-plugin><idea-plugin downloads="1315" size="228756" date="1335451096000" url=""><name>Phing Support</name><id>com.intellij.phing</id><description><![CDATA[Phing build tool support]]></description><version>117.257</version><vendor email="" url="http://jetbrains.com/phpstorm">JetBrains</vendor><idea-version min="n/a" max="n/a" since-build="112.0" until-build="118.0"/><change-notes><![CDATA[PhpStorm/WebStorm 4.0.1 version]]></change-notes><depends>com.intellij.modules.xml</depends><depends>com.intellij.properties</depends><depends>com.jetbrains.php</depends><rating>00</rating></idea-plugin></category><ff>"Code Editing"</ff><category name="Code Editing"><idea-plugin downloads="7225" size="56957" date="1280098662000" url="http://github.com/ivan-veselovsky/repka/raw/master/extended-code-sense/"><name>Extended Code Sense</name><id>extended-code-sense</id><description><![CDATA[Provides some platform code-sense functionality enhancements.]]></description><version>1.3</version><vendor email="ivan At veselovsky.net" url="">Ivan V.</vendor><idea-version min="n/a" max="n/a" since-build="80.8000" until-build="118.0"/><change-notes><![CDATA[
+        
+        <p><b>Version 1.3 changes</b></p>
+        <ul>
+           <li> fixed IndexOutOfBoundsException in edu.jetbrains.completionWithLiveTemplates.LiveTemplatesCompletionProvider, line 284</li>
+        </ul>
+        <p><b>Version 1.2 changes</b></p>
+        <ul>
+           <li> fixed exception "java.lang.NoSuchMethodError: com.intellij.codeInsight.template.CustomLiveTemplate.isApplicable(Lcom/intellij/psi/PsiFile;I)Z" that happened when running under IDEA 9.0.2 and earlier builds.</li>
+        </ul>
+        <p><b>Version 1.1 changes</b></p>
+        <ul>
+           <li> fixed arg-live-templates invocation in in-word mode.</li>
+        </ul>
+        <p><b>Version 1.0 changes</b></p>
+        <ul>
+           <li> fixed invocation of live templates with arguments.</li>
+           <li> fixed context dependency of the templates shown in the completion popup.</li>
+     	   <li> added options to control auto popup invocation in out-of-word context. </li>
+           <li> the tests now cover the main functionality. </li>
+        </ul>
+        <p><b>Version 0.7 changes</b></p>
+        <ul>
+           <li> revised the base logic of the auto-popup -- now the logic is more straight and psi-independent. </li>
+	   <li> fixed bug: live templates not applicable to the context were shown (e.g. in comments) </li>
+           <li> the tests somewhat enhanced </li>
+        </ul>
+
+        <p><b>Version 0.4 changes</b></p>
+        <ul>
+            <li>Fixed auto-popup in Php array index expressions, like myArr[| .</li>
+        </ul>
+
+        <p><b>Version 0.3 changes</b></p>
+        <ul>
+            <li>Auto pop up now works after "[" (array length expression).</li>
+            <li>Auto popup feature extended for all languages, not only Php.</li>
+        </ul>
+        
+  ]]></change-notes><depends>com.intellij.modules.platform</depends><rating>4.7</rating></idea-plugin><idea-plugin downloads="497" size="15276" date="1310700164000" url=""><name>Signals</name><id>Signals</id><description><![CDATA[Support for Signals (https://github.com/robertpenner/as3-signals/wiki)
+    ]]></description><version>0.1.1</version><vendor email="johnlindquist@gmail.com" url="http://johnlindquist.com">johnlindquist</vendor><idea-version min="n/a" max="n/a" since-build="80.8000" until-build="118.0"/><change-notes><![CDATA[0.1 initial release for public testing]]></change-notes><depends>JavaScript</depends><depends>com.intellij.modules.lang</depends><depends>com.intellij.modules.xml</depends><depends>com.intellij.modules.ultimate</depends><rating>00</rating></idea-plugin><idea-plugin downloads="13699" size="96336" date="1333403104000" url=""><name>SmarterEditor</name><id>SmarterEditor</id><description><![CDATA[
+  
+    <b>Smarten up the editor with new editor actions.</b>
+    <br>
+    This plugin makes you more productive in the editor. It supports some frequently used actions with the press of a key.
+    It relies on navigation contexts. A navigation context is defined as:
+    <ul>
+      <li>Block statement: If, Switch or loops statements</li>
+      <li>Method definition</li>
+      <li>Class definition</li>
+      <li>XML tag</li>
+    </ul>
+
+    <p>This plugin saves you from unnecessary caret movements.</p>
+
+    <br><b>Supported languages:</b>
+    <ul>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>CSS</li>
+        <li>XML</li>
+        <li>Bash (BashSupport plugin)</li>
+        <li>SQL (only certain dialects)</li>
+        <li>PHP</li>
+    </ul>
+
+    <br><b>Split the current string literal at caret or around selection</b>
+    <p>
+          Press <i>alt + PLUS</i> / Edit: Smart split. This action splits a string into two parts and positions the
+          caret between two parts.
+          For example: the string "abcd" is turned into "a" + "bc" + "d" if "bc" was selected.
+
+          <br>
+          <i>Useful examples:</i>
+          <ul>
+            <li>Working on Java code: simply split a string into two parts and enter a variable in between</li>
+          </ul>
+    </p>
+
+    <br><b>Jump to the start of a navigation block</b>
+    <p>
+          Press <i>ctrl + alt + HOME</i> / Edit: Smart home. This action moves the editor caret to the beginning of
+          the next parent navigation context.
+          <br>
+          <i>Useful examples:</i>
+          <ul>
+<li>Working on a Java loop statement: Use this action to jump to the loop beginning.</li>
+<li>Working on XML tag body: Use this action to directly jump to the tag definition. Press again to jump to the parent tag definition.</li>
+          </ul>
+    </p>
+
+    <br><b>Jump to the end of a navigation block</b>
+    <p>
+          Press <i>ctrl + alt + END</i> / Edit: Smart end. This action moves the editor caret to the end of
+          the next parent navigation context.
+
+          <br>
+          <i>Useful examples:</i>
+          <ul>
+<li>Working on a Java loop in a method: Use once to add code after the loop, press another time to move after the method to add more class level code.</li>
+<li>Working on XML tag body: Press to add another tag after the current one. Press again to move after the parent tag.</li>
+          </ul>
+    </p>
+
+
+    <br><b>Format a navigation block</b>
+    <p>
+          Press <i>ctrl + alt + shift + F</i> / Edit: Format favourite. This action reformats the next parent
+          navigation context according to the code style settings. It puts a selection on the reformatted text.
+          It can be called multiple times to reformat the next parent context.
+          <br>
+          Before you needed to press ctrl+w multiple times, then ctrl+alt+L and confirm the message box.
+
+          <br>
+          <i>Useful examples:</i>
+          <ul>
+<li>Working on a Java method: If you want to reduce whitespace changes just reformat the current method by calling this action.</li>
+<li>Working on XML tag body: Reformat the current tag and child context by calling this from anywhere on the first level below the tag.</li>
+          </ul>
+    </p>
+
+    <br><b>Select a navigation block</b>
+    <p>
+          Press <i>ctrl + alt + shift + D</i> / Edit: Select favourite. This action select the next parent
+          navigation context. It can be called multiple times to select the next parent context.
+          <br>
+          Before you needed to press ctrl+w multiple times, which works on a much finer grained model.
+
+          <br>
+          <i>Useful examples:</i>
+          <ul>
+<li>Working on a Java code: Select code on a more coarse grained model, e.g. anonymous class, then the method, then the inner class, then the outer class.</li>
+<li>Working on XML tag body: Copy all sibilings and the parent tag by calling this action twice and then <i>ctrl + c</i> </li>
+          </ul>
+    </p>
+
+    <br>
+    <b>This is an early release of this plugin. Please vote and provide feedback to help!</b>
+  
+  
+    ]]></description><version>0.8.3</version><vendor email="mail@ansorg-it.com" url="http://www.ansorg-it.com/">Joachim Ansorg IT-Services</vendor><idea-version min="n/a" max="n/a" since-build="117.0" until-build="118.0"/><change-notes><![CDATA[
+        
+    
+        <b>Changes in this version:</b>
+        <br>
+        <ul>
+        <li>Javascript string splitting improved<li>
+        </ul>
+    
+     ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>4.5</rating></idea-plugin></category><ff>"Code tools"</ff><category name="Code tools"><idea-plugin downloads="828" size="853794" date="1332801742000" url=""><name>Assets Compressor</name><id>Assets Compressor</id><description><![CDATA[Compressing js and css files, go to Refactor > Compress]]></description><version>1.2</version><vendor email="memo@abdelmonem.com" url="http://site.abdelmonem.com/content/assets-compressor-compress-css-and-js-files">Abdelmonem Ahmed</vendor><idea-version min="n/a" max="n/a" since-build="93.13" until-build="118.0"/><change-notes><![CDATA[]]></change-notes><depends>com.intellij.modules.lang</depends><rating>00</rating></idea-plugin><idea-plugin downloads="649" size="40661" date="1311060074000" url=""><name>Implementor</name><id>Implementor</id><description><![CDATA[Implements all the interfaces in a package
+    ]]></description><version>0.1.1</version><vendor email="johnlindquist@gmail.com" url="http://johnlindquist.com">johnlindquist</vendor><idea-version min="n/a" max="n/a" since-build="80.8000" until-build="118.0"/><change-notes><![CDATA[Select a package from the project view, then select Tools->Implementator]]></change-notes><depends>com.intellij.modules.ultimate</depends><depends>com.intellij.modules.xml</depends><depends>com.intellij.modules.lang</depends><depends>com.intellij.flex</depends><depends>JavaScript</depends><rating>3</rating></idea-plugin><idea-plugin downloads="1054" size="10962" date="1308166422000" url=""><name>Shifter</name><id>Shifter</id><description><![CDATA[
+    Detects type of keyword at caret and shifts it "up" or "down" on keyboard shortcut.<br>
+    <br>Supported types of keywords:
+    <ul>
+        <li>Hex RGB colors   - Shifts color value lighter / darker</li>
+        <li>Boolean          - Toggles true / false</li>
+    </ul>
+    <br>Default keyboard shortcuts:
+    <ul>
+        <li>Ctrl+Shift+Alt+Comma  - Shift Down Word at Caret
+        <li>Ctrl+Shift+Alt+Period - Shift Up  Word at Caret
+    </ul>
+    <br>Please note: this plugin is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ]]></description><version>1.0.0</version><vendor email="info@stenschke.com" url="">Kay Stenschke</vendor><idea-version min="n/a" max="n/a" since-build="80.8000" until-build="118.0"/><change-notes><![CDATA[
+    <ul>
+        <li>1.0.0 - Initial release.</li>
+    </ul>
+  ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>5</rating></idea-plugin><idea-plugin downloads="112" size="36974" date="1336248395000" url="https://github.com/janickr/shortcuttranslator"><name>Shortcut Translator</name><id>Shortcut Translator</id><description><![CDATA[Translates shortcuts from one keymap to another.
+      Let's say you want to try this Jetbrains IDE you heard about, but you are used to the Eclipse / TextMate / Emacs / Netbeans shortcuts. Sure, you can easily change your keymap in IDEA / RubyMine / PyCharm ...
+      But you want to learn the default Intellij shortcuts, just like you learned the TextMate shortcuts in TextMate and the Eclipse shortcuts in Eclipse. This plugin together with the ctrl+shift+a
+      shortcut wil get you up to speed in no time.
+
+      press Ctrl+Shift+K  to activate the plugin or select "Translate Shortcut" from the help menu
+
+  ]]></description><version>1.0</version><vendor email="shortcuttranslator@janickreynders.be" url="http://janickreynders.be">Janick Reynders</vendor><idea-version min="n/a" max="n/a" since-build="80.8000" until-build="118.0"/><change-notes><![CDATA[
+          <p>version 1.0</p>
+          <ul>
+            <li>Made the plugin available for multiple JetBrains IDEs</li>
+          </ul>
+          <p>version 0.6</p>
+          <ul>
+            <li>The plugin remembers which keymaps were selected</li>
+            <li>More information is given about the action the shortcut performs</li>
+            <li>Fixed minor layout issues</li>
+          </ul>
+          <p>version 0.5</p>
+          <ul>
+            <li>Initial release</li>
+          </ul>
+  ]]></change-notes><depends>com.intellij.modules.platform</depends><rating>5</rating></idea-plugin></category><ff>"Custom Languages"</ff><category name="Custom Languages"><idea-plugin downloads="43845" size="1713355" date="1332881935000" url="http://www.ansorg-it.com/en/products_bashsupport.html"><name>BashSupport</name><id>BashSupport</id><description><![CDATA[
+  
+    Bash 4 support for InteliJ IDEA 11. Supported are, among other things, syntax highlighting,
+    rename refactoring, documentation lookup and various inspections with quickfixes.
+  
+  ]]></description><version>1.1beta8</version><vendor email="mail@ansorg-it.com" url="http://www.ansorg-it.com/">Joachim Ansorg
+    </vendor><idea-version min="n/a" max="n/a" since-build="117.84" until-build="119.999"/><change-notes><![CDATA[
+    
+       <b>Changes in version 1.1beta8:</b>
+       <ul>
+            <li>Compatibility with IntelliJ IDEA 11.1 plattform builds</li>
+       </ul>
+
+       <b>Changes in version 1.1beta7:</b>
+       <ul>
+         <li>Possible fix for the "marker not closed" exception</li>
+       </ul>
+
+       <b>Changes in version 1.1beta6:</b>
+       <ul>
+         <li>Compatibility with 11.1 EAP</li>
+         <li>Possible fix for exception "StringIndexOutOfBoundsException"   </li>
+         <li>Less inspection warnings                                       </li>
+         <li>Hopefully fixed "marker not closed" exception                  </li>
+         <li>Better error messages for empty loop bodies                    </li>
+       </ul>
+
+       <b>Changes in version 1.1beta5:</b>
+       <ul>
+            <li>Parser fixes</li>
+            <li>Enabled debug mode for beta releases to get better catch parsing exceptions</li>
+            <li>Fixed several parsing exceptions</li>
+       </ul>
+
+       <b>Changes in version 1.1beta4:</b>
+       <ul>
+            <li>Fixed parsing of nested strings (regression in 1.1beta3)</li>
+            <li>Performance improvements</li>
+            <li>Parser improvements</li>
+       </ul>
+
+       <b>Changes in version 1.1beta3:</b>
+       <ul>
+            <li>Parser improvements</li>
+       </ul>
+
+       <b>Changes in version 1.1beta2:</b>
+       <ul>
+            <li>Compatible with the IntelliJ IDEA 11 beta2 (build 111+)
+            <li>Parser fixes</li>
+       </ul>
+
+       <b>Changes in version 1.1beta1:</b>
+       <ul>
+        <li>Compatible with IntelliJ 11 EAP or later</li>
+        <li>Parser improvements</li>
+       </ul>
+
+       <b>Changes in version 1.0:</b>
+       <ul>
+        <li>Compatible with IntelliJ 10.5 or later</li>
+        <li>The Bash REPL now uses Enter instead of Ctrl+Enter</li>
+        <li>Removed Java options tab from Bash run configuration settings</li>
+       </ul>
+
+       <b>Changes in version 0.9.23:</b>
+       <ul>
+        <li>Fixed exception which occurred when editing external files</li>
+       </ul>
+
+       <b>Changes in version 0.9.22:</b>
+       <ul>
+        <li>Restored documentation lookup for internal and external commands</li>
+        <li>#47: Lexer fixed to parse ${_a}</li>
+        <li>#46: Default value with parentheses not parsed correctly</li>
+        <li>Find usages enabled on function definitions</li>
+        <li>Improved performance of parsing files which contain include files</li>
+        <li>Inspection to detect array use of simple variables</li>
+        <li>Inspection to detect simple use of array variables</li>
+        <li>It is possible now to define functions which have the same name as built-in Bash commands</li>
+        <li>Inspection to mark functions which override built-in Bash commands</li>
+       </ul>
+
+       <b>Changes in version 0.9.21:</b>
+       <ul>
+         <li>(Almost) full support for arrays</li>
+         <li>Fixed unused function inspection in files which reference elements in files which include the current file</li>
+         <li>Compatible with PyCharm 1.2</li>
+       </ul>
+
+       <b>Changes in version 0.9.20:</b>
+       <ul>
+         <li>Fixed detection of deep recursive file include loops</li>
+         <li>Ctrl+B on file references (e.g. in include command) is supported now</li>
+         <li>Issue #35: Math calculations using square brackets not supported</li>
+         <li>Improved autocompletion</li>
+         <li>Fixed exception if an included file was not a Bash file</li>
+       </ul>
+
+       <b>Changes in version 0.9.19:</b>
+       <ul>
+         <li>Documentation lookup for variable definitions, the comment before the definition is displayed, if available</li>
+         <li>Variable completion from included files</li>
+         <li>Autocompletion inside of ${}</li>
+         <li>Globals and built-ins are now offered after second completion call, if enabled</li>
+         <li>Support for include files and contained elements (find references, rename, go to defintion, ...)</li>
+         <li>Issue #32: Length-function not supported: Expected a command</li>
+         <li>Issue #34: Unresolved variable in string definition</li>
+         <li>Issue #35: Math calculations using square brackets not supported</li>
+         <li>Issue #36: Incorrect inspection of unused parameter when using $* inside function</li>
+       </ul>
+
+       <b>Changes in version 0.9.18:</b>
+       <ul>
+         <li>New inspection to convert a simple variable usage $a to the equivalent parameter expansion ${a}</li>
+         <li>New inspection to highlight unused parameter values for function calls</li>
+         <li>New inspection to highlight unused function definitions</li>
+         <li>Bugfix: A duplicate function definition on the global level is highlighted again</li>
+         <li>Fixed exception which occured while editing the shebang line of a script</li>
+         <li>Inline renaming of variables inside of parameter expansion elements</li>
+         <li>Fixed parsing of HereDocs with single quote markers, i.e. started with &lt;&lt;'EOF'</li>
+         <li>Fixed parsing of variables in evaluating heredocs</li>
+         <li>Compatible with the build number range of PyCharm 1.1</li>
+         <li>Bugfixes</li>
+       </ul>
+
+       <b>Recent changes:</b>
+       <ul>
+          <li>Support for the "readonly" command</li>
+          <li>New inspection to detect changes to read-only variables</li>
+          <li>New inspection to detect changes to shell read-only variables, $EUID for example</li>
+          <li>New inspection which detects integer division with a remainder</li>
+          <li>Fixed variable renaming of ${a} variables</li>
+          <li>Compatibility with RubyMine 2.0.2</li>
+          <li>Fixed for heredoc folding and highlighting</li>
+          <li>A process started withing a run script action is terminated when the stop button is pressed    </li>
+          <li>Removed global settings, these are project settings now</li>
+          <li>Arithmetic expressions are supported now, including variable declarations</li>
+          <li>Color configuration for heredoc start and end markers</li>
+          <li>New Bashsupport facet to configure which files without extensions are Bash scripts</li>
+          <li>Source code released, licensed under the terms of the Apache License 2.0</li>
+          <li>Path/file completion/</li>
+          <li>Configurable support for Bash version 4.0.</li>
+          <li>Expansions now can be replaced with the evaluated result.</li>
+          <li>Basic code formatter, not yet configurable (experimental, use at your own risk).</li>
+        </ul>
+    
+    
+    ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>3.5</rating></idea-plugin><idea-plugin downloads="697" size="46247" date="1322452579000" url=""><name>BEM Support</name><id>BEM Support</id><description><![CDATA[BEM Plugin: BEMHTML language support]]></description><version>1.0.13</version><vendor email="" url="https://github.com/afelix/bemidea-bemhtml">BEM</vendor><idea-version min="n/a" max="n/a" since-build="99.18" until-build="119.999"/><change-notes><![CDATA[
+    Changelog is here: <a href="https://github.com/afelix/bemidea-bemhtml/blob/master/CHANGELOG.md">CHANGELOG.md</a>.
+    
+    ]]></change-notes><depends>JavaScript</depends><depends>com.intellij.modules.xml</depends><rating>5</rating></idea-plugin><idea-plugin downloads="30340" size="5546235" date="1330684092000" url=""><name>C/C++</name><id>C/C++</id><description><![CDATA[
+    Provides advanced C / C++ / Makefile editing and compiling / debugging capabilities. Editing capabilities consist of
+    reference navigation (variable / field / macro / macr parameter names), completion, live semantic and error highlighting (sometimes with fixes :),<br>
+    find usages, goto class / symbol / macro def / constant, refactorings (rename, introduce var), override / implements action / navigation,<br>
+    quick navigate info (Control + Mouse hover), generate default/copy constructors and assignment operator, detect unused variable / functions, structure view<br>,
+    surround with cast/if/etc, navigate from java native declaration to cpp implementation and backward, do compile for
+    cpp files and build for makefile/dsp/vcproj files and more.<br>
+    Debugging support consists of GDB integration exposed as idea debugger interface.<br>
+    EAP software, works only for Win32/(MsVc/Gcc + CygWin/MingW), Linux 32bit /Intel/Gcc, MacOSX/Intel/Gcc platforms with
+      IntelliJ Idea 10.5 Ultimate / Community editions (builds 107.200),
+      IntelliJ Idea 11 (builds 111.200+),
+      WebStorm 3.<br>
+    <a href="http://www.cpptools.com/IDEA/Readme.html">Detailed readme</a> and <a href="http://youradvtools.blogspot.com/">blog</a>
+  ]]></description><version>0.8 build 3 [BETA]</version><vendor email="support@youradvancedtools.com" url="http://bugs.cpptools.com">AdvancedTools</vendor><idea-version min="n/a" max="n/a" since-build="107.200" until-build="119.999"/><change-notes><![CDATA[
+      <b>In 0.8.3:</b>
+      <li> Added IntelliJ Idea 10.5 / 11, WebStorm support.
+      <li> Dropped IntelliJ Idea 9 (Diana) support.
+      </ul>
+    <b>In 0.8.2:</b>
+    <li> Dropped Idea 8 (Diana) support.
+    </ul>
+    <b>In 0.8.1:</b>
+    <ul>
+    <li> Major feature: initial support for handling Cpp and C files without switching settings.
+    <li> Completion of member names in constructor initializer list.
+    <li> Find usages over string literal will find other occurrences of the same literal.
+    <li> Completion of macros parameters inside macro body.
+    <li> Assorted performance and usability fixes got from dog fooding :).
+    <li> Completion / navigation for targets / value references in makefiles.
+    <li> Recent find usages action works in usage view for c++ symbols.
+    <li> Option to disable multiple definition checks (C++ Project Settings|Settings).
+    <li> No absent definition error produced for declaration of static integral constant inside class.
+    <li> Leading // file level header comments are folded.
+    <li> Fixed bug with broken "Navigate to constant / macro".
+    <li> Added IdeaX support.
+    <li> Dropped Idea 6 (Demetra) and Idea 7 (Selena) support.
+    </ul>
+  ]]></change-notes><depends>com.intellij.modules.lang</depends><depends>com.intellij.modules.java</depends><rating>3.9</rating></idea-plugin><idea-plugin downloads="4131" size="5646529" date="1289858716000" url="https://github.com/t3hnar/CmdSupport"><name>CMD Support</name><id>CMD Support</id><description><![CDATA[
+		
+				
+					
+						<strong>CMD Support plugin for Intellij Idea</strong>
+						<ul>
+							<li>Enables highlighting</li>
+							<li>Adds new actions</li>
+						</ul>
+					
+				
+				
+	]]></description><version>1.0.2</version><vendor email="" url="">Yaroslav Klymko aka t3hnar</vendor><idea-version min="n/a" max="n/a" since-build="90.0" until-build="119.999"/><change-notes><![CDATA[
+		
+				
+					<strong>Changes in version 1.0.1:</strong>
+					<ul>
+						<li>Added 'Run Cmd Shell action'</li>
+						<li>Added 'Run Cmd Script' action</li>
+					</ul>
+
+					<strong>Changes in version 1.0.0:</strong>
+					<ul>
+						<li>Created cmd highlighting</li>
+					</ul>
+				
+				
+	]]></change-notes><depends>com.intellij.modules.lang</depends><rating>3</rating></idea-plugin><idea-plugin downloads="4193" size="187586" date="1296748770000" url=""><name>CoffeeBrew</name><id>org.coffebrew</id><description><![CDATA[Plugin for CoffeeScript language support]]></description><version>0.2.0</version><vendor email="" url="https://github.com/netzpirat/coffee-brew">Michael Kessler
+    </vendor><idea-version min="n/a" max="n/a" since-build="80.9000" until-build="119.999"/><change-notes><![CDATA[Start of a minimal PSI: Words can be selected now (Fixes #4)
+The maia and indeax plugins have been unified.
+]]></change-notes><depends>com.intellij.modules.xml</depends><rating>3.2</rating></idea-plugin><idea-plugin downloads="4847" size="23388" date="1271239929000" url="http://yeungda.github.com/coffeescript-idea/"><name>coffeescript-idea</name><id>coffeescript-idea</id><description><![CDATA[Syntax highlighting for CoffeeScript]]></description><version>0.1-1-gae5a</version><vendor email="" url="">David Yeung</vendor><idea-version min="n/a" max="n/a" since-build="80.8000" until-build="119.999"/><change-notes><![CDATA[coffeescript-idea is a plugin for IntelliJ IDEA and RubyMine that provides basic syntax highlighting for CoffeeScript. It is licensed under the Apache License 2.0.]]></change-notes><depends>com.intellij.modules.xml</depends><rating>00</rating></idea-plugin><idea-plugin downloads="1464" size="151186" date="1335544705000" url=""><name>Dart</name><id>Dart</id><description><![CDATA[Support for Dart programming language]]></description><version>0.2</version><vendor email="" url="">JetBrains</vendor><idea-version min="n/a" max="n/a" since-build="117.105" until-build="118.1"/><change-notes><![CDATA[
+      
+        <p>0.2:</p>
+        <ul>
+          <li>New parser</li>
+          <li>Keyword completion</li>
+          <li>Local resolve</li>
+        </ul>
+        <p>0.1.2:</p>
+        <ul>
+          <li>Basic syntax coloring</li>
+          <li>Brace matching</li>
+          <li>Commenting</li>
+          <li>Comments folding</li>
+        </ul>
+      
+  ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>4.3</rating></idea-plugin><idea-plugin downloads="5139" size="4463981" date="1263490094000" url=""><name>ErlGray</name><id>ErlGray</id><description><![CDATA[
+    
+    Erlang support for IntelliJ 10.x.
+
+    <p>Features:
+    <ul>
+        <li>Parsing of .erl source code files, with error highlighting;</li>
+        <li>Configurable syntax highlighting;</li>
+        <li>Basic brace matching;</li>
+        <li>Hierarchy view (shows function definitions).</li>
+    </ul></p>
+
+    <p>This is an early release. Things may be broken or not working.</p>
+
+    <p>Plugin contest 2009</p>
+    <p>The plugin was started in 2009. All features are submitted to the contest. The source repository
+    is located at <a href="http://code.google.com/p/idea-erlang/">code.google.com</a>.</p>
+    
+  ]]></description><version>0.1.2</version><vendor email="mail@ansorg-it.com" url="http://www.ansorg-it.com/">Joachim Ansorg</vendor><idea-version min="n/a" max="n/a" since-build="91.15" until-build="118.1"/><change-notes><![CDATA[
+  
+    Changes in version 0.1.1
+        <ul><li>Compatible with IntelliJ IU/IC 9.0</li></ul>
+
+    Changes in version 0.1
+            <ul>
+            <li> This is the first release of ErlGray.</li>
+            </ul>
+  
+  ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>3.8</rating></idea-plugin><idea-plugin downloads="158" size="35003" date="1331198099000" url="https://github.com/berkel/FestSupport"><name>Fest Support</name><id>FestSupport</id><description><![CDATA[
+		
+			 <a href="https://github.com/mailru/fest">Fest templater</a> support
+		
+	]]></description><version>1.3.3</version><vendor email="dmitry@shkinev.ru" url="">Dmitry Shkinev</vendor><idea-version min="n/a" max="n/a" since-build="55.5784" until-build="118.1"/><change-notes><![CDATA[
+		
+			
+				<b>1.3</b>
+				
+					<ul>
+						<li>Add new inspection (Nested attributes tag)</li>
+						<li>Restructuring XSD</li>
+					</ul>
+				
+				<b>1.2</b>
+				
+					<ul>
+						<li>Refactoring</li>
+					</ul>
+				
+				<b>1.1</b>
+				
+					<ul>
+						<li>Add autocomplete and validation</li>
+						<li>Add new Fest file template</li>
+					</ul>
+				
+				<b>1.0</b>
+				
+					<ul>
+						<li>Add syntax highlighting</li>
+					</ul>
+				
+			
+ 		
+	]]></change-notes><depends>com.intellij.modules.xml</depends><rating>00</rating></idea-plugin><idea-plugin downloads="193" size="125441" date="1331631762000" url=""><name>Frozen Idea</name><id>FrozenIdea</id><description><![CDATA[ICE framework support.]]></description><version>0.0.0.5</version><vendor email="xblackcat@gmail.com" url="http://code.google.com/p/ice-framework-idea-plugin/">xBlackCat</vendor><idea-version min="n/a" max="n/a" since-build="111.1" until-build="118.1"/><change-notes><![CDATA[<ul>
+            <li><b>0.0.0.1</b> - First revision: Only syntax highlighting</li>
+            <li><b>0.0.0.2</b> - Slice2Java translation was added.</li>
+            <li><b>0.0.0.3</b> - More error detections while file parsing. Allow to configure translation to several languages. Autodetection of Ice library in module classpath.</li>
+            <li><b>0.0.0.4</b> - Search source files for #include directive in content and source roots. Added line/block commenter.</li>
+            <li><b>0.0.0.5</b> - FIX: configuration check bug prevent compilation start
+            </ul>
+    ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>00</rating></idea-plugin><idea-plugin downloads="33" size="212766" date="1336229043000" url="http://code.google.com/p/glsl4idea/"><name>GLSL Support</name><id>GLSL</id><description><![CDATA[
+        
+        Support for the OpenGL Shading Language
+        
+    ]]></description><version>0.1</version><vendor email="" url="">Jean-Paul Balabanian, Yngve Devik Hammersland</vendor><idea-version min="n/a" max="n/a" since-build="117.1" until-build="118.1"/><change-notes><![CDATA[
+        
+        Support for the OpenGL Shading Language
+        
+    
+        
+      <p>0.1 - Initial revision. Features:</p>
+      <ul>
+          <li>Syntax checking</li>
+          <li>Jump to declaration of variable, function, type or field</li>
+          <li>Brace mathing</li>
+          <li>Type checking</li>
+          <li>Structure view</li>
+          <li>Sharers embedding in HTML</li>
+          <li>Comments folding</li>
+          <li>Customizable elements colors</li>
+          <li>Line markers for functions prototypes and definitions</li>
+          <li>Shader file template</li>
+          <li>"Deduce Expression Type" action</li>
+          <li>Convert vector components intention</li>
+      </ul>
+      
+    ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>4</rating></idea-plugin><idea-plugin downloads="1783" size="22106" date="1326300904000" url=""><name>Google Closure Soy Templates</name><id>Google Closure Soy Templates</id><description><![CDATA[Google Closure Soy Templates custom language plugin for IntelliJ IDEA]]></description><version>0.2.2</version><vendor email="vrungelru@gmail.com" url="http://shchekoldin.com/">Alexander Shchekoldin</vendor><idea-version min="n/a" max="n/a" since-build="107.587" until-build="118.1"/><change-notes><![CDATA[]]></change-notes><depends>com.intellij.modules.lang</depends><rating>00</rating></idea-plugin><idea-plugin downloads="864" size="37908" date="1336605926000" url="https://github.com/dmarcotte/idea-handlebars"><name>Handlebars</name><id>com.dmarcotte.handlebars</id><description><![CDATA[
+    
+      <a href="http://handlebarsjs.com/">Handlebars</a> template support
+      <br>
+      <br>
+      Issues, feature requests and contributions welcome: <a href="https://github.com/dmarcotte/idea-handlebars">https://github.com/dmarcotte/idea-handlebars</a>
+    
+  ]]></description><version>0.1.1</version><vendor email="" url="https://github.com/dmarcotte">dmarcotte</vendor><idea-version min="n/a" max="n/a" since-build="110.0" until-build="118.1"/><change-notes><![CDATA[
+    
+      <b>Version 0.1.1</b>
+      <br>
+      <br>
+      <ul>
+        <li>Adds .mustache and .hbs as default files extensions handled by this plugin</li>
+        <li>Fixes a lexer issue where non-Handlebars "{" characters were being parsed incorrectly</li>
+      </ul>
+
+      <b>Version 0.1</b>
+      <br>
+      <br>
+
+      The key feature of this early version of the plugin is that it allows most of the power of the built-in IDEA HTML
+      editing utilities to be used with Handlebars syntax inserted in the markup.  Future versions will build out more
+      Handlebars-specific utilites.
+      <ul>
+        <li>
+          <b>Features</b>
+          <ul>
+            <li>Configurable syntax highlighting</li>
+            <li>Mustache pair highlighting</li>
+            <li>Full HTML highlighting, code completion, inspections, formatting and commenting</li>
+            <li>Since Handlebars is a super-set of <a href="http://mustache.github.com/">Mustache</a> syntax, this plugin should greatly improve IDEA's editing experience for Mustache templates too</li>
+          </ul>
+        </li>
+        <li>
+          <b>Not yet implemented</b>
+          <ul>
+            <li>Handlebars-specific syntax-error highlighting</li>
+            <li>Find usages, Go-to declaration, etc. for references</li>
+            <li>Support for Handlebars templates embedded in script tags in html files</li>
+          </ul>
+         </li>
+      </ul>
+    
+  ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>00</rating></idea-plugin><idea-plugin downloads="339" size="45622" date="1336828373000" url=""><name>Ini4Idea</name><id>com.jetbrains.plugins.ini4idea</id><description><![CDATA[Provides ".ini" files support.]]></description><version>0.7</version><vendor email="" url="">Alexei Vasin</vendor><idea-version min="n/a" max="n/a" since-build="112.0" until-build="118.1"/><change-notes><![CDATA[]]></change-notes><depends>com.intellij.modules.lang</depends><rating>00</rating></idea-plugin><idea-plugin downloads="760" size="30829" date="1307217304000" url="http://jodd.org/doc/props.html"><name>Jodd Props Support</name><id>org.jodd.idea.props</id><description><![CDATA[
+<p>
+Enables editing of <a href="http://jodd.org">Jodd</a> props files.
+<b>Features</b>:
+<ul>
+	<li>Highlighting keys and values</li>
+	<li>Highlight profiles in keys</li>
+	<li>Highlight macros in values</li>
+	<li>Customizable highlighting colors</li>
+	<li>Code folding for section blocks</li>
+</ul>
+</p>
+	
+	]]></description><version>0.52</version><vendor email="info@jodd.org" url="http://jodd.org">Jodd Team</vendor><idea-version min="n/a" max="n/a" since-build="103.72" until-build="118.1"/><change-notes><![CDATA[
+<ul>
+	<li>0.52: Fixed issue with some special chars in values</li>
+	<li>0.51: Fixed plugin.xml unclosed tag</li>
+	<li>0.5: Public release</li>
+	<li>0.4: Profiles support added</li>
+	<li>0.3: Macros support added</li>
+	<li>0.1: Initial release</li>
+</ul>
+	
+	]]></change-notes><depends>com.intellij.modules.xml</depends><rating>3.5</rating></idea-plugin><idea-plugin downloads="30304" size="1377315" date="1336213209000" url="http://bitbucket.org/sylvanaar2/lua-for-idea/"><name>Lua</name><id>Lua</id><description><![CDATA[
+    
+        Lua language integration for IntelliJ
+        <br>
+        <b>Features:</b>
+        <br>
+            <ul>
+                <li>Type Inference Based Completions (<b>Experimental</b>)</li>
+                <li>Introduce Variable Refactoring (<b>Experimental</b>)</li>
+                <li>Modules support (<b>Experimental</b>)</li>
+                <li>Debugger (<b>Experimental</b>)</li>
+                <li>LuaDoc Creation, Highlighting and Folding</li>
+                <li>Live Templates ("Zen Lua")</li>
+                <li>Custom API Support including custom function signatures and documentation</li>
+                <li>Lua Standard Library Information via Quickhelp (ctrl-Q)</li>
+                <li>Goto Symbol</li>
+                <li>Safe Delete</li>
+                <li>Rename Identifier</li>
+                <li>JavaHelp For Lua 5.1</li>
+                <li>Go to definition</li>
+                <li>find usages</li>
+                <li>Code formatting</li>
+                <li>Speculative completion as an option (Settings|Lua)</li>
+                <li>Code completion</li>
+                <li>1 quickfix</li>
+                <li>6 code intentions</li>
+                <li>11 code inspection</li>
+                <li>Script execution and run configurations</li>
+                <li>Kahlua REPL Console</li>
+                <li>Lua REPL Console</li>
+                <li>Structure view</li>
+                <li>Syntax checking</li>
+                <li>Highlighting of Upvalues, Parameters and Fields</li>
+                <li>Highlighting global vs local variables</li>
+                <li>Customizable Syntax highlighting</li>
+                <li>Code folding for code blocks and comments</li>
+                <li>Brace Matching for do blocks, long strings and comments, and (, { , [</li>
+                <li>Minor feature: comment in/out.</li>
+            </ul>
+        
+        ]]></description><version>1.0a38</version><vendor email="sylvanaar@mindspring.com" url="https://www.ohloh.net/accounts/sylvanaar">sylvanaar</vendor><idea-version min="n/a" max="n/a" since-build="110.137" until-build="117.9999"/><change-notes><![CDATA[
+        
+        
+            1.0a26-29
+            Bug Fixes<br>
+            1.0a24-5
+            Introduces type inference based completions. Very experimental. Large number of pending fixes, disabled by default<br>
+            1.0a19-23
+            Bug Fixes<br>
+            1.0a18
+            IDEA 11 Support (110+)<br>
+            1.0a17
+            IDEA 11 Support<br>
+            1.0a16
+            Bug Fixes<br>
+            1.0a15
+            Major performance fixes for various global variable cases<br>
+            1.0a14
+            Introduce Variable Refactoring (experimental)<br>
+            1.0a12-3
+            Bug Fixes<br>
+            1.0a11
+            Added the "suspicious global creation" and "Parameter hides implicit self" inspection<br>
+            1.0a10
+            Fix the error reporter and language console up down arrow keys to cylcle through command history<br>
+            1.0a06-9
+            Minor fixes<br>
+            1.0a03-5
+            Modules support<br>
+            1.0a01-2
+            Debugger support<br>
+            0.9.94-5
+            Misc Fixes<br>
+            0.9.93
+            Field renaming and luadoc generation for tables<br>
+            0.9.92
+            Fix renaming of parameters<br>
+            0.9.91
+            Bug fixes. Improved the unbalanced assignment handling. Doclua enhancement for Corona<br>
+            0.9.90
+            Fix Refactor|Rename not working for parameters<br>
+            0.9.89
+            Fix for PyCharm compatibility issue.<br>
+            0.9.87-8
+            Formatter fixes for comments<br>
+            0.9.86a
+            Disabled the copyright optional dependency - it was not optional for everyone<br>
+            0.9.86
+            Extremely aggressive completions as an option "Enable Additional Completions"<br>
+            0.9.85
+            Autogenerate LuaDoc function comment on ---ENTER<br>
+            0.9.84
+            LuaDoc improvements<br>
+            0.9.83
+            Copied the grooovydoc implementation for use with LuaDoc. Attempt at identifier resolution in modules. Copyright support<br>
+            0.9.82
+            Complete revamp of the API documentation system.<br>
+            0.9.81
+            LuaDoc highlighting and folding. Bugfix for missing intention examples<br>
+            0.9.80
+            EAP 10.5 Support, Lua SDK version determined via lua.exe vs luac.exe (LuaJIT 2.0 support)<br>
+            0.9.79
+            Major parsing speed improvement. New intention for string.* function calls<br>
+            0.9.78
+            Basic language console implementation for REPL with the standard lua interpreter<br>
+            0.9.77
+            Memory usage tuning. Removed some caching<br>
+            0.9.75-6
+            New SDK implementation (You must recreate your SDK's). Added option to allow help and parameter completion for upvalued/aliased globals<br>
+            0.9.74
+            Pluggable quickhelp API (lua based)<br>
+            0.9.72-3
+            Starter set of 4 live templates fork, fori, ift, tnil (type and press tab)<br>
+            0.9.71
+            Point Lua documenter at the lua.org docs<br>
+            0.9.70
+            Handling of "self" in completions and reference resolution<br>
+            0.9.67-9
+            Smart dedent causing trouble again. So it is disabled for now<br>
+            0.9.66
+            Undo a change which made projects non-creatable<br>
+            0.9.65
+            Don't create src directory for new projects. Try to be compatible with new Rubymine 3.1<br>
+            0.9.64
+            Change the error reporter to use YouTrack while they are offering free hosting.<br>
+            0.9.63
+            Fix for resolve, docs, and completions when the project SDK is not set, but the module sdk is.<br>
+            0.9.62
+            Fix for autopopup completions outside of a statement<br>
+            0.9.61
+            Fix for custom SDK's with compound identifiers e.g. foo.bar<br>
+            0.9.60
+            Quick and dirty self: completions<br>
+            0.9.59
+            Quickfix for unbalanced assignment, new inspection for access of array element 0<br>
+            0.9.58
+            Lightning fast, stub based identifier resolving<br>
+            0.9.57
+            Support for 3rd party library signature files, and display of parameter infos<br>
+            0.9.53-6
+            Support for 3rd party libraries via the SDK classpath, Lua quickhelp (ctrl-q) from the html lua docs<br>
+            0.9.52
+            Remove duplicate core lua completions<br>
+            0.9.51
+            Compound reference support including standard Lua functions, e.g. io.write()<br>
+            0.9.50-Beta1-7
+            Major new features, and rework of some fundamental implementations, e.g  reference resolution, if your build is marked as beta and you find bugs, you can revert to a previous version.<br>
+            0.9.21-23
+            Fix lexer errors when indexing, smart de-dent on enter<br>
+            0.9.20
+            Formatter tweaks<br>
+            0.9.19
+            Fix field highlights<br>
+            0.9.18
+            Fix TODO handling<br>
+            0.9.17
+            Disable folding for single line table constructors<br>
+            0.9.16
+            fixed lexing of hexadecimal numbers<br>
+            0.9.14
+            Performance enhancements<br>
+            0.9.13
+            safe delete (experimental)<br>
+            0.9.12
+            versioning for IntelliJ 10<br>
+            0.9.11
+            adds the rename identifier refactoring (experimental)<br>
+            0.9.10
+            Fixes an edge case where too many upvalues would cause an exception<br>
+            0.9.8-9
+            Fixes for multiple inspection annotations<br>
+            0.9.1-7
+            Additional reference issues fixed, improved performance of editor when using the identifier highlighter<br>
+            0.9
+            Most reference issues are fixed. QuickDocs<br>
+            0.8.33
+            New inspection and some bug fixes.<br>
+            0.8.32
+            fix eof parsing bug<br>
+            0.8.31
+            stop bug report submissions from generating another bug due to logging<br>
+            0.8.30
+            enable 3 new inspections. fix a major bug in the parser that was causing exceptions saying there were unparsed tokens<br>
+            0.8.25-9
+            bug fixes<br>
+            0.8.24
+            Disable auto brace closing and remove the name validator<br>
+            0.8.23
+            more identifier fixes<br>
+            0.8.22
+            fix resolution of identifiers used in function declarations like foo:bar(), where foo would not resolve<br>
+            0.8.21
+            Adds code to try an rescue an incomplete parse<br>
+            0.8.20
+            Enable identifier highlighting by default<br>
+            0.8.19
+            Fixed many name resolution issues, improved brace handling<br>
+            0.8.17
+            Long string literal fix<br>
+            0.8.16
+            Long string literal fix<br>
+            0.8.15
+            Much improved code formatting, and editor auto-indention<br>
+            0.8.14
+            fixes for intentions, tail call marker, improved parser error recovery<br>
+            0.8.13
+            automated error submissions<br>
+            0.8.10-12
+            Many improvements to the code formatter (still considered experimental)<br>
+            0.8.9
+            Identifier highlighter, javahelp topic for lua 5.1, Kahlua execution<br>
+            0.8.1-0.8.4
+            Identifier resolution fixes<br>
+            0.8
+            Experimental reference resolution for go to declaration and find usages. Does not work for a lot of cases. Kahlua SDK also not working<br>
+            0.7.13-16
+            Fix the unbalanced assignment inspection for the single function call case, automatically select the interpreter from the SDK, fix structure view<br>
+            0.7.12
+            Support for Lua SDK specification<br>
+            0.7.11
+            Support for Lua Module Projects<br>
+            0.7.10
+            Fixed tail call highlighting, minor bug fixes<br>
+            0.7.9
+            Restore operation in Rubymine (tested) and other JetBrains products<br>
+            0.7.6-0.7.8
+            Bug fixes<br>
+            0.7.5
+            First inspection, global self usage<br>
+            0.7-0.7.4
+            Using internal parser, instead of external annotator.<br>
+            0.6.5
+            display key commands for Kahlua shell<br>
+            0.6.3 - 0.6.4
+            Improve annotation when using Kahlua - now it annotates semi-instantly<br>
+            0.6.2
+            Fix unresponsive annotator for syntax errors<br>
+            0.6.1
+            Bug fixes, and disabling of some unimplemented features<br>
+            0.6
+            Now using Kahlua as the built in interpreter tool, and the compiler<br>
+            0.5.1
+            Improved the script execution interface, coded mostly from the bash plugin's implementation<br>
+            0.5.0
+            Very basic script execution support. The lua interpreter needs to be on your path for this to work. Borrowed lots of code from the bash plugin<br>
+            0.4.3
+            Removed some Java specific code<br>
+            0.4.2
+            Enabled some more experimental features, run configs, and formatting. Neither really work well at the moment<br>
+            0.4.1
+            Added application level options for syntax check type<br>
+            0.4.0
+            Using luaj to syntax check the current file. Optional luac in next release<br>
+            0.3.0
+            Using luac to syntax check the current file when luac is on the path.<br>
+            0.2.1
+            Improved parser offering better code folding for functions<br>
+            0.2.0
+            Simple block parser based code folding<br>
+            0.1.7
+            Fix to make eg. ----[[ a single long comment instead of a short comment followed by a long comment<br>
+            0.1.6
+            Fix to ignore newline after extended string start token<br>
+            0.1.5
+            Customizable coloring<br>
+        
+        
+        ]]></change-notes><depends>com.intellij.modules.lang</depends><depends>com.intellij.copyright</depends><rating>4.8</rating></idea-plugin><idea-plugin downloads="11813" size="510106" date="1330773791000" url="http://github.com/nicoulaj/idea-markdown"><name>Markdown</name><id>net.nicoulaj.idea.markdown</id><description><![CDATA[
+    
+      <b><a href="http://daringfireball.net/projects/markdown">Markdown</a> language support for IntelliJ IDEA.</b>
+    
+  ]]></description><version>0.8</version><vendor email="julien.nicoulaud@gmail.com" url="http://github.com/nicoulaj">Julien Nicoulaud</vendor><idea-version min="n/a" max="n/a" since-build="110.0" until-build="117.9999"/><change-notes><![CDATA[
+    ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>3.6</rating></idea-plugin><idea-plugin downloads="2228" size="401096" date="1333868939000" url=""><name>Non-Dairy Soy Plugin</name><id>Non-Dairy Soy Plugin</id><description><![CDATA[
+        
+        <p>A plugin to help with the development of Closure Templates
+        (soy files).</p>
+        <p>This plugin includes support for syntax highlighting, code folding,
+        find usages and go to declaration on parameters and templates, and
+        Structure view.</p>
+        <p>This plugin is still under development, and updates are subject to
+        my available free time.</p>
+        
+    ]]></description><version>0.5.0 (beta)</version><vendor email="" url="">Ed Venaglia</vendor><idea-version min="n/a" max="n/a" since-build="111.1" until-build="117.9999"/><change-notes><![CDATA[ver 0.5.0
+* Seven inspections to make soy development easier and less error prone
+* Fixed lexer problems detecting line and block comments in several situations
+* Improved parsing for doc comments now has better structure
+]]></change-notes><depends>com.intellij.modules.platform</depends><depends>com.intellij.modules.lang</depends><rating>4.8</rating></idea-plugin><idea-plugin downloads="2362" size="760950" date="1275812175000" url="http://code.google.com/p/intellij-ocaml/"><name>OCaml Support</name><id>OCamlSupport</id><description><![CDATA[OCaml language support]]></description><version>0.9.8</version><vendor email="maxim.manuylov@gmail.com" url="">Maxim Manuylov</vendor><idea-version min="n/a" max="n/a" since-build="90.10000" until-build="117.9999"/><change-notes><![CDATA[
+        &nbsp;OCaml Support v0.9.8
+        <ul>
+            <li>Showing conflicts for renaming</li>
+            <li>Bug fixing</li>
+        </ul>
+        &nbsp;OCaml Support v0.9.7
+        <ul>
+            <li>Correct processing of compiler output</li>
+            <li>Fixed one more NPE on project creating</li>
+        </ul>
+        &nbsp;OCaml Support v0.9.6
+        <ul>
+            <li>Fixed NPE on project creating</li>
+        </ul>
+        &nbsp;OCaml Support v0.9.5
+        <ul>
+            <li>Context-dependent code completion for keywords</li>
+            <li>Choosing sources directory step in module creating wizard</li>
+            <li>Bug fixing</li>
+        </ul>
+        &nbsp;OCaml Support v0.9
+        <ul>
+            <li>Syntax and errors highlighting</li>
+            <li>References resolving</li>
+            <li>Compilation and executing</li>
+            <li>Automatic dependencies detection</li>
+            <li>Run configurations producer</li>
+            <li>Top level console (including support for several consoles running simultaneously)</li>
+            <li>Quick switching between ".ml" and ".mli" files (Shift + Alt + M)</li>
+            <li>Code completion for identifiers</li>
+            <li>Rename refactoring</li>
+            <li>Find usages</li>
+            <li>Surround with</li>
+            <li>Code commenting/uncommenting</li>
+            <li>Code folding</li>
+            <li>Brace matching</li>
+            <li>Quotes and backspace handlers</li>
+        </ul>
+    ]]></change-notes><depends>com.intellij.modules.platform</depends><depends>com.intellij.modules.lang</depends><rating>3</rating></idea-plugin><idea-plugin downloads="11051" size="3680657" date="1335451880000" url=""><name>PHP</name><id>com.jetbrains.php</id><description><![CDATA[PHP 5.3/5.4 editing and debugging, PHPUnit, Smarty, Twig and various frameworks support]]></description><version>117.257</version><vendor email="" url="http://jetbrains.com/phpstorm">JetBrains</vendor><idea-version min="n/a" max="n/a" since-build="112.0" until-build="117.9999"/><change-notes><![CDATA[PhpStorm/WebStorm 4.0.1 version]]></change-notes><depends>com.intellij.modules.xml</depends><depends>com.intellij.css</depends><depends>com.intellij.java-i18n</depends><depends>com.intellij.modules.ultimate</depends><depends>com.intellij.diagram</depends><depends>Coverage</depends><depends>com.intellij.modules.coverage</depends><depends>com.jetbrains.plugins.webDeployment</depends><depends>org.intellij.intelliLang</depends><rating>3</rating></idea-plugin><idea-plugin downloads="3765" size="0" date="1326304154000" url="http://code.google.com/p/pmip/"><name>PMIP - Poor Mans IDE Plugin</name><id>pmip</id><description><![CDATA[
+        
+        
+        
+        <p>A simple tool for realtime rapid development of Intellij plugins in ruby. For example:</p><br>
+
+class HelloWorldAction &lt PMIPAction
+  def run(event, context)
+    Dialogs.new(context).info('Hello World', 'Hello from PMIP!')
+  end
+end
+
+bind 'ctrl alt shift A', HelloWorldAction.new
+
+        <p>Please see <a href="http://code.google.com/p/pmip/">homepage</a> for full instructions, examples and plugin helper bundles.</p>
+        
+        
+    ]]></description><version>0.3.2</version><vendor email="paulallton@gmail.com" url="http://code.google.com/p/pmip/">Paul Allton</vendor><idea-version min="n/a" max="n/a" since-build="40.3000" until-build="117.9999"/><change-notes><![CDATA[
+        
+        
+        
+        0.3.2
+        <UL>
+        <LI>Fix issue where PMIP sometimes fails to start in Intellij 11.
+        <LI>Upgraded jruby to 1.6.5.1.
+        <LI>Refresh no longer puts the cleared text in the clipboard.
+        </UL>
+        0.3.1
+        <UL>
+        <LI>Refresh now clears console log.
+        </UL>
+        0.3.0
+        <UL>
+        <LI>Finally have a workaround for intellij bug that prevented PMIP from starting when intellij plugins directory contains a space
+        <LI>Core bundle updated to support many new features including: CTRL-E style choosers, playing of sounds, executing external commands
+         executing ant tasks, displaying balloons and hosting servlets.
+        </UL>
+        0.2.3
+        <UL>
+        <LI>Upgraded to jruby 1.5.0.
+        <LI>Resolved (hopefully!) jruby startup issue (i.e large blob of red) caused by intellij settings directory containing a space
+        <LI>jruby_home property now exposed to scripts.
+        </UL>
+        0.2.2
+        <UL>
+        <LI>Finally added some instructions - see: <a href="http://code.google.com/p/pmip/">homepage</a>.
+        <LI>Plugin name now available during plugin loading.
+        </UL>
+        0.2.1
+        <UL>
+        <LI>Improved error handling when intellij setttings directory contains a space.
+        <LI>Rebuild to support 1.5 JDK.
+        <LI>Plugin directive now creates file structure automatically.
+        </UL>
+        0.2.0
+        <UL>
+        <LI>Initial Release.
+        </UL>
+        
+        
+    ]]></change-notes><depends>com.intellij.modules.lang</depends><depends>com.intellij.modules.platform</depends><rating>5</rating></idea-plugin><idea-plugin downloads="108221" size="0" date="1333709623000" url="http://www.jetbrains.net/confluence/display/RUBYDEV/RubyMine+and+IntelliJ+IDEA+Ruby+Plugin"><name>Ruby</name><id>org.jetbrains.plugins.ruby</id><description><![CDATA[
+The Ruby plug-in makes IntelliJ IDEA the smart Ruby and Ruby on Rails editor, ideal for the full cycle application development.
+Resources:<br>
+<a href="http://blogs.jetbrains.com/ruby">RubyMine and Ruby plugin blog</a><br>
+<a href="http://www.jetbrains.net/devnet/community/ruby">Discussion forum</a><br>
+<a href="http://youtrack.jetbrains.net/issues/RUBY">Issue tracker</a><br>
+<a href="http://www.jetbrains.net/devnet/community/ruby?view=documents">Troubleshooting and FAQs</a>
+
+
+  ]]></description><version>4.0.3.20120406</version><vendor email="" url="http://www.jetbrains.com">JetBrains</vendor><idea-version min="n/a" max="n/a" since-build="116.108" until-build="118.0"/><change-notes><![CDATA[]]></change-notes><depends>org.jetbrains.plugins.yaml</depends><depends>com.intellij.modules.ultimate</depends><depends>Coverage</depends><depends>com.intellij.persistence.database</depends><depends>JavaScriptDebugger</depends><depends>com.intellij.diagram</depends><depends>com.intellij.css</depends><depends>org.jetbrains.plugins.haml</depends><depends>cucumber</depends><rating>3.9</rating></idea-plugin><idea-plugin downloads="591" size="247268" date="1300140229000" url="http://teatrove.sourceforge.net"><name>TeaCup</name><id>tea</id><description><![CDATA[Language Support for the scripting language Tea.]]></description><version>0.6</version><vendor email="Brian.R.Jackson@espn.com" url="http://www.espn.com">ESPN</vendor><idea-version min="n/a" max="n/a" since-build="103.72" until-build="118.0"/><change-notes><![CDATA[
+    
+        Release Notes - TeaCup - Version 0.6
+
+        Bug
+
+<ul>
+<li>[<a href='http://jira.espn.com/browse/TEACUP-3'>TEACUP-3</a>] -         Get variables with later assignments resolving correctly
+</li>
+<li>[<a href='http://jira.espn.com/browse/TEACUP-4'>TEACUP-4</a>] -         Attempting to rename parameter, claims invalid identifier
+</li>
+<li>[<a href='http://jira.espn.com/browse/TEACUP-5'>TEACUP-5</a>] -         Variables first defined without &#39;define&#39; keyword don&#39;t have references resolved
+</li>
+<li>[<a href='http://jira.espn.com/browse/TEACUP-6'>TEACUP-6</a>] -         NPE in VariantsProcessor
+</li>
+<li>[<a href='http://jira.espn.com/browse/TEACUP-9'>TEACUP-9</a>] -         Renaming template parameter replaces type instead of parameter name
+</li>
+</ul>
+
+        New Feature
+
+<ul>
+<li>[<a href='http://jira.espn.com/browse/TEACUP-10'>TEACUP-10</a>] -         Navigate through to declaration of called template
+</li>
+</ul>
+
+See <a href="http://jira.espn.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+TEACUP+AND+status+%3D+Open+ORDER+BY+priority+DESC&mode=hide">Open Issues</a>
+
+        Release Notes - TeaCup - Version 0.5 (March 7, 2011)
+        <ul>
+        <li>Refactored for IDEA 10.0</li>
+        <li>[TEACUP-1] Hitting Enter in a text block outside of a code region doesn't create new lines</li>
+        </ul>
+        <br>
+        Known-issues:
+        <ul>
+        <li>None</li>
+        </ul>
+
+        Release Notes - TeaCup - Version 0.4
+        <ul>
+        <li>Rewrote for IDEA 8.1</li>
+        </ul>
+        <br>
+        Known-issues:
+        <ul>
+        <li>Adding new lines in plain-text blocks</li>
+        </ul>
+
+        Release Notes - TeaCup - Version 0.3
+        <ul>
+        <li>Added language injection into static text blocks based on contentType call.</li>
+        <li>Added JVM-level debugging support.  Templates must be under a folder marked as source. Viewing scoped variables requires Trove 1.6.2-espn.</li>
+        </ul>
+        <br>
+        Known-issues:
+        <ul>
+        <li>assignment current redefines a variable, blocking earlier assignments for reference resolution</li>
+        <li>Language injection doesn't maintain context across scriptlet blocks.</li>
+        <li>Language injection doesn't update contentType properly.  Requires restart if contentType changes.</li>
+        </ul>
+
+        Release Notes - TeaCup - Version 0.2 (March 7, 2011)
+        <ul>
+        <li>Added brace matching</li>
+        <li>Added folding for block statements</li>
+        <li>Added commenting support (Ctrl-/, Ctrl-Shift-/)</li>
+        <li>Added reference resolution for local variables, foreach variables and template parameters</li>
+        <li>Find usage support for local variables, foreach variables and template parameters</li>
+        <li>Rename refactor support for local variables, foreach variables and template parameters</li>
+        <li>Fixed all parsing issues</li>
+        </ul>
+        <br>
+        Known-issues:
+        <ul>
+        <li>assignment current redefines a variable, blocking earlier assignments for reference resolution</li>
+        </ul>
+    
+    ]]></change-notes><depends>com.intellij.modules.lang</depends><depends>com.intellij.modules.java</depends><rating>00</rating></idea-plugin><idea-plugin downloads="415" size="86167" date="1336832417000" url=""><name>TypoScript Support</name><id>com.jetbrains.typoscript</id><description><![CDATA[Typo3 language TypoScript support]]></description><version>0.1.0</version><vendor email="" url="">JetBrains</vendor><idea-version min="n/a" max="n/a" since-build="107.89" until-build="118.0"/><change-notes><![CDATA[]]></change-notes><depends>com.intellij.modules.lang</depends><rating>4.8</rating></idea-plugin></category><ff>"Database"</ff><category name="Database"><idea-plugin downloads="57917" size="6227939" date="1334704221000" url="http://www.jetbrains.net/confluence/display/CONTEST/Database+Navigator"><name>Database Navigator</name><id>DBN</id><description><![CDATA[
+            </b>
+            <b>Database development, scripting and navigation tool</b><br>
+            This product aims to add extensive database development and maintenance capabilities to the IntelliJ
+            IDEA development environment. Along with a qualified and IDE-compliant SQL and PL/SQL editor, it provides advanced database connection management,
+            script execution support, database objects browsing, data and code editor, support for database compiler operations, method execution and debugging,
+            database objects factory, as well as various navigation capabilities between all its components.<br>
+            See features overview on the <a href="http://www.jetbrains.net/confluence/display/CONTEST/Database+Navigator" target="new">support page</a>.<br><br>
+
+            <b>Supported Databases:</b>
+            <ul>
+                <li>Oracle
+                <li>MySQL
+            </ul><br>
+
+            <b>For JRE5 users (MAC)</b><br>
+            (Discontinued with version 3.0.1844)<br>
+            Java 5 compatible builds of the plugin are also available. Please pick the appropriate one and unpack it in the plugins directory:<br>
+                &nbsp;&nbsp;- <a href="http://www.jetbrains.net/confluence/download/attachments/37378/DBN-8.0-JRE5.zip">DBN-8.0-JRE5</a> (for IntelliJ IDEA 8.x)<br>
+                &nbsp;&nbsp;- <a href="http://www.jetbrains.net/confluence/download/attachments/37378/DBN-9.0-JRE5.zip">DBN-9.0-JRE5</a> (for IntelliJ IDEA 9.x)<br>
+            </ul><br><br>
+    ]]></description><version>3.0.2222</version><vendor email="dancioca@bluewin.ch" url="">Dan Cioca</vendor><idea-version min="n/a" max="n/a" since-build="111.1" until-build="119.9999"/><change-notes><![CDATA[
+        <ul>
+            <li><b>3.0.2222</b>
+            <ul>
+                - Support for IntelliJ 11.1 release<br>
+                - Fixed broken user interface with PyCharm and RubyMine<br>
+                - Minor bug fixes<br>
+            </ul>
+            <li><b>3.0.2191</b>
+            <ul>
+                - Support for IntelliJ 11 release<br>
+                - Configurable datbase environments / environment colors<br>
+                - Data grid preview popup for BLOB/CLOBs <br>
+                - Data search functionality in dataset editors and query results (experimental)<br>
+                - Minor bug fixes<br>
+            </ul>
+            <li><b>3.0.2017</b>
+            <ul>
+                - Support for latest IntelliJ EAP versions<br>
+                - Statement generation engine (extract select, insert, ddl statements)<br>
+                - Fixes of BLOB editing support<br>
+                - Support for database content encoding<br>
+                - Data Editor - navigate to referenced record<br>
+                - Navigation bar improvement for DB objects<br>
+                - XML Data Export format<br>
+                - Custom number and date/time formats in locale settings<br>
+                - Connection setup enhancements (NOTE: you may lose connection custom properties)<br>
+                - Minor bug fixes<br>
+            </ul>
+            <li><b>3.0.1911</b>
+            <ul>
+                - Fixed compatibility issues with Ruby plugin<br>
+                - Support for IDEA 10.5 release<br>
+                - General bug fixes and performance improvements<br>
+            </ul>
+            <li><b>3.0.1898</b>
+            <ul>
+                - <b>recommended upgrade if you are using 3.0.1895</b><br>
+                - Support for IDEA X EAP releases<br>
+                - Configuration framework changes (NOTE: some of your settings may be reset to default)<br>
+                - Object name filters (e.g. Schema filters) on connection level<br>
+                - Object type filters on connection level<br>
+                - Ability to activate/deactivate connections<br>
+                - Oracle OS authentication<br>
+                - Fixed memory leak issues with large result-sets<br>
+                - General bug fixes and performance improvements<br>
+            </ul>
+            <li><b>3.0.1870</b>
+            <ul>
+                - Quick SQL sandbox (SQL Console for database connections)<br>
+                - Show object detailed information (configurable)<br>
+                - Added support for SQL ISO-92 (work in progress - not usable yet)<br>
+                - Minor bug fixes<br>
+            </ul>
+            <li><b>3.0.1856</b>
+            <ul>
+                - Added support for IntelliJ IDEA X (BETA)<br>
+                - Discontinued support for IDEA 8.x<br>
+                - Improved navigation within PL/SQL code<br>
+                - Added code completion for variables and method parameters in PL/SQL code<br>
+                - Enhanced database object compiler handling (keep current debug status)<br>
+                - Improved object lookup functionality (select connection prompt)<br>
+                - Added navigation-bar support for database objects (experimental)<br>
+                - Fixed xls data export for select statement results<br>
+                - Enhanced xls export data format (make use of regional settings)<br>
+                - Added HTML data export processor<br>
+                - Persisted data export options<br>
+                - Object properties (work in progress)<br>
+                - Minor bug fixes<br>
+            </ul>
+            <li><b>3.0.1804</b>
+            <ul>
+                - Database object lookup (Ctrl-Shift-D) - Experimental phase<br>
+                - Improved Debugger breakpoint handling<br>
+                - Compatibility version constraint (no support for IDEA X yet)<br>
+                - Minor bug fixes<br>
+            </ul>
+        </ul>
+        <a href="http://confluence.jetbrains.net/display/CONTEST/DBN+-+Change+Notes">See full release notes</a>
+     ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>4</rating></idea-plugin><idea-plugin downloads="20564" size="11396978" date="1333478652000" url="https://github.com/deepsky/SQL-Code-Assistant-/wiki"><name>SQL Code Assistant</name><id>SQL</id><description><![CDATA[
+    
+    SQL Code Assistant provides extended editing capability for SQL and PL/SQL code of the Oracle database.<br>
+    The database objects are always at your fingertips no matter where they came from - the database
+    or sql scripts on the local File System. With the SQL Code Assistant you are able to browse the objects,
+    edit and execute SQL statements, navigate over the code, search for usages in the database schema
+    or scripts on the File System.<br><br>
+
+    The plugin uses lexer and parser generated by ANTLR tool, thanks to Terence Parr (parrt@cs.usfca.edu, parrt@antlr.org).
+    <br><br>
+    Feature list:
+    <ul>
+        <li>Syntax and error highlighting</li>
+        <li>Highlighting of keywords, types, system functions, table names, pl/sql varaible, etc</li>
+        <li>Static code analysis (arithmetic expression evaluation, resolving references)</li>
+        <li>Context aware code completion</li>
+        <li>Viewing the Structure of SQL and PL/SQL code</li>
+        <li>SQL and PL/SQL code formatting (experimental) <b>(Ctrl-Alt-L)</b></li>
+        <li>Code Navigation</li>
+        <li>Quick object lookup <b>(Ctrl-Shift-O)</b></li>
+        <li>Find Usages tables, views, columns, function, procedures, etc over a database schema or objects in the sql scripts on the local File System
+            SQL and PL/SQL code execution with sortable query result <b>(Ctrl-Shift-M)</b></li>
+        <li>Code Folding and bracket matching support</li>
+        <li>Code commenting</li>
+        <li>Database Schema Browsing</li>
+        <li>Connection management</li>
+    </ul>
+    <br>
+
+    I appreciate comments, suggestions or bug reports, thanks in advance.
+    
+    ]]></description><version>1.2.2.11</version><vendor email="plsql.assistant@gmail.com" url="https://github.com/deepsky/SQL-Code-Assistant-">Serhiy Kulyk</vendor><idea-version min="n/a" max="n/a" since-build="111.1" until-build="117.999"/><change-notes><![CDATA[
+       <ul>
+            <li><b>1.2.2.11</b>
+                 <ul>
+                    - [FIX] Allow hyphen character in DB host name, example: 'host-101.com'<br>
+                    - [FIX] DatabaseBrowser is not properly updated on ALTER TABLE request<br>
+                 </ul>
+            </li>
+            <li><b>1.2.1.11</b>
+                 <ul>
+                    - [FIX] Handling changes of File Type extensions<br>
+                    - [FIX] Find Usages for names in double quotes<br>
+                    - [FIX] Parsing<br>
+                 </ul>
+            </li>
+            <li><b>1.2.0.11</b>
+                 <ul>
+                    - [NEW] Code formatter added<br>
+                 </ul>
+            </li>
+            <li><b>1.1.4.11</b>
+                 <ul>
+                    - [FIX] Misbehavior after editing of connection settings in the DBBrowser<br>
+                    - [FIX] Not correct value saving in the Result Panel<br>
+                    - [FIX] SQL files opened in the Editor not indexed properly<br>
+                    - [FIX] Minor fixes in completion<br>
+                    - [NEW] "Create DDL script" added<br>
+                 </ul>
+            </li>
+            <li><b>1.1.3.11</b>
+                 <ul>
+                    - [FIX] Minor issue in cache locator<br>
+                 </ul>
+            </li>
+            <li><b>1.1.2.11</b>
+                 <ul>
+                    - [NEW] Performance improvements<br>
+                    - [NEW] Added Quick Navigation Info for table, view, table column, function, procedure, etc<br>
+                    - [NEW] JDBC driver was replaced with fresh one<br>
+                    - [NEW] Added support for tablespaces: create/alter/drop (parsing and execution)<br>
+                    - [FIX] QuickLookup: package scope objects were handled not correctly<br>
+                    - [FIX] Some minor issues in FindUsages<br>
+                 </ul>
+            </li>
+            <li><b>1.1.1.10</b>
+                 <ul>
+                     - [FIX] Word Indexer did not work properly for files opened in the Editor<br>
+                     - [FIX] Validate of the VirtualFile before processing<br>
+                 </ul>
+            </li>
+            <li><b>1.1.0.10</b>
+                <ul>
+                    - [NEW] Editable Result Set
+                    - [NEW] SID/SERVICE_NAME access support
+                    - [FIX] Indexing of Excluded folders
+                </ul>
+            </li>
+            <li><b>1.0.3.10</b>
+                <ul>
+                    - [FIX] Falling performance down on big schemas<br>
+                    - [FIX] Renaming/deleting issue<br>
+                </ul>
+            </li>
+            <li><b>1.0.2.10</b>
+                <ul>
+                    - [FIX] Rename refactoring issues: IDEA-66451, WI-5607<br>
+                    - [FIX] Autocompletion issues<br>
+                    - [FIX] DBBrowser Window rendering<br>
+                    - [FIX] Rendering of column values in ResultPane for types: ROWID, LONG, RAW, etc types<br>
+                    - [NEW] Added posibility to run anonymous PL/SQL block<br>
+                    - [NEW] Configuration page<br>
+                    - [NEW] Result Pane supports opening column value in popup window<br>
+                </ul>
+            </li>
+            <li><b>1.0.1.10</b>
+                <ul>
+                    - [FIX] Not stable resolving for some cases<br>
+                    - [FIX] Autocompletion for group by and order by clauses<br>
+                    - [FIX] Packages in the DB Browser, in case of numerous packages with the same name<br>
+                    - [FIX] Parsing and indexing views for some specific cases<br>
+                    - [FIX] Handling file names with non alphanumeric characters<br>
+                </ul>
+            </li>
+            <li><b>1.0.0.10</b>
+                <ul>
+                    - [NEW] DB Browser is capable to replicate database objects from scripts<br>
+                    - [NEW] No need active connection to browse schema objects, all objects are cached<br>
+                    - [NEW] No need active connection to search for usages<br>
+                    - [NEW] Support "Find Usages" for procedures, functions, packages, pl/sql variables, etc<br>
+                    - [NEW] Plugin is capable to run create scripts for packages, procedure, function, etc<br>
+                </ul>
+            </li>
+            <li><b>0.9.3.9</b>
+                <ul>                 
+                    - Parser became faster<br>
+                    - [NEW] Added action: 'Go To Database Object' activated with Ctrl-P shortcut<br>
+                    - [NEW] Help Topic added<br>
+                </ul>
+            </li>
+            <li><b>0.9.2.9</b>
+                <ul>
+                    - More stable release<br>
+                    - [FIX] Some fixes in the SQL parser and the resolver<br>
+                    - [NEW] Added highlighting of Oracle DML functions and PLSQL variables<br>
+                </ul>
+            </li>
+            <li><b>0.9.1.x</b>
+                <ul>
+                    - [FIX] Many fixes in the SQL parser and the resolver<br><br>
+                    - [NEW] Plugin supports enabling/disabling AutoCommit mode. Control is available in the Result Pane or in the Plugin Settings menu<br>
+                    - [NEW] Go to Declaration/Go to Implementation feature is supported.<br>
+                    - [NEW] Structure View Panel supports running of SQL statements from the context menu.<br>
+                    - [NEW] Added hightlighting of SQLPLUS commands in the editor.<br>
+                    - [NEW] Added button Refresh in the Database Browsers.<br>
+                </ul>
+            </li>
+            <li><b>0.9.0.x</b>
+                <ul>
+                    - [NEW] The plugin supports Find Usages. At the moment it is implemented search usages for Tables, Views and Columns.<br>
+                    Search usages available over PL/SQL packages, Triggers, Functions, Procedures, Table or View definitions, in the Database Schema Scope or Project specific scopes.<br>
+                    The found usages can be grouped by file structure or usages type.<br><br>
+                    - [FIX] Some fixes in the parser related to SQL syntax<br>
+                </ul>
+            </li>
+            <li><b>0.8.4.1.x</b>
+                <ul>
+                    - [FIX] Fixed "Connect on Start" in the multiframe mode<br>
+                    - Some minor enhancements and bug fixes<br>
+                </ul>
+            </li>
+            <li><b>0.8.4.x</b>
+                <ul>
+                    - [FIX] The issue prevented plug-in from running in multiframe mode<br>
+                    - [FIX] Configuration settings are made project specific<br>
+                    - [FIX] "Component already disposed" error<br><br>
+                    - [NEW] SQL Query can be run in the background<br>
+                    - [NEW] INSERT statement validation added<br>
+                    - Some minor enhancements and bug fixes<br>
+                </ul>
+            </li>
+            <li><b>0.8.3.x</b>
+                <ul>
+                    - [FIX] NULL/NOT NULL column attribute for tables in the Database Browser<br>
+                    - [FIX] "Component already disposed" error<br>
+                    - [FIX] Connection procedure accelerated<br><br>
+                    - [NEW] Enhancements in the Database Browser: it is possible to query tables/views, open view/trigger definitions, open package body and specification, create table script (not complete yet)<br>
+                    - [NEW] Enhancements in the Grid: export to file supported, data/time format configurable<br>
+                    - [NEW] Query Result Window is able to open several grids at the same time<br>
+                    - [NEW] Query Result Window is enhanced with bookmarks which allow navigation between SQL queries typed in the editor and Query Result Panels and vice versa<br>
+                    - [NEW] Added Trigger support: parsing, Structure View, resolving old/new prefixes<br>
+                    - [NEW] More PL/SQL types are supported: REF CURSOR, Varray, Collection, etc<br>
+                    - [NEW] SQL Code Validation options made configurable<br>
+                    - [NEW] Connection procedure is enhanced with Progress Indicator. It is supported canceling or moving connecting process to background<br>
+                </ul>
+            </li>
+        </ul>
+    ]]></change-notes><depends>com.intellij.modules.lang</depends><depends>com.intellij.modules.platform</depends><rating>4.6</rating></idea-plugin></category><ff>"Editor"</ff><category name="Editor"><idea-plugin downloads="3132" size="34351" date="1302096175000" url=""><name>Base64 for IDEA and Storm</name><id>Base64 for IDEA and Storm</id><description><![CDATA[This version also supports PhpStorm and WebStorm. Adds Base64 encoding and decoding support. Decode and Encode Action available in Edit Menu. Please configure your keymap after installation.]]></description><version>1.1b</version><vendor email="" url="">Roel Noten (modified by Valeriy Yatsko)</vendor><idea-version min="n/a" max="n/a" since-build="50.4267" until-build="117.999"/><change-notes><![CDATA[]]></change-notes><depends>com.intellij.modules.lang</depends><rating>5</rating></idea-plugin><idea-plugin downloads="19010" size="198608" date="1288304463000" url=""><name>Copy as HTML</name><id>Copy as HTML</id><description><![CDATA[        Copies a snippet of code as html
+        <ul>
+            <li>Adds menu items "Copy as HTML" to main menu and editor popup.
+                Will copy the current selection or the complete editor buffer.
+                Currently only works if focus is in editor (for example won't work in project tree).</li>
+            <li>Preserves more formatting than the built-in HTML export.</li>
+            <li>HTML is only a snippet (without html and body tags) meant to be inserted into a complete
+                HTML document.</li>
+            <li>Currently HTML format is fixed and uses CSS a lot.</li>
+            <li>Options: unindent, add border, padding, line numbers, tabs to spaces conversion, include editor's warning and error highlighting
+                (see IDE Settings -> Copy as HTML).</li>
+            <li>Reuses the editor "Show Line Numbers" setting (see Idea's "View" menu).</li>
+        </ul>
+        
+        
+    ]]></description><version>0.7.1</version><vendor email="stephen.friedrich@eekboom.com" url="">Stephen Friedrich</vendor><idea-version min="n/a" max="n/a" since-build="93.13" until-build="117.999"/><change-notes><![CDATA[
+        <ul>
+            <li>0.7.1 Small bug fix: Styling ended one character to late</li>
+            <li>0.7   Works in IDEA 9, also tested with IDEA X (EAP build 98.117)</li>
+            <li>0.6   New options for line numbers, font size, padding and unindent, tabs to spaces conversion, changed default shortcut to Ctrl-Shift-Q</li>
+            <li>0.5   Works on IDEA 8.0 (no functional changes)</li>
+            <li>0.4   Works on IDEA 6.0 (no functional changes)</li>
+            <li>0.3   New option: Start line nos at either 1 or editor row number</li>
+            <li>0.2.1 Minor bugfixes (works for plain text files)</li>
+            <li>0.2   Now copies both in text/plain and text/html format suitable for formatted
+                      pasting into OpenOffice, Word, etc. (Can be configured in settings.)
+                      Credits to Peter B&uuml;ttner for his JDK bug workaround (see www.peterbuettner.de)</li>
+            <li>0.1   Initial Version</li>
+        </ul>
+        
+        
+    ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>4.2</rating></idea-plugin><idea-plugin downloads="6150" size="1151999" date="1255745724000" url=""><name>eSnippet Pro plugin</name><id>eSnippet Pro plugin</id><description><![CDATA[
+        Make it to access code snippet repository easy!  The central repository is
+              <a href="http://snippet.mvnsearch.org" target="_blank">http://snippet.mvnsearch.org</a>.
+              You can find all source code at <a href="http://code.google.com/p/esnippet" target="_blank">http://code.google.com/p/esnippet</a>
+        <ul> Features List:
+          <li>Snippet repository</li>
+          <li>Snippet Search</li>
+          <li>Snippet Live Template</li>
+          <li>Snippet Editing</li>
+      </ul>
+    ]]></description><version>1.4.0</version><vendor email="linux_china@hotmail.com" url="http://snippet.mvnsearch.org">linux_china
+    </vendor><idea-version min="n/a" max="n/a" since-build="92.9677" until-build="117.999"/><change-notes><![CDATA[        
+        <ul>Change list in 1.4.0
+            <li>Work on IDEA 9.0 only</li>
+            <li>Bug fix for IDEA 9.0</li>
+            <li>Icon support for popup items</li>
+        </ul>
+        <ul>Change List in 1.3.1
+            <li>Bug fix for file fragment creation</li>
+        </ul>
+        <ul>Change List in 1.3
+            <li>Add RubyMine suport</li>
+            <li>Mvnsearch URL Switch only one setting</li>
+        </ul>
+        <ul>Change List in 1.2
+            <li>EAP 8.1 Build</li>
+            <li>Bug fix for DZone snippet search</li>
+            <li>Bug fix for completion</li>
+            <li>Remove word selection for completion</li>
+            <li>Mnemonic completion with hint support</li>
+        </ul>
+        <ul>Change List in 1.1.2
+            <li>Bug fix for class cast exception</li>
+        </ul>
+        <ul>Change List in 1.1.1
+            <li>Bug fix for datacontext between events</li>
+            <li>Minor bugs fixed</li>
+        </ul>
+        <ul>Change List in 1.1
+            <li>Syntax color high light introduced by jsyntaxpane</li>
+            <li>Fix DZone snippet repository query logic</li>
+            <li>Fix regexlib.com snippet repository query logic</li>
+            <li>Minor bug fix
+            </li>
+        </ul>
+        <ul>Change List in 1.0.1
+            <li>Compiled by Jdk 1.5</li>
+        </ul>
+        <ul>Change List in 1.0
+            <li>Initial Version
+            </li>
+        </ul>
+            
+    ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>4</rating></idea-plugin><idea-plugin downloads="76115" size="1095308" date="1332340480000" url="http://plugins.intellij.net/plugin/?id=164"><name>IdeaVIM</name><id>IdeaVIM</id><description><![CDATA[
+        VIM Emulator. This plugin provides nearly complete vi/vim/gvim emulation while editing files in IntelliJ platform based products.
+        The following functionality is supported:
+        <ul>
+            <li>Motion keys</li>
+            <li>Deletion/Changing</li>
+            <li>Insert mode commands</li>
+            <li>Marks</li>
+            <li>Registers</li>
+            <li>VIM undo/redo</li>
+            <li>Visual mode commands</li>
+            <li>Some Ex commands</li>
+            <li>Some :set options</li>
+            <li>Full VIM regular expressions for search and search/replace</li>
+            <li>Macros</li>
+            <li>Diagraphs</li>
+            <li>VIM help</li>
+        </ul>
+    ]]></description><version>0.23.93</version><vendor email="" url="">Rick Maddy, JetBrains</vendor><idea-version min="n/a" max="n/a" since-build="110.0" until-build="117.999"/><change-notes><![CDATA[Vim.xml was fixed to use Command+C, Command+V on Mac OS. Unfortunally you need to update Vim.xml manually this time.]]></change-notes><depends>com.intellij.modules.lang</depends><rating>4.1</rating></idea-plugin><idea-plugin downloads="1549" size="87502" date="1336513699000" url=""><name>Injector</name><id>Injector</id><description><![CDATA[
+    Provides fast Ruby code injections into erb files and ruby strings. Injector makes replacements as fast as you
+    type shortcut text and also provides additional features. Examples:
+    <ul>
+        <li>'%%' --&gt; &lt;%- | -%&gt;</li>
+        <li>'%=' --&gt; &lt;%= | -%&gt;</li>
+        <li>'%-' --&gt; &lt;% | %&gt;</li>
+        <li>'##' --&gt; &lt;%# | -%&gt;</li>
+    </ul>
+    Templates can be added and/or changed in settings. See details in General Usage section.
+    Feel free to report bugs and your suggestions to provided e-mail.
+    ]]></description><version>1.02</version><vendor email="toxxic@tut.by" url="">Basil Gren</vendor><idea-version min="n/a" max="n/a" since-build="80.8000" until-build="117.999"/><change-notes><![CDATA[
+        <p><b>1.02</b>
+        <ul>
+          <li>Fixed Injector exception throwed when typing characters in editors that are not linked to any project (for example, in Settings dialog).</li>
+        </ul>
+        </p>
+
+        <p><b>1.01</b>
+        <ul>
+          <li>Fixed throwing exception by Injector when task is changed in Task Manager with switching current context</li>
+        </ul>
+        </p>
+
+        <p><b>1.0</b>
+        <ul>
+          <li>Added Injector settings dialog, where you can specify own templates. The dialog accessible by right-click on Injector icon in status bar (opens very fast).</li>
+          <li>Added ignore shortcut option</li>
+          <li>Added ability to insert '#{}' into ruby strings, converting them to interpolated if necessary</li>
+          <li>Code optimization</li>
+          <li>Usage statistics added</li>
+        </ul>
+        </p>
+
+        <p><b>0.95b</b>
+        <ul>
+          <li>Changed injection method. Now character sequence should be typed instead of one char to be replaced by template.
+              This makes Injector not so annoying in some situations as it was before.</li>
+          <li>Added some new templates.</li>
+        </ul>
+        </p>
+
+
+        <p><b>0.91</b>
+        <ul>
+          <li>Fixed issue when Injector occasionally inserted ruby injections if replace key is hold.</li>
+          <li>Minor injection rules fix.</li>
+        </ul>
+        </p>
+
+        <p><b>0.9</b>
+        <ul>
+          <li>Injector have become much more unobtrusive. It injects code only within html text and attributes value,
+              within &lt;script&gt; tag it's automatically disabled.</li>
+          <li>Performance improved.</li>
+          <li>Plugin state now persists between IDE restarts.</li>
+          <li>Minor bugs fixed.</li>
+        </ul>
+        </p>
+
+        <p><b>0.8</b>
+        <ul>
+          <li>Initital release</li>
+        </ul>
+        </p>
+    ]]></change-notes><depends>com.intellij.modules.ruby</depends><rating>2.5</rating></idea-plugin><idea-plugin downloads="16256" size="45919" date="1319736501000" url=""><name>Key promoter</name><id>Key promoter</id><description><![CDATA[Shows to user how easy he can make same action using only keyboard(menus and toolbar button mouse clicks initiates shortcut display)]]></description><version>1.0.10</version><vendor email="kashin_d@hotmail.ru" url="">Dmitry Kashin</vendor><idea-version min="n/a" max="n/a" since-build="107.587" until-build="117.999"/><change-notes><![CDATA[<ul>
+        <li> 1.0.10 </li>
+        <ul>
+          <li>Menus support for Windows fixed(probably for all platforms except Mac) - http://code.google.com/p/key-promoter/issues/detail?id=8</li>
+          <li>Multiple shortcuts supported(all of the rendered) - http://code.google.com/p/key-promoter/issues/detail?id=3</li>
+        </ul>
+        <li> 1.0.9 </li>
+        <ul>
+          <li>Idea 10.5 and 11 supported now</li>
+          <li>Position of popup in case of dual monitor configuration fixed</li>
+          <li>Popup appeared always on top now(for example over dialogs)</li>
+        </ul>
+        <li> 1.0.8 </li>
+        <ul>
+          <li> Maia and RubyMine (since 8000) compatible version. (RubyMine repack)</li>
+        </ul>
+        <li> 1.0.6 </li>
+        <ul>
+          <li> Selena (since 6767) compatible version. </li>
+        </ul>
+        <li> 1.0.4 </li>
+        <ul>
+          <li> NPE fixed. </li>
+        </ul>
+        <li> 1.0.3 </li>
+        <ul>
+          <li> Popup text template configurable now. </li>
+          <li> Possible to set number of uncshortcutted action invocation (or even turn off this feature by 0 value). </li>
+          <li> Minor improvements and bugfixes. </li>
+        </ul>
+        <li> 1.0.2 </li>
+        <ul>
+          <li> Popup redraw issues fixed. </li>
+          <li> Right click now ignored. </li>
+          <li> Refactored and source bundled with plugin (<a href="http://plugins.intellij.net/plugin/?id=1017">PluginPacker plugin</a> used for packaging). </li>
+          <li> Bugfixes. </li>
+        </ul>
+        <li> 1.0 </li>
+        <ul>
+          <li> Keyboard shortcut association suggested each 3 actio invocations by mouse(not possible to turn off be design :) ). </li>
+          <li> Popup UI impoved. </li>
+          <li> Fixed dialogs overlapping issue. </li>
+        </ul>
+        <li> 0.9 </li>
+        <ul>
+          <li> Popup follow the mouse possible now. </li>
+          <li> Per shortcut stats for invocations (count displayed in tip popup). </li>
+        </ul>
+        <li> 0.8 </li>
+        <ul>
+          <li> Previous shortcuts hiding once new appeared. </li>
+          <li> Alpha channel transparency for background added. </li>
+        </ul>
+        <li> 0.7 </li>
+        <ul>
+          <li> Added configuration </li>
+          <li> Added support for buttons that has mnemonics (disabled by default)(Known issue: For Mac Alt displayed as mnemonic trigger) </li>
+        </ul>
+        <li> 0.6 </li>
+        <ul>
+          <li> Tool window button click added </li>
+          <li> Animation changed </li>
+          <li> Mac menus clicks now supported (thanks to Yegor Yarko and Dmitry Jemerov) </li>
+        </ul>
+    </ul>]]></change-notes><depends>com.intellij.modules.lang</depends><rating>4.5</rating></idea-plugin></category><ff>"Folder"</ff><category name="Folder"><idea-plugin downloads="3922" size="33480" date="1317542359000" url=""><name>FavoriteFolders</name><id>FavoriteFolders</id><description><![CDATA[Adds favorite folders into FileChooser dialog toolbar.]]></description><version>1.0.0.2</version><vendor email="xblackcat@gmail.com" url="http://code.google.com/p/favoritefolders-idea-plugin/">xBlackCat</vendor><idea-version min="n/a" max="n/a" since-build="103.1" until-build="117.999"/><change-notes><![CDATA[<ul>
+<li><b>v0.0.0.1</b> - Initial revision.</li>
+<li><b>v0.0.0.2</b> - Allow to install plugin in all Idea-based products.</li>
+<li><b>v0.0.0.3</b> - Allow to set custom name to favorite folder (to show in tooltip)</li>
+<li><b>v0.0.0.4</b> - Allow to set custom icon to favorite folder.</li>
+<li><b>v0.0.0.5</b> - Browse button to select custom icon for favorite folder. Small fixes.</li>
+<li><b>v1.0</b> - Project-level favorite folders configuration.</li>
+<li><b>v1.0.0.1</b> - Fix NPE if custom icon is not found. Show warning in this case.</li>
+<li><b>v1.0.0.2</b> - Fix NPE at new project opening in Idea 11 (Nika)</li>
+        </ul>]]></change-notes><depends>com.intellij.modules.lang</depends><rating>3.5</rating></idea-plugin></category><ff>"Framework integration"</ff><category name="Framework integration"><idea-plugin downloads="307" size="3614" date="1336774198000" url="http://github.com/johnlindquist/angularjs-plugin"><name>AngularJS</name><id>AngularJS</id><description><![CDATA[Support for AngularJS]]></description><version>0.1.3</version><vendor email="johnlindquist@gmail.com" url="http://johnlindquist.com">johnlindquist</vendor><idea-version min="n/a" max="n/a" since-build="107.105" until-build="117.999"/><change-notes><![CDATA[
+        
+        
+            0.1.3
+            Adding the mouse events and a couple other missing directives
+            0.1.2
+            Works with any doctype (not just !doctype html).
+            0.1.1
+            Changed Autocomplete approach to "provide" custom autocompletes through a provider extension point. I'll
+                revisit a custom DTD after more discussion/thought with other developers.
+            
+            0.1
+            Basic ng attribute autocompletion based on an included DTD.
+        
+        
+        
+    ]]></change-notes><depends>JavaScript</depends><depends>com.intellij.modules.platform</depends><rating>00</rating></idea-plugin><idea-plugin downloads="44" size="243216" date="1334940076000" url="https://github.com/cobaltolabs/IntelliStripes-NV"><name>IntelliStripes-NV</name><id>IntelliStripes-NV</id><description><![CDATA[IntelliStripes' Next Version. This plugin add support for Stripes Framework to IntelliJ Ultimante 11
+        and up
+    ]]></description><version>0.1</version><vendor email="" url="http://cobaltolabs.com">Cobalto Labs SAS</vendor><idea-version min="n/a" max="n/a" since-build="117.105" until-build="117.9999"/><change-notes><![CDATA[]]></change-notes><depends>com.intellij.css</depends><depends>com.intellij.javaee</depends><depends>com.intellij.spring</depends><depends>com.intellij.jsp</depends><depends>com.intellij.modules.java</depends><depends>com.intellij.modules.ultimate</depends><rating>00</rating></idea-plugin><idea-plugin downloads="723" size="43318" date="1335161097000" url="https://github.com/johnlindquist/open-source-plugins/RobotlegsPlugin"><name>Robotlegs</name><id>Robotlegs</id><description><![CDATA[
+        
+        Robotlegs Support for IntelliJ
+        <ul>
+            <li>Adds a Robotlegs tool window to let you explore the mappings in your project.</li>
+
+            <li>Use CTRL + SHIFT + G to jump to a mapped class (from view->mediator, event->command, etc)
+            </li>
+
+            <li>File issues here: https://github.com/johnlindquist/open-source-plugins/issues
+            </li>
+        </ul>
+        
+        
+    ]]></description><version>0.4</version><vendor email="johnlindquist@gmail.com" url="http://johnlindquist.com">johnlindquist</vendor><idea-version min="n/a" max="n/a" since-build="80.8000" until-build="117.9999"/><change-notes><![CDATA[
+        
+        
+            0.4.1
+            Added simple sort for all columns<br>
+            0.4
+            Fixed for IntelliJ 11.1.1<br>
+            0.3
+            Added switching between mapped classes with ctrl+shift+G (think "Go to mapped class"). Next steps: I
+                need to clean up the code base before taking it any further, then start work on code generation.<br>
+            0.2
+            Fixed bugs from real-world user-testing (handling conditionals, multiple args, etc)
+            <br>
+            0.1
+            Initial Beta Release: Browse your project for mapped classes and inject a class with
+                right-click.<br>
+        
+        
+        ]]></change-notes><depends>JavaScript</depends><depends>com.intellij.modules.lang</depends><depends>com.intellij.modules.xml</depends><depends>com.intellij.modules.ultimate</depends><rating>00</rating></idea-plugin></category><ff>"Menu Components"</ff><category name="Menu Components"></category><ff>"Misc"</ff><category name="Misc"><idea-plugin downloads="1599" size="0" date="1331306201000" url=""><name>Color</name><id>Color</id><description><![CDATA[
+      Find and share color schemes on <a href="http://ideacolorschemes.com">ideacolorschemes.com</a>
+  ]]></description><version>0.1.6</version><vendor email="ideacolorschemes@gmail.com" url="http://ideacolorschemes.com">ideacolorschemes.com</vendor><idea-version min="n/a" max="n/a" since-build="111.63" until-build="117.9999"/><change-notes><![CDATA[
+      <ul>
+
+      <b>0.1.6 (2012-03-09)</b>
+      <li>Bug fix: throw NullPointerException sometimes</li>
+      <li>Load local cached schemes first</li>
+
+      <b>0.1.5 (2012-03-09)</b>
+      <li>Support console font</li>
+      <li>Bug fix: some colors upload and display incorrectly</li>
+
+      <b>0.1.4 (2012-03-05)</b>
+      <li>Bug fix: fuckin slow!</li>
+      <li>Synchronize update</li>
+
+      <b>0.1.3 (2012-03-04)</b>
+      <li>optimize memory usage</li>
+      <li>Bug fix: fail to recovery current scheme</li>
+
+      <b>0.1.2 (2012-03-03)</b>
+      <li>Bug fix: fail to download scheme</li>
+
+      <b>0.1.1 (2012-03-01)</b>
+      <li>Bug fix: cannot upload schemes</li>
+      <li>Preload all schemes when update</li>
+
+      <b>0.1 (2012-02-29)</b>
+      <li>Upload(share) your current color schemes to <a href="http://ideacolorschemes.com">ideacolorschemes.com</a></li>
+      <li>Download/Update your color schemes from <a href="http://ideacolorschemes.com">ideacolorschemes.com</a></li>
+
+      </ul>
+  ]]></change-notes><depends>com.intellij.modules.platform</depends><rating>3</rating></idea-plugin><idea-plugin downloads="5831" size="445513" date="1332873352000" url=""><name>Pomodoro-tm</name><id>Pomodoro-tm</id><description><![CDATA[Pomodoro timer]]></description><version>0.42</version><vendor email="" url="http://github.com/dkandalov/pomodoro-tm">mq0</vendor><idea-version min="n/a" max="n/a" since-build="80.8000" until-build="117.9999"/><change-notes><![CDATA[
+        
+        <ul>
+            <li>0.2 - added ring sound, status bar timer, popup notification, ctrl+shift+P shortcut</li>
+            <li>0.3 - added settings UI, ring volume</li>
+            <li>0.4 - modal window to block IntelliJ during break, option to hide tool window</li>
+            <li>0.42 - memory leak fix</li>
+        </ul>
+        
+        
+    ]]></change-notes><depends>com.intellij.modules.platform</depends><rating>5</rating></idea-plugin><idea-plugin downloads="131" size="447064" date="1331480326000" url=""><name>Pomodoro-tm-cd</name><id>Pomodoro-tm-cd</id><description><![CDATA[Pomodoro timer for coding dojo]]></description><version>2.0</version><vendor email="" url="https://github.com/AlexJudge/pomodoro-tm-cd">AlexJudge</vendor><idea-version min="n/a" max="n/a" since-build="80.8000" until-build="117.9999"/><change-notes><![CDATA[
+        
+        <ul>
+            <li>2.0 - min time interval 1 min, timer does not stop after break, sygnal rings after each time interval</li>
+        </ul>
+        
+        
+    ]]></change-notes><depends>com.intellij.modules.platform</depends><rating>00</rating></idea-plugin><idea-plugin downloads="16333" size="136097" date="1328428820000" url="http://myregexp.com/ideaPlugin.html"><name>RegexpTester</name><id>org.intellij.RegexpTester</id><description><![CDATA[Regular Expression Tester for IntelliJ IDEA.
+<br /> Allows you to experiment with Java regular expressions in a dynamic environment. 
+<br /> 
+<ul> 
+ <li>Full highlighting of regular expression syntax for an easy visual clue (including bracket matching and error detecting)</li> 
+ <li>Tooltips with context help will be shown when the mouse is over a part of the regex.</li> 
+ <li>Synchronized selection of regular expression and text: Just select part of the regexp to see which part of the text is matched by this part.</li> 
+</ul> Functionality of this plugin is available as java-applet at 
+<a href="http://myregexp.com/applet.html" rel="nofollow">http://myregexp.com/applet.html</a>]]></description><version>1.0.4</version><vendor email="sergey.evdokimov85@gmail.com" url="">Sergey Evdokimov</vendor><idea-version min="n/a" max="n/a" since-build="90.1" until-build="117.9999"/><change-notes><![CDATA[Fix compatibility with PhpStorm.]]></change-notes><depends>com.intellij.modules.lang</depends><rating>4.8</rating></idea-plugin><idea-plugin downloads="98" size="1666" date="1332852244000" url=""><name>Retarded Buttons Fix</name><id>RetardedButtonsFix</id><description><![CDATA[
+        By Swing default the Enter always fires default button regardless of selection by arrows or Tab 	.
+        This plugin fixes it so the focused button is fired with Enter.
+          
+	]]></description><version>1.0</version><vendor email="vojta.krasa@gmail.com" url="">Vojtech Krasa</vendor><idea-version min="n/a" max="n/a" since-build="90.0" until-build="117.9999"/><change-notes><![CDATA[]]></change-notes><depends>com.intellij.modules.lang</depends><rating>00</rating></idea-plugin><idea-plugin downloads="5835" size="12515" date="1322067935000" url=""><name>Scratch</name><id>Scratch</id><description><![CDATA[
+		
+				Quickly opens temporary IntelliJ text editor tab. Data is stored on application level.
+				
+				Usage:
+				<ul>
+					<li>Alt+C, Alt+C - opens default scratch;</li>
+					<li>Alt+C, Alt+S - opens list of all scratches.</li>
+				</ul>
+				
+		
+	]]></description><version>0.15</version><vendor email="dmitry.kandalov [at] gmail.com" url="https://github.com/dkandalov/scratch">Dmitry Kandalov</vendor><idea-version min="n/a" max="n/a" since-build="80.8000" until-build="117.9999"/><change-notes><![CDATA[
+        
+        <ul>
+            <li>0.11 - fixed bug when control symbols like 0x11 couldn't be saved</li>
+            <li>0.12 - bug fixing</li>
+            <li>0.13 - should work in IntelliJ 11</li>
+            <li>0.14 - should work in PhpStorm EAP</li>
+            <li>0.15 - NPE if there are no open projects</li>
+        </ul>
+        
+        
+    ]]></change-notes><depends>com.intellij.modules.platform</depends><rating>4.5</rating></idea-plugin><idea-plugin downloads="2066" size="656788" date="1335996124000" url="http://www.intellij.org/twiki/bin/view/Main/CharacterBrowser"><name>Unicode Browser</name><id>Unicode Browser</id><description><![CDATA[
+        This plugin allows you to browse and search characters and parts of the Unicode™ character set. Insert
+        characters into an editor in one of 10 forms. Decodes coded characters at the cursor position.
+    ]]></description><version>0.5.0-10.5</version><vendor email="campus@zumcampus.de" url="">Christoph Wagner</vendor><idea-version min="n/a" max="n/a" since-build="107.777" until-build="117.9999"/><change-notes><![CDATA[
+        ]]></change-notes><depends>com.intellij.modules.xml</depends><rating>00</rating></idea-plugin></category><ff>"Navigation"</ff><category name="Navigation"><idea-plugin downloads="3921" size="106593" date="1335376907000" url=""><name>AltN8</name><id>Alt n 8</id><description><![CDATA[
+        Open Alternate File: i.e. jump from source to test file, maven resource, html file, properties file, etc... configured using regular expressions.<br>
+        <br>
+        Usage: Just use [ALT]&[8] to popup all matching files.<br>
+        <br>
+        Thanks to LeapingFrogs.com for the original plugin.
+        
+    ]]></description><version>1.3.1</version><vendor email="" url="http://code.google.com/p/altn8">Minas Manthos</vendor><idea-version min="n/a" max="n/a" since-build="93.13" until-build="117.9999"/><change-notes><![CDATA[See <a href="http://code.google.com/p/altn8/wiki/ChangeNotes">change notes</a>.]]></change-notes><depends>com.intellij.modules.lang</depends><rating>4.7</rating></idea-plugin><idea-plugin downloads="4851" size="15363" date="1333304432000" url=""><name>BrowseWordAtCaret</name><id>BrowseWordAtCaret</id><description><![CDATA[
+      1. Allows to easily browse next/previous word at caret.<br>
+      2. Highlight other appearances of selected word.<br>
+      3. Copy/Cut effects to word at caret (if nothing seleceted)<br>
+      4. New EditorAction 'PasteReplace' to paste and replace word at caret.<br>
+      <br>
+      Keys:<br>
+      - Browse with [CTRL]&[ALT]&[UP]/[DOWN] (note: on default-keymap this shortcut is also for next/previous occurrence).<br>
+      - PasteReplace with [ALT]&[V].
+    ]]></description><version>2.3.0</version><vendor email="" url="http://code.google.com/p/browsewordatcaret">Minas Manthos</vendor><idea-version min="n/a" max="n/a" since-build="93.13" until-build="117.9999"/><change-notes><![CDATA[
+      2.3.0<br>
+      + Available for all IntelliJ Platform Products<br>
+      + Configurable via Color Settings Page (Settings/Editor/Colors&Fonts/BrowseWordAtCaret)<br>
+      2.2.1<br>
+      + Works now with all filetypes<br>
+      2.2.0<br>
+      + Settings dialog added<br>
+      2.1.2<br>
+      + minor changes<br>
+      2.1.0<br>
+      + Copy/Cut effects to word at caret (if nothing seleceted)<br>
+      + Paste and replace word at caret<br>
+      2.0.1<br>
+      + minor changes<br>
+      2.0.0<br>
+      + Highlight other appearances of browsing word and selected text<br>
+      1.1.0<br>
+      + better national language support (like german 'umlaute' etc...)<br>
+      + minor changes<br>
+      1.0.1<br>
+      + minor changes<br>
+      1.0.0<br>
+      + initial release
+    ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>5</rating></idea-plugin><idea-plugin downloads="2314" size="48424" date="1317109600000" url="https://github.com/sitano/intellij-code-outline/"><name>Code Outline 2</name><id>CodeOutline2</id><description><![CDATA[Shows a zoomed out "outline" of your code while you're editing it.]]></description><version>0.5.1</version><vendor email="john.koepi@gmail.com" url="">Ivan</vendor><idea-version min="n/a" max="n/a" since-build="93.13" until-build="117.9999"/><change-notes><![CDATA[
+        <b>In 0.5.1:</b>
+        <li> Fix to plugin manifest to support IntelliJ Platform (IntelliJ IDEA, RubyMine, WebStorm, PhpStorm, PyCharm and AppCode)
+        <b>In 0.5:</b>
+        <ul>
+        <li> Plugin does not work when running on Java 6 (JDK 6.0)
+        <li> Code Outline panel is not always rendered when open file or tab
+        <li> Exceptions when pointing to not existing place in code
+        <li> Not current panel opened if not last tab selected when opening project
+        <li> (Not a bug)
+                   Resizing Code Outline panel consume a lot of CPU cause repainted every tick.
+                   Repainting code is not regenerating img every scrollable area changed event occurred, but
+                   when resizing involves changes in visible empty area. It changes img height. This flow
+                   exists cause there is no scaling of rendered source.
+        <li> Windows jumps randomly when dragged when text too width and horizontal offset.
+        <li> (Not Resolved) Plugin not deal well with deleting large amounts of text when file is too large
+        <li> Not always image in the panel is rendered when switching for the first time throught a lot of
+        <li> In 10.5 there is no notifyPublisher method in FileEditorManagerEx
+        </ul>
+    ]]></change-notes><depends>com.intellij.modules.platform</depends><rating>00</rating></idea-plugin><idea-plugin downloads="1233" size="4130" date="1326400162000" url="http://plugins.intellij.net/plugin/?id=6318"><name>Identifier Highlighter Reloaded</name><id>Identifier Highlighter Reloaded</id><description><![CDATA[
+    
+    Gives you one-stroke way to navigate to next/previous identifier occurrence.
+    
+    Use Shift+Alt+Up and Shift+Alt+Down to navigate up and down to each identifier occurrence.
+    
+    Make sure that these shortcuts are not mapped to e.g. "Move Line Up" and "Move Line Down" in Keymap.
+    
+    Can be used with or without "Highlight usages of element at caret" enabled.
+    
+    Source available at <a href="http://github.com/olegych/ih-reloaded">http://github.com/olegych/ih-reloaded</a>.
+    
+  ]]></description><version>1.02</version><vendor email="" url="">OlegYch</vendor><idea-version min="n/a" max="n/a" since-build="80.8000" until-build="117.9999"/><change-notes><![CDATA[
+    
+    <ul>
+      <li>1.02
+        <ol>
+          <li>Marked as compatible with all IntelliJ platform IDEs.</li>
+        </ol>
+      </li>
+      <li>1.01
+        <ol>
+          <li>Better description.</li>
+        </ol>
+      </li>
+      <li>1.0
+        <ol>
+          <li>Initial version.</li>
+        </ol>
+      </li>
+    </ul>
+    
+  ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>3.5</rating></idea-plugin><idea-plugin downloads="1979" size="57085" date="1321542094000" url="https://github.com/johnlindquist/open-source-plugins"><name>QuickJump</name><id>QuickJump</id><description><![CDATA[
+    QuickJump allows you to quickly navigate the cursor to any position visible in the editor. Simply hit "ctrl+;" then start typing. Once options appear, hit Enter or the number key corresponding to the position where you want the cursor to move.
+    
+    ctrl+; Jump Only
+    
+    ctrl+shift+; Jump and Select
+    
+    ctrl+alt+; Jump and Autocomplete
+    
+    
+    When Selecting Enter or #
+    
+    ctrl+# New line after
+    
+    ctrl+shift+# New line before
+    
+    alt+# Space after
+    
+    ctrl+alt+# Space Before
+    
+    ]]></description><version>4.3</version><vendor email="johnlindquist@gmail.com" url="http://johnlindquist.com">johnlindquist
+    </vendor><idea-version min="n/a" max="n/a" since-build="110.365" until-build="117.9999"/><change-notes><![CDATA[
+        
+        
+            4.3
+            Fixing bug introduced with latest Intellij v11 eap
+            4.2
+            Favoring results on the same line over closer results on other lines.
+            4.1
+            Added ctrl+shift+alt+; to "Select from Caret". Hitting alt while selecting selects the space after your selection.
+            4.0
+            Added jump modifiers. Add line above/below and and space before/after
+            3.2
+            Minor optimizations and minor bug fixes for edges cases 
+            3.1
+            Support for Intellij 11 EAP, Webstorm 3 EAP, etc (108.XXX). Special characters now invoke quickjump on
+                the first keystroke.
+            3.0
+            Adding a ctrl+alt+; which automatically opens code completion
+            2.0
+            Added camelCase searching. Also, ctrl+shift+; start a quick jump that will select the entire word when
+                you make your target selection
+            1.1.1
+            Fixed minor bug where if you already had text selected, it didn't deselect before jumping.
+            1.1
+            You can now expand your search with ctrl+Enter. Adjusting popup sizes.
+            1.0
+            Initial Release
+        
+        
+        
+    ]]></change-notes><depends>com.intellij.modules.platform</depends><rating>4</rating></idea-plugin><idea-plugin downloads="1306" size="13154" date="1331434381000" url=""><name>Remote call</name><id>Remote call</id><description><![CDATA[
+		IntelliJ IDEA plugin for remote call some procedures.
+
+		At the moment it can open the files on http GET-request to localhost:8091 with "message" parameter looking like
+		"FileName.java:89" or "any/path/FileName.java:89".
+		In this case plugin will try to find the most appropriate file basing on the specified path in opened projects and
+		navigate to it.
+
+		Send requests permitted only from localhost.
+	]]></description><version>1.4</version><vendor email="zolotov@farpost.com" url="http://farpost.com">FarPost</vendor><idea-version min="n/a" max="n/a" since-build="80.8000" until-build="117.9999"/><change-notes><![CDATA[Support for additional \'column\' parameter]]></change-notes><depends>com.intellij.modules.platform</depends><rating>5</rating></idea-plugin><idea-plugin downloads="3030" size="73094" date="1330972518000" url="https://github.com/crazyproger/Tabdir"><name>Tabdir</name><id>ru.crazycoder.plugins.tabdir</id><description><![CDATA[
+        <p>Awesome replacement for IDEA's 'Show directory in editor tabs for non-unique filenames'.
+        If you have same named files in different directories this plugin will allow you to have directory names added to tab labels.
+        It only shows path differences so if you have "blog/controllers/index" and "news/controllers/index" it will add either [blog] or [news].
+        In setting tab 'Tabdir' you can control how prefixes will be formatted.</p>
+        <p>Per-project configuration allow specify different formatting rules for each directory in project.
+        To enable per-project configuration enable "<b>Use per project configuration</b>" checkbox(see screenshot №3)
+        and reopen settings window(need close with Ok or Apply buttons). After this you will find 'Tabdir' configuration
+        in project section(screenshot №4) in which different configurations can be specified. </p>
+
+        Note: that you should turn off IDE Settings → Editor tabs → Show directory in editor tabs for non-unique filenames.
+        
+    ]]></description><version>1.5</version><vendor email="" url="">Vladimir Rudev</vendor><idea-version min="n/a" max="n/a" since-build="95.429" until-build="117.9999"/><change-notes><![CDATA[
+        <ul>
+            <li>1.1 Add possibility to configure tab title format.</li>
+            <li>1.2 Fixed NPE for files with no path(in memory).</li>
+            <li>1.3 Add possibility to configure per project format for directories.</li>
+            <li>1.3.1 Share plugin to all IntelliJ Platform products.</li>
+            <li>1.4 Fixed NPE(was in phpstorm), update description.</li>
+            <li>1.5 Tabdir-4 issue fixed, copyright updated </li>
+        </ul>
+        
+    ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>4.6</rating></idea-plugin><idea-plugin downloads="3818" size="2174" date="1308818508000" url=""><name>TabFolder</name><id>TabFolder</id><description><![CDATA[Shows file folder name in the tab if there are several files in the project with this name.
+        It's useful for Django projects to distinguish files from different applications.]]></description><version>1.0.1</version><vendor email="" url="http://handyedit.com">HandyEdit</vendor><idea-version min="n/a" max="n/a" since-build="50.4155" until-build="117.9999"/><change-notes><![CDATA[
+        text
+  ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>5</rating></idea-plugin><idea-plugin downloads="50464" size="28452" date="1308672628000" url="http://www.intellij.org/twiki/bin/view/Main/TabSwitchPlugin"><name>TabSwitch</name><id>TabSwitch</id><description><![CDATA[
+    Open files/tabs switcher to quickly switch between tabs with less keystrokes than
+    Recent Files. Open files are selected from a list in most recently used order, similarly
+    to Alt-Tab in Windows or Ctrl-Tab in Opera. By default the action is mapped to
+    Alt-A, but another popular assignment is Ctrl-Tab.<br><br>
+
+    Thanks to Timur Zambalayev for the original plugin, Martin Fuhrer for a major contribution
+    in the form of a rewrite and Mark Scott for patching a bug. Follow further development of
+    <a href="https://github.com/BasLeijdekkers/TabSwitch">this plugin on GitHub</a> or follow
+    <a href="http://twitter.com/inspectorbas">me on twitter</a> for announcements and other things.
+    
+  ]]></description><version>2.1.9</version><vendor email="basleijdekkersYour Hat@gmail.com" url="http://twitter.com/inspectorbas">Bas Leijdekkers (remove Your Hat to mail me;)</vendor><idea-version min="n/a" max="n/a" since-build="99.18" until-build="117.9999"/><change-notes><![CDATA[
+    2.1.9: Switch to open tab even if it is located in a different split pane.<br>
+    2.1.8: The TabSwitch actions are now available during background indexing in Maia.<br>
+    2.1.7: Fix for mouse over popup changes selection problem reported by Michael Bushe.<br>
+    2.1.6: RubyMine compatible version.<br>
+  ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>4.2</rating></idea-plugin></category><ff>"OS Integration"</ff><category name="OS Integration"><idea-plugin downloads="18423" size="52564" date="1289639330000" url="http://code.google.com/p/nativeneighbourhood/"><name>Native Neighbourhood</name><id>Native Neighbourhood</id><description><![CDATA[Provides some actions to integrate IDEA into the native desktop environment.
+        <p>Actions include executing the currently active file in the platform's <b>default
+        application</b>, showing the active file in the platform <b>file manager</b> and opening a <b>command
+        shell</b> in the active file's directory.
+        </p><p>
+        Integrates the actions into Tools-menu and main toolbar and provides an entry for the
+        <b>SelectInTarget</b>-Menu to show in file manager.
+        </p><p>
+        Additionally a custom <b>binary file type</b> is registered and associated with several extensions.
+        These files may be executed in the platform's default application by double-clicking them
+        in the project view, for example.
+        </p><p>
+        Furthermore from native file manager <b>files may be dropped</b> on unused areas of the idea
+        frame (empty space in toolwindowbars, editor tab area, toolbar, menubar and statusbar).
+        </p><p>
+        The action commands may be configured in config/options/other.xml in section
+        NativeNeighbourhoodPlugin. Supported replacement variables are
+        $FilePath$, $FileDir$, $FileName$ and $PluginsHome$. All Icons
+        are loaded from configured "iconsDir" below /org/intellij/plugins/nativeNeighbourhood/icons/.
+        </p><p>
+        The labels may be customized in META-INF/plugin.xml in plugin directory.
+        The associated extensions may be configured in other.xml or using the filetypes-applet
+        in IDEA configuration.
+        </p>
+    ]]></description><version>1.3.0</version><vendor email="f.bruch@gmx.net" url="http://plugins.intellij.net/plugin/?id=38">Frank Bruch</vendor><idea-version min="n/a" max="n/a" since-build="80.8000" until-build="117.9999"/><change-notes><![CDATA[
+    
+    Release 1.3.0 - Support other IDEs based on the IntelliJ platform
+    <ul><li>
+    Should now work on RubyMine, PyCharm, PhpStorm, WebStorm etc.
+    </li></ul>
+    Release 1.2.2 - Minor issues
+    <ul><li>
+    Fix: Preventing complete reindexing on every start for IDEA 8 and later. (Open API Change:
+    <a href="http://youtrack.jetbrains.net/issue/IDEA-25207">IDEA-25207</a>)
+    </li><li>
+    Feature: Show directory path in terminal window title on windows
+    (<a href="http://code.google.com/p/nativeneighbourhood/issues/detail?id=3">Issue 3</a>)
+    </li></ul>
+    Release 1.2.1 - Bugfixes
+    <ul><li>
+    Fixing Command Shell on Windows.
+    </li><li>
+    Fixing FileManager & Command Shell on Mac OS X.
+    </li></ul>
+    Release 1.2 - Linux support
+    <ul><li>
+    Linux/Gnome Support out of the box (many thanks to Nikita Belenkiy).
+    </li><li>
+    Linux/KDE Support out of the box (thanks to Clifton Craig).
+    </li></ul>
+    Release 1.1.1
+    <ul><li>
+    Platform's default application executes in selected file's parent directory.
+    </li><li>
+    Bugfix concerning problem with different project-frames.
+    </li></ul>
+    Release 1.1 - Dropping files, Mac OS X Support
+    <ul><li>Dropping of files from native file manager opens idea editors (known issue:
+            Dropping unknown filetypes silently fails.) Drop Targets are unused areas of the idea
+            frame (empty space in toolwindowbars, editor tab area, toolbar, menubar and statusbar).
+    </li><li>Mac OS X Support out of the box (many thanks to Denis N. Antonioli).
+             Initializing with default configuration according to autodetected Mac OS X is only done
+             for missing config entry "NativeNeighbourhoodPlugin" in other.xml.
+    </li><li>Icons are loaded using configured subdir (other.xml), no more need to edit plugin.xml.
+    </li></ul>
+    
+    ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>4</rating></idea-plugin></category><ff>"Plugin Development"</ff><category name="Plugin Development"><idea-plugin downloads="11250" size="89663" date="1321835079000" url="https://github.com/cmf/psiviewer"><name>PsiViewer</name><id>PsiViewer</id><description><![CDATA[A Program Structure Interface (PSI) tree viewer. This plugin may be useful for developers who are considering using the PSI interface in their own plugins.]]></description><version>3.27.56</version><vendor email="" url="">Andrew Armstrong, Bas Leijdekkers, Vince Mallet, Ole Matzura, Jacques Morel, Colin Fleming, Jon Akhtar</vendor><idea-version min="n/a" max="n/a" since-build="110.129" until-build="117.9999"/><change-notes><![CDATA[<ul>
+    <li>Avoided <i>Should not be called on Chameleons</i> assertion (via an ugly hack, so it might happen again)</li>
+    <li>Updated to use Java 1.5 generics</li>
+</ul>
+]]></change-notes><depends>com.intellij.modules.lang</depends><rating>4.1</rating></idea-plugin></category><ff>"TeamWork"</ff><category name="TeamWork"><idea-plugin downloads="5779" size="226920" date="1315410925000" url=""><name>IntelliJ Configuration Server Plugin</name><id>IdeaServerPlugin</id><description><![CDATA[Supports sharing settings between installations of IntelliJ Platform based products used by the same developer on different computers]]></description><version>1.0.3</version><vendor email="" url="">JetBrains</vendor><idea-version min="n/a" max="n/a" since-build="104.177" until-build="117.9999"/><change-notes><![CDATA[]]></change-notes><depends>com.intellij.modules.ultimate</depends><depends>com.intellij.modules.vcs</depends><rating>3</rating></idea-plugin><idea-plugin downloads="295" size="70712" date="1327062900000" url=""><name>wide-task-browser</name><id>wide-task-browser</id><description><![CDATA[Displays complete task list]]></description><version>0.1</version><vendor email="" url="">ol-loginov</vendor><idea-version min="n/a" max="n/a" since-build="80.8000" until-build="117.9999"/><change-notes><![CDATA[Displays list of current tasks servers with it\'s tasks]]></change-notes><depends>com.intellij.modules.lang</depends><depends>com.intellij.tasks</depends><rating>00</rating></idea-plugin></category><ff>"Tools Integration"</ff><category name="Tools Integration"><idea-plugin downloads="54418" size="5530217" date="1331809123000" url="http://www.atlassian.com/software/ideplugin/"><name>Atlassian Connector for IntelliJ IDE</name><id>Atlassian Connector for IntelliJ IDE</id><description><![CDATA[
+		
+		Atlassian Connector for IntelliJ IDE provides integration for the following Atlassian products:
+		<ul>
+			<li>JIRA 3.12 and above</li>
+			<li>Bamboo 2.7 and above</li>
+			<li>Crucible 2.4 and above</li>
+			<li>FishEye 2.4 and above</li>
+		</ul>
+		
+	]]></description><version>3.0.4, SVN:1203151109</version><vendor email="" url="http://www.atlassian.com">Atlassian</vendor><idea-version min="n/a" max="n/a" since-build="95.627" until-build="117.9999"/><change-notes><![CDATA[
+		
+Change Notes
+<ol>
+	<li>Compatibility with IDEA 11</li>
+</ol>
+
+
+<p>Fore more information please see the <a target="_blank" href="q" rel="nofollow">Release Notes</a>.</p>
+	
+	]]></change-notes><depends>Subversion</depends><depends>JUnit</depends><depends>com.intellij.modules.lang</depends><depends>com.intellij.tasks</depends><rating>3.7</rating></idea-plugin><idea-plugin downloads="2235" size="134603" date="1335451083000" url=""><name>Command Line Tool Support</name><id>com.jetbrains.php.framework</id><description><![CDATA[Supports command execution.
+    Provides completion and parameter info for Zend Framework Tool, Symfony, third party command-line tools via XML descriptor.
+  ]]></description><version>117.257</version><vendor email="" url="http://jetbrains.com/phpstorm">JetBrains</vendor><idea-version min="n/a" max="n/a" since-build="112.0" until-build="117.9999"/><change-notes><![CDATA[PhpStorm/WebStorm 4.0.1 version]]></change-notes><depends>com.intellij.modules.xml</depends><depends>com.jetbrains.php</depends><depends>com.intellij.modules.ultimate</depends><rating>00</rating></idea-plugin><idea-plugin downloads="23909" size="285755" date="1336580604000" url="https://github.com/ronniekk/css-x-fire"><name>CSS-X-Fire</name><id>CSS-X-Fire</id><description><![CDATA[
+        <p>Connects Firebug CSS editor with any IDE with CSS capabilities (IntelliJ IDEA Ultimate, PhpStorm, WebStorm, PyCharm, RubyMine).</p>
+        <p>Please read the installation guidelines here: <a href="http://code.google.com/p/css-x-fire/wiki/Installation">http://code.google.com/p/css-x-fire/wiki/Installation</a></p>
+        <p>Style with pleasure!</p>
+    ]]></description><version>1.28</version><vendor email="ronnie.kolehmainen at gmail.com" url="https://github.com/ronniekk/css-x-fire">Ronnie Kolehmainen</vendor><idea-version min="n/a" max="n/a" since-build="111.1" until-build="117.9999"/><change-notes><![CDATA[
+        <ul>1.28
+            <li><a href="https://github.com/ronniekk/css-x-fire/issues/7">Issue 7</a> Fix for NullPointerException.</li>
+        </ul>
+        <ul>1.27
+            <li><a href="https://github.com/ronniekk/css-x-fire/issues/2">Issue 2</a> Added folders with popup actions in tree view.</li>
+            <li><a href="https://github.com/ronniekk/css-x-fire/issues/1">Issue 1</a> Resolve mixins and variables defined in other files.</li>
+        </ul>
+        <ul>1.26
+            <li>Variables support.</li>
+            <li>Mixins support.</li>
+        </ul>
+        <ul>1.25
+            <li>Bumped Firefox version to 12.</li>
+        </ul>
+        <ul>1.24
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=27">Issue 27</a> Support for the !important construct.</li>
+            <li>Support for Firefox 9.</li>
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=29">Issue 29</a> Fix for false positives in nested rules.</li>
+        </ul>
+        <ul>1.23
+            <li>Support for Firefox 8.</li>
+            <li>
+                <a href="http://code.google.com/p/css-x-fire/issues/detail?id=4">Issue 4</a> and
+                <a href="http://code.google.com/p/css-x-fire/issues/detail?id=5">Issue 5</a>
+                Initial support for Less and Sass (nested rules).
+            </li>
+        </ul>
+        <ul>1.22
+            <li>Internal caching of selector and media query searches.</li>
+        </ul>
+        <ul>1.21
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=23">Issue 23</a> Fixed compability issues with latest EAP's.</li>
+        </ul>
+        <ul>1.20
+            <li>Enabled (automatic) xpi updates from Firefox.</li>
+            <li>Support for Firefox 7.</li>
+        </ul>
+        <ul>1.19
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=22">Issue 22</a> Fixed hotkey error.</li>
+            <li>Support custom key binds for all actions.</li>
+        </ul>
+        <ul>1.18
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=21">Issue 21</a> Reduce filter for currently opened files.</li>
+            <li>Support for Firefox 5.</li>
+        </ul>
+        <ul>1.17
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=18">Issue 18</a> Quick navigation from all nodes with double click or middle mouse click.</li>
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=19">Issue 19</a> Toggle option for automatic expand of changes tree.</li>
+        </ul>
+        <ul>1.16
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=17">Issue 17</a> Spam protection when using arrow keys in Firebug.</li>
+        </ul>
+        <ul>1.15
+            <li>New settings form.</li>
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=11">Issue 11</a> Configurable route mappings.</li>
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=14">Issue 14</a> Clear pending changes on page leave or refresh (optional settings).</li>
+        </ul>
+        <ul>1.14
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=13">Issue 13</a> Made server IP configurable for remote setup (in about:config, filter on cssxfire for options).</li>
+        </ul>
+        <ul>1.13
+            <li>Also delete trailing semi-colon when removing a declaration.</li>
+        </ul>
+        <ul>1.12
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=12">Issue 12</a> Compatible with Firefox 4.</li>
+        </ul>
+        <ul>1.11
+            <li>Fixed linking against latest EAPs.</li>
+        </ul>
+        <ul>1.10
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=8">Issue 8</a> Support for addition of selectors.</li>
+            <li>Enqueue incoming changes when in 'dumb' mode (when indices are updated in background).</li>
+        </ul>
+        <ul>1.9
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=6">Issue 6</a> Support for CSS media queries.</li>
+            <li>Improved selector search/match accuracy.</li>
+        </ul>
+        <ul>1.8
+            <li>Added navigation buttons (prev, next) in toolbar with automatic jump-to-code.</li>
+            <li>Toolbar filter(s) group with popup and proper descriptions.</li>
+        </ul>
+        <ul>1.7
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=7">Issue 7</a> Reduce filter for incoming changes (match specific file only when possible).</li>
+        </ul>
+        <ul>1.6
+            <li>Fixed updating of UI - keeping tree state and put expand icon on correct nodes.</li>
+            <li>Error message and disable tool if local web server cannot be started.</li>
+        </ul>
+        <ul>1.5
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=2">Issue 2</a> Support for Firebug Lite (Google Chrome and Firefox).</li>
+            <li>Changes which are invalid may only be removed.</li>
+        </ul>
+        <ul>1.4
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=3">Issue 3</a> Trigger automatic upload etc. when applying changes.</li>
+        </ul>
+        <ul>1.3
+            <li><a href="http://code.google.com/p/css-x-fire/issues/detail?id=1">Issue 1</a> Installation help.</li>
+            <li>Removed Firefox constraint in internal web server.</li>
+        </ul>
+        <ul>1.2
+            <li>Support for removing properties in Firebug.</li>
+            <li>Fixed broken images on help page when not using Firefox.</li>
+        </ul>
+        <ul>1.1
+            <li>Track modifications in source code and invalidate elements in tree view.</li>
+            <li>Offer help page dialog on first run or after upgrade.</li>
+            <li>Declaration nodes (leafs) are navigatable with double-click or enter key.</li>
+            <li>Right-click a node selects it and brings up popup menu.</li>
+        </ul>
+        <ul>1.0
+            <li>Initial version</li>
+        </ul>
+    
+    ]]></change-notes><depends>com.intellij.modules.lang</depends><depends>com.intellij.css</depends><depends>org.jetbrains.plugins.less</depends><depends>org.jetbrains.plugins.sass</depends><rating>4.9</rating></idea-plugin><idea-plugin downloads="1866" size="1006594" date="1335142926000" url=""><name>Heroku Integration</name><id>Heroku Integration</id><description><![CDATA[Heroku integration for all Jetbrains products.
+        Stores credentials and API-token, lists existing apps, allows current project to be connected to an app, new app creation, deploy.
+        Handling of addons, processes, scaling, collaborators, logs, environment and releases.
+    ]]></description><version>0.3.9</version><vendor email="" url="">Michael Hunger</vendor><idea-version min="n/a" max="n/a" since-build="80.8000" until-build="117.9999"/><change-notes><![CDATA[update to heroku APi 0.6, some UI improvements, some internal cut-down due to incompatible open-api changes]]></change-notes><depends>Git4Idea</depends><depends>com.intellij.modules.vcs</depends><depends>com.intellij.modules.platform</depends><depends>com.intellij.modules.lang</depends><rating>00</rating></idea-plugin><idea-plugin downloads="4557" size="281372" date="1334651144000" url=""><name>Jenkins Control Plugin</name><id>Jenkins Control Plugin</id><description><![CDATA[A Jenkins Plugin for Intellij for IDEA 10+]]></description><version>0.5.1</version><vendor email="david.boissier [at] gmail [dot] com" url="http://codinjutsu.blogspot.com">David Boissier</vendor><idea-version min="n/a" max="n/a" since-build="107.587" until-build="117.9999"/><change-notes><![CDATA[
+<ul>Version 0.5.1
+    <li>[Fix] Regression : When the server url is not set (or set to a dummy url), the plugin should not try to connect</li>
+    <li>[Fix] Browser Panel : OneTouch Expandable should be accessible</li>
+</ul>
+<ul>Version 0.5.0
+    <li>[Add] Job Tree : Search job panel (CTRL + F, F3 to search forward, SHIFT + F3 to search backward, the search feature is cyclic)</li>
+    <li>[Add] Jenkins Widget that displays either a blue icon (no broken build on selected view) or else a red icon with the number of the remaining broken builds</li>
+    <li>[Upd] Increase loading performance</li>
+    <li>[Fix] Connection issue when Job and Rss autorefresh are both enabled</li>
+    <li>[Fix] Configuration Panel: File input fields should have a validator</li>
+    <li>[Fix] Configuration Panel: Rename 'Password' to 'Password file'</li>
+</ul>
+ ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>3.9</rating></idea-plugin><idea-plugin downloads="6629" size="397724" date="1324065604000" url="https://github.com/ishchenko/idea-nginx"><name>nginx Support</name><id>ideanginx9</id><description><![CDATA[
+    
+        nginx server support for IntelliJ IDEA<br>
+        Runs/reloads configuration/stops nginx server from IDEA.<br>
+        Configuration file syntax highlighting, auto-completion and inspections.
+    
+    ]]></description><version>0.0.12</version><vendor email="" url="https://github.com/ishchenko/idea-nginx">Max Ishchenko</vendor><idea-version min="n/a" max="n/a" since-build="111.69" until-build="117.9999"/><change-notes><![CDATA[
+        <b>0.0.12</b>
+        <ul>
+            <li>Built for IDEA 11 and later</li>
+        </ul>
+        <b>0.0.11</b>
+        <ul>
+            <li>-V output pattern parser fixed again, should work for all versions</li>
+            <li>Documentation and autocompletion update for nginx 1.1.1</li>
+            <li>Built for IDEA 10.5.x and later</li>
+        </ul>
+        <b>0.0.10</b>
+        <ul>
+            <li>-V output pattern fixed for versions 0.8.23+ and 0.7.64+</li>
+            <li>Works for all Jetbrains platform products (since build 93.94)</li>
+            <li>Documentation and autocompletion update for nginx 0.8.35</li>
+        </ul>
+        <b>0.0.9</b>
+        <ul>
+            <li>Now only "Run" button is enabled for nginx run configuration.</li>
+            <li>Works for WebIDE.</li>
+            <li>Documentation and autocompletion update.</li>
+        </ul>
+        <b>0.0.8</b>
+        <ul>
+            <li>Documentation and autocompletion update.</li>
+        </ul>
+        <b>0.0.7</b>
+        <ul>
+            <li>Open included files with ctrl+b (Go to Declaration).</li>
+        </ul>
+        <b>0.0.6</b>
+        <ul>
+            <li>Autoformat support.</li>
+        </ul>
+        <b>0.0.5</b>
+        <ul>
+            <li>Quick documentation lookup support for directives and variables. Only for those that can be found at wiki.nginx.org.</li>
+            <li>$arg_&lt;PARAM&gt;, $http_&lt;PARAM&gt; and $cookie_&lt;PARAM&gt; are not highlighted as unknown anymore.</li>
+            <li>Warning when choosing nginx executable. Running "nginx -V" can be cancelled and default parameter values will be used.</li> 
+        </ul>
+        <b>0.0.4</b>
+        <ul>
+            <li>Basic $variable support. Autocompletion and name checks are available. No checks for parent context and no support for variables in strings yet.</li>
+        </ul>
+        <b>0.0.3</b>
+        <ul>
+            <li>Log files can be shown in tabs next to console. Important: "Horizontal toolbars" layout mode must be turned on
+            (vote http://youtrack.jetbrains.net/issue/IDEA-44882 to fix)</li>
+        </ul>
+        <b>0.0.2</b>
+        <ul>
+            <li>Autocompletion is context-aware</li>
+            <li>Directive list is taken from sources, not from docs</li>
+            <li>More advanced inspections like checking if a directive can reside in a context</li>
+            <li>Should work on Mac</li>
+        </ul>
+        <b>0.0.1</b>
+        <ul>
+            <li>First release. Won't work for Mac.</li>
+            <li>Basic autocompletion and inspections.</li>
+        </ul>
+    
+    ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>5</rating></idea-plugin><idea-plugin downloads="43287" size="8114287" date="1330619104000" url="http://www.jetbrains.com/teamcity/"><name>TeamCity Integration</name><id>Jetbrains TeamCity Plugin</id><description><![CDATA[Integration with JetBrains TeamCity - innovative solution for continuous integration and build management.]]></description><version>7.21241</version><vendor email="support@jetbrains.com" url="http://www.jetbrains.com/teamcity/">Jetbrains, s.r.o.</vendor><idea-version min="n/a" max="n/a" since-build="90.10000" until-build="117.9999"/><change-notes><![CDATA[Updated to match TeamCity 7.0. If you are using TeamCity other then 7.0, you will be prompted to download corresponding plugin from your TeamCity server on first login.]]></change-notes><depends>PerforceDirectPlugin</depends><depends>ClearcasePlugin</depends><depends>CVS</depends><depends>Subversion</depends><depends>SourceSafe</depends><depends>Starteam</depends><depends>Git4Idea</depends><depends>Coverage</depends><depends>Emma</depends><depends>com.intellij.modules.lang</depends><depends>TestNG-J</depends><depends>JUnit</depends><rating>3</rating></idea-plugin><idea-plugin downloads="1857" size="67688" date="1311030423000" url="http://www.mojojungle.com/webos-storm"><name>webOS-Storm</name><id>com.mojojungle.webosstorm</id><description><![CDATA[Developer tools for HP webOS developers. Requires a valid installation of the HP webOS SDK 2.1 or 3.0 to function properly.]]></description><version>1.2</version><vendor email="j.kovacs@mojojungle.com" url="http://www.mojojungle.com">MojoJungle</vendor><idea-version min="n/a" max="n/a" since-build="99.18" until-build="117.9999"/><change-notes><![CDATA[
+			<ul>
+			<li>1.2
+				<ul>
+					<li>Lets you create run configurations for projects that are not in the top level directory (via right click in Project view)</li>
+				</ul>
+			</li>
+			<li>1.1
+				<ul>
+					<li>Compatability with WebIDE 2.0 and webOS SDK 2.1</li>
+				</ul>
+			</li>
+			</ul>
+			]]></change-notes><depends>com.intellij.modules.lang</depends><rating>00</rating></idea-plugin></category><ff>"UI"</ff><category name="UI"><idea-plugin downloads="17995" size="24466" date="1306656037000" url="http://www.intellij.org/twiki/bin/view/Main/BackgroundImage"><name>BackgroundImage</name><id>BackgroundImage</id><description><![CDATA[Plugin that loads a background image into editors]]></description><version>0.10.1</version><vendor email="chris@kimptoc.net" url="">Eric Sheffer/Charles DeCroes/Chris Kimpton</vendor><idea-version min="n/a" max="n/a" since-build="99.18" until-build="117.9999"/><change-notes><![CDATA[
+                <ul>
+                 <li>Support for IDEA 10.5 and above.
+                </ul>
+                   ]]></change-notes><depends>com.intellij.modules.lang</depends><rating>4.7</rating></idea-plugin><idea-plugin downloads="893" size="332938" date="1315089123000" url=""><name>Console Beep</name><id>Console Beep</id><description><![CDATA[Plays a sound when a certain text appears in console]]></description><version>0.2</version><vendor email="" url="https://github.com/ishchenko/idea-console-beep">Max Ishchenko</vendor><idea-version min="n/a" max="n/a" since-build="107.307" until-build="117.9999"/><change-notes><![CDATA[
+        <b>0.2</b>
+        <ul>
+            <li>Four sounds</li>
+            <li>Selecting sound type in context menu</li>
+        </ul>
+        <b>0.1</b>
+        <ul>
+            <li>Initial version, single sound</li>
+        </ul>
+    
+    ]]></change-notes><depends>com.intellij.modules.platform</depends><rating>00</rating></idea-plugin></category><ff>"Unit Testing"</ff><category name="Unit Testing"><idea-plugin downloads="937" size="18065184" date="1310474970000" url="http://jschilicat.chilicat.net"><name>JsChilicat</name><id>JsChilicat</id><description><![CDATA[
+        JsChilicat is a javascript test framework integration for intellij idea. JsChilicat is based on Rhino and EnvJs
+        for headless JavaScript testing.
+        As testframework is QUnit in use. The plugin will add a new Run configuration JsChilicat which let you configure
+        a source and a test directory.
+
+        It will present the test results in a JUnit style.
+
+        Added local server for Ajax tests. JsChilicate supports now to write a server interface completely in
+        java script. It allows the user to write a mock server for AJAX api tests in a easy way.
+        Currently is it possible to receive Forms and JSON objects ans to send JSON objects back.
+        Please download the latest jsChilicat release bundle form the project page.
+
+        Feedback is welcome.
+    ]]></description><version>1.2.1</version><vendor email="dkuffner@chilicat.net" url="http://jschilicat.chilicat.net">Chilicat</vendor><idea-version min="n/a" max="n/a" since-build="107.105" until-build="117.9999"/><change-notes><![CDATA[Intelij 10.5 compatible. Selenium upgrade.]]></change-notes><depends>com.intellij.modules.lang</depends><depends>com.intellij.modules.platform</depends><rating>5</rating></idea-plugin><idea-plugin downloads="13512" size="6236995" date="1335451077000" url="http://confluence.jetbrains.net/display/WI/JsTestDriver+IntelliJ+plugin"><name>JSTestDriver Plugin</name><id>JSTestDriver Plugin</id><description><![CDATA[Execute JavaScript unit tests using JsTestDriver]]></description><version>117.257</version><vendor email="js-test-driver@googlegroups.com" url="http://code.google.com/p/js-test-driver/">Google; JetBrains</vendor><idea-version min="n/a" max="n/a" since-build="117.0" until-build="118.0"/><change-notes><![CDATA[
+    ]]></change-notes><depends>com.intellij.modules.lang</depends><depends>org.jetbrains.plugins.yaml</depends><depends>com.intellij.modules.yaml</depends><depends>JavaScript</depends><depends>Coverage</depends><depends>com.intellij.modules.coverage</depends><rating>3</rating></idea-plugin><idea-plugin downloads="1317" size="52483" date="1327149381000" url=""><name>NUnitJS</name><id>NUnitJS</id><description><![CDATA[NUnitJS integration plugin, NUnitJS is a test framework for NodeJS]]></description><version>1.3</version><vendor email="" url="nunitjs.org">Fabio Montanari</vendor><idea-version min="n/a" max="n/a" since-build="107.658" until-build="118.0"/><change-notes><![CDATA[]]></change-notes><depends>NodeJS</depends><depends>com.intellij.modules.lang</depends><rating>4</rating></idea-plugin><idea-plugin downloads="7265" size="59902" date="1329150837000" url="https://github.com/oker1/phpunit_codecoverage_display"><name>PHPUnit code coverage</name><id>PHPUnit code coverage</id><description><![CDATA[Displays PHPUnit code coverage of file in the editor.]]></description><version>0.2.1</version><vendor email="zsolt@takacs.cc" url="https://github.com/oker1/phpunit_codecoverage_display">Zsolt Takacs</vendor><idea-version min="n/a" max="n/a" since-build="107.120" until-build="118.0"/><change-notes><![CDATA[
+        ]]></change-notes><depends>com.intellij.modules.platform</depends><rating>4.3</rating></idea-plugin></category><ff>"VCS Integration"</ff><category name="VCS Integration"><idea-plugin downloads="9742" size="468488" date="1334302651000" url="https://bitbucket.org/atlassian/jetbrains-bitbucket-connector/"><name>Bitbucket</name><id>org.bitbucket.connector</id><description><![CDATA[The Bitbucket plugin enables you to checkout your existing Bitbucket repository and auto-open it as a project or share a project on Bitbucket instantly.]]></description><version>1.1.6</version><vendor email="support@bitbucket.org" url="http://bitbucket.org/">Bitbucket</vendor><idea-version min="n/a" max="n/a" since-build="107.105" until-build="118.0"/><change-notes><![CDATA[
+    <p>1.1.6
+        <ul>
+            <li>Share repository fix: progress hangs</li>
+        </ul>
+    </p>
+    <p>1.1.5
+        <ul>
+            <li>Tasks: repository selection fix</li>
+        </ul>
+    </p>
+    <p>1.1.4
+        <ul>
+            <li>Added proxy support</li>
+        </ul>
+    </p>
+    <p>1.1.3
+        <ul>
+            <li>Task: add server fix: server URL</li>
+        </ul>
+    </p>
+    <p>1.1.2
+        <ul>
+            <li>getCustomIcon fix: new tasks API support (PHP Storm 3 etc)</li>
+        </ul>
+    </p>
+    <p>1.1.1
+        <ul>
+            <li>directoryCheckedOut fix: new VCS API support (PHP Storm 3 etc)</li>
+        </ul>
+    </p>
+    <p>1.1
+        <ul>
+            <li>Checkout / publish project by SSH</li>
+            <li>Repository access by HTTP fix: if login or password contains special URL characters (?, &, =)</li>
+            <li>Bitbucket tasks integration</li>
+        </ul>
+    </p>
+  ]]></change-notes><depends>com.intellij.modules.lang</depends><depends>com.intellij.tasks</depends><depends>hg4idea</depends><depends>Git4Idea</depends><rating>3.7</rating></idea-plugin><idea-plugin downloads="9041" size="875987" date="1297772060000" url="http://launchpad.net/bzr4j"><name>Bzr4IntelliJ</name><id>bzr4intellij</id><description><![CDATA[
+  
+  <b>IntelliJ IDEA</b> plugin for Bazaar VCS integration.<br>
+  <p>
+  System Requirements:
+  <ul>
+    <li>IntelliJ IDEA 10+ (Ultimate or Community)
+    <li>Java 5+
+    <li>Bazaar 2.0+
+    <ul>
+      <li>xmloutput plugin
+    </ul>
+  </ul>
+  
+  ]]></description><version>2.6.1</version><vendor email="patrick@woodworth.org" url="http://bzr4j.emergent.org/">Patrick Woodworth</vendor><idea-version min="n/a" max="n/a" since-build="103.72" until-build="118.0"/><change-notes><![CDATA[
+  
+  Changes since 2.6.0
+  <ul>
+    <li>[bugfix] <a href="https://launchpad.net/bugs/716279">716279</a>
+  </ul>
+  Changes since 2.4.3
+  <ul>
+    <li>[bugfix] <a href="https://launchpad.net/bugs/620420">620420</a>
+  </ul>
+  Changes since 2.4.2
+  <ul>
+    <li>[enhancement] Less strict XML handling (thanks Ian)
+    <li>[enhancement] Support for lightweight checkouts (thanks Ian)
+  </ul>
+  Changes since 2.4.1
+  <ul>
+    <li>[bugfix] <a href="https://launchpad.net/bugs/587035">587035</a>
+    <li>[bugfix] <a href="https://launchpad.net/bugs/531260">531260</a>
+    <li>[bugfix] <a href="https://launchpad.net/bugs/534959">534959</a>
+  </ul>
+  Changes since 2.4.0
+  <ul>
+    <li>[bugfix] <a href="https://launchpad.net/bugs/546925">546925</a>
+    <li>[bugfix] <a href="https://launchpad.net/bugs/582772">582772</a>
+  </ul>
+  Changes since 2.3.1
+  <ul>
+    <li>[enhancement] Updated to support IDEA 9.0.2.
+  </ul>
+  Changes since 2.3.0
+  <ul>
+    <li>[bugfix] <a href="https://launchpad.net/bugs/527601">527601</a>
+    <li>[bugfix] <a href="https://launchpad.net/bugs/528067">528067</a>
+  </ul>
+  Changes since 2.1.1
+  <ul>
+    <li>[feature] Built-in error reporting.
+    <li>[feature] Auto-correction of misconfigured roots.
+    <li>[enhancement] Various improvements throughout.
+  </ul>
+  Changes since 2.1.0
+  <ul>
+    <li>[bugfix] Suppress inappropriate error dialog popups when invoking commit or rename actions.
+  </ul>
+  Changes since 2.0.0
+  <ul>
+    <li>[enhancement] Better integration with IDEA due to revamp based on the hg4idea plugin (thanks Victor!)
+    <li>[bugfix] Plays nicer with IntelliJ's builtin shelving capabilities.
+    <li>[bugfix] Plays nicer in projects with a heterogeneous VCS configuration.
+  </ul>
+  Changes since 1.1.9
+  <ul>
+    <li>[feature] Supports IntelliJ IDEA 9.0
+  </ul>
+  
+  ]]></change-notes><depends>com.intellij.modules.vcs</depends><rating>3.7</rating></idea-plugin><idea-plugin downloads="11751" size="241473" date="1270734211000" url=""><name>MKS</name><id>MKS</id><description><![CDATA[
+    
+Integrates MKS Source Integrity with IDEA 
+See <a href="http://code.google.com/p/ideamksplugin/">here</a> for the googlecode project
+
+  ]]></description><version>0.8.1</version><vendor email="" url="http://code.google.com/p/ideamksplugin/">Eric Sheffer, Thibaut Fagart</vendor><idea-version min="n/a" max="n/a" since-build="94.426" until-build="118.0"/><change-notes><![CDATA[<ul>
+    <li>0.8.1 : IDEA 9.x compatibility
+    </li>
+    <li>0.8 : See  <a href="http://code.google.com/p/ideamksplugin/issues/list?q=label%3AMilestone%20label%3ARelease0.8&can=1">googlecode issues resolved in 0.8</a>
+	Main changes
+	Support for MKS 2007.
+	Align on new IDEA 9 VCS OpenAPI
+	Support for viewing the MKS change package associated to a IDEA changelist
+    </li>
+	<li>0.7.4 This a bugfix release. See  <a href="http://code.google.com/p/ideamksplugin/issues/list?q=label%3AMilestone%20label%3ARelease0.7.4&can=1">googlecode issues resolved in 0.7.4</a>
+	Main changes
+	Support for IDEA 8.1 EAP
+	Performance Improvements
+	Preferences action in popup menu opens the about box.
+	</li>
+	<li>0.7.3 This a bugfix release. See  <a href="http://code.google.com/p/ideamksplugin/issues/list?q=label%3AMilestone%20label%3ARelease0.7.3&can=1">googlecode issues resolved in 0.7.3</a> <br>
+	Main changes
+	Support for IDEA 8.x EAP
+	Auto detect MKS controlled directories
+	Performance Improvements
+	Exception when accessing some members' history .
+	</li>
+	<li>0.7.2 This a bugfix release. See  <a href="http://code.google.com/p/ideamksplugin/issues/list?q=label%3AMilestone%20label%3ARelease0.7.2&can=1">googlecode issues resolved in 0.7.2</a> <br>
+	Main changes
+	Performance improvements related to non members and projects roots or registered sandboxes being updated.
+	Date pattern is not persisted
+	</li>
+	<li>0.7.1 This a bugfix release. See  <a href="http://code.google.com/p/ideamksplugin/issues/list?q=label%3AMilestone%20label%3ARelease0.7.1&can=1">googlecode issues resolved in 0.7.1</a> <br>
+	Main changes
+	Mks server deployed on windows support.
+	Better support for non english locales : ability to customize mks date formats
+	</li>
+	<li>0.7  <a href="http://code.google.com/p/ideamksplugin/issues/list?q=label%3AMilestone%20label%3ARelease0.7&can=1">googlecode issues resolved in 0.7</a> <br>
+	Vcs Directory Status support
+	Vcs Member History support, together with Compare With ... actions.
+	Change package renaming support
+	Display members with deferred operations pending in the changes view 
+	 Improve support for multiple pj files per folder
+	</li>
+	<li>0.6 <a href="http://code.google.com/p/ideamksplugin/issues/list?q=Milestone%20Release0.6&can=1">googlecode issues resolved in 0.6</a> <br>
+	 View Changes ignores IDEA ignored files <br>
+	 Most MKS actions now applicable on multiple targets (Actions will only be available if applicable on the current selection)<br>
+	 MKS Packages viewed as IDEA ChangeLists in the changes view. Depending on the MKS server, this may be slow to refresh<br>
+	 Suppressed GlobalChanges action as it is now handled by the IDEA Changes view<br>
+	 MKS project files are properly ignored<br>
+	 MKS Changes integration : encoding support per si CLI MKS commands (different commands seem to use different encodings) see the configuration.
+	 On windows (france) encoding seems to be IBM437<br>
+	 Files locally modified (without checkout) are distinguished from properly checked out ones. Files need to be moddified (and not just locked)<br>
+	 IDEA 7002+ compatible, tested with 7.0M2 (7123)
+	 bugfixes
+	</li>
+	<li>0.5.0 IDEA 7.x compatible</li>
+	<li>0.4.0 IDEA 6.x compatible, and added a "MKS changes" tool window, displaying (recursively) all differences between a local sandbox and the MKS project</li>
+    <li>0.3.4 Added logo for IDEA start screen</li>
+    </ul>]]></change-notes><depends>com.intellij.modules.vcs</depends><rating>4.3</rating></idea-plugin><idea-plugin downloads="10861" size="369833" date="1336588479000" url="http://www.seapine.com"><name>Surround SCM</name><id>Surround</id><description><![CDATA[Surround SCM Integration. This plug-in requires Surround SCM to be installed.
+   Please visit http://www.seapine.com/scmupgrades.html to download the latest version of Surround SCM.]]></description><version>2012.1.0.13</version><vendor email="support@seapine.com" url="">Seapine Software, Inc.</vendor><idea-version min="n/a" max="n/a" since-build="85.9999" until-build="118.0"/><change-notes><![CDATA[]]></change-notes><depends>com.intellij.modules.vcs</depends><rating>4.8</rating></idea-plugin></category><ff>"Web"</ff><category name="Web"><idea-plugin downloads="151" size="623551" date="1336332095000" url=""><name>Webmaster</name><id>com.strintec.intellij.webmaster</id><description><![CDATA[Swiss-army knife for webmasters (see 'Tools' -> 'Webmaster').]]></description><version>0.0.2</version><vendor email="" url="">Strintec</vendor><idea-version min="n/a" max="n/a" since-build="112.0" until-build="118.0"/><change-notes><![CDATA[]]></change-notes><depends>com.intellij.modules.lang</depends><rating>00</rating></idea-plugin></category><ff>"XML"</ff><category name="XML"><idea-plugin downloads="3134" size="216428" date="1323349128000" url=""><name>XmlSearchAndReplace</name><id>XmlSearchAndReplace</id><description><![CDATA[Provides dreamweaver-like feature to find and replace xml tags. Allows you to create powerfull and complex patterns with GUI and perform search and replace of them.]]></description><version>0.0.7</version><vendor email="andrey.zaytsev@jetbrains.com" url="jetbrains.com">JetBrains</vendor><idea-version min="n/a" max="n/a" since-build="111.69" until-build="118.0"/><change-notes><![CDATA[updated to use with IntelliJ IDEA 11 and fixed some bugs!]]></change-notes><depends>com.intellij.modules.xml</depends><rating>3.5</rating></idea-plugin></category></plugin-repository>

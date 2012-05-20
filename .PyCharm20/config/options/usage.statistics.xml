@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="UsagesStatistic" time="1336500105141" allowed="true" show-notification="false" period="weekly">
+    <group id="JavaScript versions" priority="0.0" data="DEFAULT=6" />
+    <group id="disabled-plugins" priority="0.0" data="PerforceDirectPlugin=1,org.jetbrains.plugins.less=1,org.jetbrains.plugins.sass=1,Subversion=1" />
+    <group id="file-type" priority="0.0" data="Locale=0,Native=0,Images=0,BuildoutCfg=0,UNKNOWN=0,ReST=0,CSS=0,SQL=0,JSON=0,XML=0,HTML=0,Python=0,PATCH=0,ARCHIVE=0,Cython=0,PLAIN_TEXT=0,JavaScript=0,DATASOURCE_STORAGE=0,YAML=0" />
+    <group id="frameworks" priority="0.0" data="django=1,google-appengine-python=1" />
+    <group id="jdbc-datasource" priority="0.0" data="/=1" />
+    <group id="jdbc-driver" priority="0.0" data="com.mysql.jdbc.Driver=1" />
+    <group id="module type" priority="0.0" data="PYTHON_MODULE=11" />
+    <group id="non-bundled-plugins" priority="0.0" data="com.intellij=1" />
+    <group id="productivity" priority="0.0" data="refactoring.rename=2,editing.completion.replace=47,editing.completion.basic=204,editing.completion.finishByDotEtc=35,navigation.goto.declaration=69,find.recent.search=4" />
+    <group id="run-configuration-type" priority="0.0" data="Python.DjangoServer=1,Python.AppEngineServer=1" />
+    <group id="vcs" priority="0.0" data="hg4idea=1,Git=9" />
+  </component>
+</application>
+
