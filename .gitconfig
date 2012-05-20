@@ -3,3 +3,7 @@
 	email = berker.peksag@gmail.com
 [color]
 	ui = auto
+[core]
+	filemode = false
+[status]
+	showUntrackedFiles = no
