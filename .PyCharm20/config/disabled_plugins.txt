@@ -1,4 +1,0 @@
-Subversion
-org.jetbrains.plugins.sass
-PerforceDirectPlugin
-org.jetbrains.plugins.less
