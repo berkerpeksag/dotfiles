@@ -94,7 +94,7 @@ Emacs buffers are those whose name starts with *."
 (setq whitespace-style (quote (spaces tabs newline space-mark tab-mark newline-mark)))
 
 ;; save session state when you quit emacs
-(setq desktop-dirname             "~/.emacs.d/desktop/"
+(setq desktop-dirname             "~"
       desktop-base-file-name      "emacs.desktop"
       desktop-base-lock-name      "lock"
       desktop-path                (list desktop-dirname)
