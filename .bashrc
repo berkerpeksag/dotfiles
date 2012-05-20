@@ -6,20 +6,8 @@ export PATH=$PATH:/home/berkerpeksag/hacking/node/build/default/node
 PATH=$PATH:/home/berkerpeksag/hacking/google/appengine/python
 export PATH
 
-export PLAY_HOME=/home/berkerpeksag/hacking/play/
-export PATH=$PATH:$PLAY_HOME
-
-export ANT_HOME=/usr/share/ant
 export JAVA_HOME=/usr/lib/jvm/java-6-sun
-export PATH=$PATH:$JAVA_HOME/bin:$ANT_HOME/bin
-
-export PATH=$PATH:/home/berkerpeksag/hacking/google/android/platform-tools
-export PATH=$PATH:/home/berkerpeksag/hacking/google/android/tools
-
-export WORKON_HOME=$HOME/.virtualenvs
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-export PIP_RESPECT_VIRTUALENV=true
-source /usr/local/bin/virtualenvwrapper.sh
+export PATH=$PATH:$JAVA_HOME/bin
 
 export PYTHONPATH="/home/berkerpeksag/hacking/django"
 
