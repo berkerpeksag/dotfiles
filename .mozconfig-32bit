@@ -1,0 +1,17 @@
+#export PKG_CONFIG_LIBDIR=/usr/lib/pkgconfig:/usr/share/pkgconfig
+export CROSS_COMPILE=1
+mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/objdir-ff-dbg32
+mk_add_options MOZ_MAKE_FLAGS="-s -j4"
+ac_add_options --enable-application=browser
+
+CC="gcc -m32"
+CXX="g++ -m32"
+AR=ar
+ac_add_options --x-libraries=/usr/lib32
+ac_add_options --target=i686-pc-linux
+
+ac_add_options --disable-crashreporter # needed because I couldn't find a 32-bit curl-dev lib
+ac_add_options --disable-libnotify     # needed because I couldn't find a 32-bit libinotify-dev
+ac_add_options --disable-gnomevfs      # needed because I couldn't find a 32-bit libgnomevfs-dev
+ac_add_options --disable-freetypetest
+ac_add_options --disable-pango
