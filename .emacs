@@ -9,6 +9,8 @@
 
 (require 'whitespace)
 (global-set-key (kbd "\C-c w") 'whitespace-mode)
+(setq whitespace-style '(face empty tabs lines-tail trailing))
+(global-whitespace-mode t)
 
 (autoload 'markdown-mode "markdown-mode.el"
   "Major mode for editing Markdown files" t)
