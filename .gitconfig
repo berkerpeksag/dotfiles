@@ -5,7 +5,7 @@
 	ui = auto
 [core]
 	filemode = false
-	editor = emacs
+	editor = emacs -nw
 [status]
 	showUntrackedFiles = no
 [alias]
