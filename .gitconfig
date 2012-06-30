@@ -5,7 +5,10 @@
 	ui = auto
 [core]
 	filemode = false
+	editor = emacs
 [status]
 	showUntrackedFiles = no
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[branch "master"]
+	rebase = true
