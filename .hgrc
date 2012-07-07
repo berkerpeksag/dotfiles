@@ -2,6 +2,9 @@
 username = Berker Peksag <berker.peksag@gmail.com>
 verbose = True
 
+[alias]
+try = push -f ssh://hg.mozilla.org/try
+
 [extensions]
 color =
 progress =
