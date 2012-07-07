@@ -69,10 +69,9 @@
  '(safe-local-variable-values (quote ((eval add-hook (quote write-file-hooks) (quote time-stamp)))))
  '(save-place t nil (saveplace))
  '(scroll-bar-mode (quote right))
- '(tool-bar-mode nil))
-
-;; Add newline at end of files
-(setq require-final-newline t)
+ '(tool-bar-mode nil)
+ '(indent-tabs-mode nil)
+ '(require-final-newline t)) ;; Add newline at end of files
 
 ;; Taken from http://stackoverflow.com/a/2706660/57823
 (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
