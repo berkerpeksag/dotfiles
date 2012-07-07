@@ -11,5 +11,16 @@ progress =
 mq =
 churn =
 
+[defaults]
+diff = -p -U 8
+qdiff = -p -U 8
+qnew = -U
+commit = -v
+
 [diff]
 git = True
+showfunc = True
+unified = 8
+
+[paths]
+try = ssh://berker.peksag@gmail.com@hg.mozilla.org/try/
