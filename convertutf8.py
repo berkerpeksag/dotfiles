@@ -11,7 +11,7 @@ extensions = ('srt', 'sub')
 SOURCE_ENCODING = 'iso-8859-9'
 TARGET_ENCODING = 'utf-8'
 
-_slugify = lambda str: re.sub(r'\W+', '-', str.lower())
+_slugify = lambda _str: re.sub(r'\W+', '-', _str.lower())
 
 
 def _convert_utf8(source):
