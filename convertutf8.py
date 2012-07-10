@@ -5,7 +5,6 @@ import os
 import re
 import sys
 
-
 extensions = ('srt', 'sub')
 
 SOURCE_ENCODING = 'iso-8859-9'
