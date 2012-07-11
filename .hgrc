@@ -10,6 +10,8 @@ color =
 progress =
 mq =
 churn =
+pager =
+rebase =
 
 [defaults]
 diff = -p -U 8
@@ -24,3 +26,7 @@ unified = 8
 
 [paths]
 try = ssh://berker.peksag@gmail.com@hg.mozilla.org/try/
+
+[pager]
+pager = LESS='FSRX' less
+attend = cat, diff, log, show
