@@ -55,6 +55,30 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+pathremove() {
+    local IFS=':'
+    local NEWPATH
+    local DIR
+    local PATHVARIABLE=${2:-PATH}
+    for DIR in ${!PATHVARIABLE} ; do
+        if [ "$DIR" != "$1" ] ; then
+            NEWPATH=${NEWPATH:+$NEWPATH:}$DIR
+        fi
+    done
+    export $PATHVARIABLE="$NEWPATH"
+}
+
+unckecked_pathappend() {
+    pathremove "$1" "$2"
+    local PATHVARIABLE=${2:-PATH}
+    export $PATHVARIABLE="${!PATHVARIABLE:+${!PATHVARIABLE}:}$1"
+}
+
+pathappend() {
+    test ! -d "${1}" && return 0
+    unckecked_pathappend "$1" "$2"
+}
+
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
