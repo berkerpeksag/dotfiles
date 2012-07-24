@@ -93,3 +93,7 @@
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
+
+(custom-set-faces
+ '(diff-added ((t (:foreground "Green"))) 'now)
+ '(diff-removed ((t (:foreground "Red"))) 'now))
