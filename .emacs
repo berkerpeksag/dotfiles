@@ -6,23 +6,22 @@
 
 ; Taken from http://stackoverflow.com/a/94277/57823
 (defun set-frame-size-according-to-resolution ()
-  (interactive)
-  (if window-system
+ (interactive)
+ (if window-system
   (progn
-    ;; use 120 char wide window for largeish displays
-    ;; and smaller 80 column windows for smaller displays
-    ;; pick whatever numbers make sense for you
-    (if (> (x-display-pixel-width) 1280)
-           (add-to-list 'default-frame-alist (cons 'width 120))
-           (add-to-list 'default-frame-alist (cons 'width 80)))
-    ;; for the height, subtract a couple hundred pixels
-    ;; from the screen height (for panels, menubars and
-    ;; whatnot), then divide by the height of a char to
-    ;; get the height we want
-    (add-to-list 'default-frame-alist
-         (cons 'height (/ (- (x-display-pixel-height) 200)
-                             (frame-char-height)))))))
-
+   ;; use 120 char wide window for largeish displays
+   ;; and smaller 80 column windows for smaller displays
+   ;; pick whatever numbers make sense for you
+   (if (> (x-display-pixel-width) 1280)
+          (add-to-list 'default-frame-alist (cons 'width 120))
+          (add-to-list 'default-frame-alist (cons 'width 80)))
+   ;; for the height, subtract a couple hundred pixels
+   ;; from the screen height (for panels, menubars and
+   ;; whatnot), then divide by the height of a char to
+   ;; get the height we want
+   (add-to-list 'default-frame-alist
+    (cons 'height (/ (- (x-display-pixel-height) 200)
+     (frame-char-height)))))))
 (set-frame-size-according-to-resolution)
 
 (require 'auto-complete)
@@ -34,9 +33,9 @@
 (global-whitespace-mode t)
 
 (autoload 'markdown-mode "markdown-mode.el"
-  "Major mode for editing Markdown files" t)
+ "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
-      (cons '("\\.md" . markdown-mode) auto-mode-alist))
+ (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
 (require 'ido)
 (ido-mode t)
@@ -60,10 +59,6 @@
 (require 'rust-mode)
 
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(erc-modules (quote (autojoin button completion fill irccontrols list log match menu move-to-prompt netsplit networks noncommands readonly ring stamp track)))
@@ -78,14 +73,8 @@
 
 ;; Taken from http://stackoverflow.com/a/2706660/57823
 (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
-  "Prevent annoying \"Active processes exist\" query when you quit Emacs."
-  (flet ((process-list ())) ad-do-it))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
+ "Prevent annoying \"Active processes exist\" query when you quit Emacs."
+ (flet ((process-list ())) ad-do-it))
 
 ;; The following lines are always needed.  Choose your own keys.
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))

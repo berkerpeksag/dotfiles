@@ -1,9 +1,9 @@
 ;;; Hooks
 (defun add-mode-line-dirtrack ()
-  "When editing a file, show the last 2 directories of the current path in the mode line."
-  (add-to-list 'mode-line-buffer-identification
-	       '(:eval (substring default-directory
-				  (+ 1 (string-match "/[^/]+/[^/]+/$" default-directory)) nil))))
+ "When editing a file, show the last 2 directories of the current path in the mode line."
+ (add-to-list 'mode-line-buffer-identification
+  '(:eval (substring default-directory
+    (+ 1 (string-match "/[^/]+/[^/]+/$" default-directory)) nil))))
 
 (add-hook 'find-file-hook 'add-mode-line-dirtrack)
 
@@ -15,7 +15,6 @@
 ;;; See: http://www.emacswiki.org/cgi-bin/wiki/CopyAndPaste#toc5
 (setq x-select-enable-clipboard t)
 (setq inter-program-paste-function 'x-cut-buffer-or-selection-value)
-
 
 (custom-set-variables
  '(column-number-mode t)
@@ -102,4 +101,3 @@ Emacs buffers are those whose name starts with *."
       desktop-files-not-to-save   "^$" ;reload tramp paths
       desktop-load-locked-desktop nil)
 (desktop-save-mode 1)
-
