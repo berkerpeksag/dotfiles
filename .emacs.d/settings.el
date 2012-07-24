@@ -8,7 +8,7 @@
 (add-hook 'find-file-hook 'add-mode-line-dirtrack)
 
 ;;; Custom keys
-(set-default-font "Monaco-11")
+(set-default-font "Ubuntu Mono-15")
 
 (setq frame-title-format '("emacs@" system-name ": %b %+%+ %f"))
 
