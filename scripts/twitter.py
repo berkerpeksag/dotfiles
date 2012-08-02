@@ -43,6 +43,7 @@ def main(screen_name):
 
     for user_id in following_ids:
         screen_name, last_tweet_date = get_user_tweets(user_id)
+        # TODO(berker): Use logging module.
         print 'Checking {0:s}...'.format(screen_name)
         if last_tweet_date <= DATE_RANGE:
             print screen_name, last_tweet_date
