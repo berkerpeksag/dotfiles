@@ -19,9 +19,9 @@ def convert_iso(date_string):
 
 def request(url):
     r = requests.get(BASE_URL + url)
-    if r.status_code == requests.codes.bad:
-        r.raise_for_status()
-    return r
+    if r.status_code is requests.codes.ok:
+        return r
+    r.raise_for_status()
 
 
 def get_following_ids(screen_name):
