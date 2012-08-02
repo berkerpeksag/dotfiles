@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-from datetime import date, datetime, timedelta
+from datetime import date, timedelta
 from sys import argv, exit
 from time import strftime, strptime
 
