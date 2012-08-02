@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+from sys import argv
+
 import os
 import re
-import sys
 
 extensions = ('srt', 'sub')
 
@@ -28,5 +29,11 @@ def main(dir_path):
         if _file.endswith(extensions):
             _convert_utf8(_file)
 
+
+def usage():
+    exit('Usage: python {0} <DIR>'.format(__file__))
+
 if __name__ == '__main__':
-    main(sys.argv[1])
+    if len(argv) is not 2 or not isinstance(argv[1], basestring):
+        usage()
+    main(argv[1])
