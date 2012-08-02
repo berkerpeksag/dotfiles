@@ -8,7 +8,6 @@ from time import strftime, strptime
 import requests
 
 BASE_URL = 'http://api.twitter.com/1/'
-LIMIT = 100
 DATE_RANGE = (date.today() - timedelta(days=30)).isoformat()
 
 
@@ -42,7 +41,7 @@ def get_user_tweets(user_id):
 def main(screen_name):
     following_ids = get_following_ids(screen_name)
 
-    for user_id in following_ids[:LIMIT]:
+    for user_id in following_ids:
         screen_name, last_tweet_date = get_user_tweets(user_id)
         print 'Checking {0:s}...'.format(screen_name)
         if last_tweet_date <= DATE_RANGE:
