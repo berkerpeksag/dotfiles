@@ -15,3 +15,5 @@ tmux::
 # Not finished yet.
 scripts::
 	@cp $(SCRIPTS)/x-art.sample.sh $(SCRIPTS)/met-art
+
+# TODO(berker): Add `clean` command.
