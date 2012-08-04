@@ -36,8 +36,10 @@ def get_user_tweets(user_id):
     return result
 
 
-def main(screen_name):
+def main(screen_name, _reversed):
     following_ids = get_following_ids(screen_name)
+    if _reversed:
+        following_ids = reversed(following_ids)
 
     for user_id in following_ids:
         screen_name, last_tweet_date = get_user_tweets(user_id)
@@ -50,9 +52,12 @@ def main(screen_name):
 
 
 def usage():
-    exit('Usage: python {0} <TWITTER_SCREEN_NAME>'.format(__file__))
+    exit('Usage: python {0} <TWITTER_SCREEN_NAME> [--reversed]'.format(__file__))
 
 if __name__ == '__main__':
-    if len(argv) is not 2 or not isinstance(argv[1], basestring):
+    if len(argv) > 3 or not isinstance(argv[1], basestring):
         usage()
-    main(argv[1])
+    _reversed = False
+    if len(argv) is 3 and argv[2] == '--reversed':
+       _reversed = True
+    main(argv[1], _reversed)
