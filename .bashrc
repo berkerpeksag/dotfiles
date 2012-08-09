@@ -57,6 +57,24 @@ export PS1='\u@\h \[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '
 
 # }}}
 
+# {{{ Mozilla
+
+mk() {
+    last=${!#};
+    for folder in "$@"; do
+        make -sC $folder -j4
+        RESULT=$?
+        if [ $RESULT -gt 0 ]; then
+            echo Error making $folder
+            return $RESULT
+        else
+            echo Made $folder
+        fi
+    done
+}
+
+# }}}
+
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 export HISTCONTROL=ignoreboth
 
