@@ -14,5 +14,7 @@
         # Usage: git get <BRANCH_NAME>
         # https://github.com/mozilla/webdev-bootcamp/issues/12#issuecomment-7118587
         get = "!f() { echo Merging $1... && git checkout master && git pull origin master && git submodule sync && git submodule update --init --recursive && git checkout $1 && git rebase master && git checkout master && git merge --ff-only $1; }; f"
+        gb = git branch
+        gsu = git submodule update --init --recursive
 [branch "master"]
 	rebase = true
