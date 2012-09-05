@@ -34,6 +34,6 @@ def usage():
     exit('Usage: python {0} <DIR>'.format(__file__))
 
 if __name__ == '__main__':
-    if len(argv) is not 2 or not isinstance(argv[1], basestring):
+    if len(argv) != 2 or not isinstance(argv[1], basestring):
         usage()
     main(argv[1])
