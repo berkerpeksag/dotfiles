@@ -2,7 +2,7 @@ if [[ -n "$PS1" ]] ; then
 
 # {{{ Paths
 
-GAE_HOME=home/berker/google/appengine/python
+GAE_HOME=/home/berker/google/appengine
 export JAVA_HOME=/usr/lib/jvm/java-6-sun
 PATH=$PATH:$GAE_HOME:$JAVA_HOME/bin
 export PATH
