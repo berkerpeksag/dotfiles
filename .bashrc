@@ -12,6 +12,7 @@ export PATH
 # {{{ Settings
 
 export EDITOR="emacs -nw"
+export PIP_DOWNLOAD_CACHE=~/.pip-cache
 
 # }}}
 
