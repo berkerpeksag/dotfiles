@@ -17,7 +17,8 @@ _slugify = lambda _str: re.sub(r'\W+', '-', _str.lower())
 
 def _convert_utf8(source, dir_path):
     source_name, source_ext = os.path.splitext(source)
-    target_name = _slugify(source_name) + '_utf8' + source_ext.lower()
+    target_name = '{:s}_{:s}{:s}'.format(_slugify(source_name), TARGET_ENCODING,
+                                         source_ext.lower())
     source_file = open(dir_path + source)
     target_file = open(dir_path + target_name, 'w')
     target_file.write(unicode(source_file.read(),
