@@ -27,6 +27,8 @@ def _convert_utf8(source, dir_path):
 
 
 def main(dir_path):
+    if not dir_path.endswith('/'):
+        dir_path += '/'
     files = os.listdir(dir_path)
     for _file in files:
         if _file.lower().endswith(extensions):
