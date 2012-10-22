@@ -8,6 +8,7 @@ import re
 
 extensions = ('srt', 'sub', 'txt')
 
+# TODO(berker): Make mutable via CLI.
 SOURCE_ENCODING = 'iso-8859-9'
 TARGET_ENCODING = 'utf-8'
 
