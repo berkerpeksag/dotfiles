@@ -6,7 +6,7 @@ from sys import argv
 import os
 import re
 
-extensions = ('srt', 'sub')
+extensions = ('srt', 'sub', 'txt')
 
 SOURCE_ENCODING = 'iso-8859-9'
 TARGET_ENCODING = 'utf-8'
