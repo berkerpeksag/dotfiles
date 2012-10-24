@@ -36,7 +36,7 @@ def get_user_tweets(user_id):
     return result
 
 
-def main(screen_name, _reversed):
+def main(screen_name, _reversed=False):
     following_ids = get_following_ids(screen_name)
     if _reversed:
         following_ids = reversed(following_ids)
