@@ -33,6 +33,7 @@ def main(dir_path):
     for _file in files:
         if _file.lower().endswith(extensions):
             _convert_utf8(_file, dir_path)
+    print 'Done.'
 
 
 def usage():
