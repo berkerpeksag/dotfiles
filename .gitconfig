@@ -19,3 +19,5 @@
         hgp = show --format=\"From: %an <%ae>%n%s%n%b\" -U8
 [branch "master"]
 	rebase = true
+[help]
+	autocorrect = 1
