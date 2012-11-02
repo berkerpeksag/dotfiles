@@ -7,6 +7,8 @@ export JAVA_HOME=/usr/lib/jvm/java-6-sun
 PATH=$PATH:$GAE_HOME:$JAVA_HOME/bin
 export PATH
 
+export PYTHONSTARTUP=$HOME/.pythonrc.py
+
 # }}}
 
 # {{{ Settings
