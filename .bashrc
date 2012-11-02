@@ -44,6 +44,11 @@ pathappend() {
     unckecked_pathappend "$1" "$2"
 }
 
+# Create a new directory and enter it
+function mkd() {
+    mkdir -p "$@" && cd "$@"
+}
+
 # }}}
 
 # {{{ Prompt
