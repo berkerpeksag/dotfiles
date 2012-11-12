@@ -49,9 +49,12 @@
 
 (require 'gist)
 
-(require 'color-theme)
-(setq color-theme-is-global t)
-(color-theme-clarity)
+; Save the old theme for now.
+;(require 'color-theme)
+;(setq color-theme-is-global t)
+;(color-theme-clarity)
+(add-to-list 'load-path "~/.emacs.d/emacs-color-theme-solarized/")
+(require 'color-theme-solarized)
 
 (require 'smooth-scrolling)
 
