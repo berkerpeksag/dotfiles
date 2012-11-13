@@ -1,7 +1,8 @@
 DOTFILES = $(PWD)
 SCRIPTS = $(DOTFILES)/scripts
 
-all:: emacs tmux bash git scripts
+all:: emacs tmux bash git config
+home:: all scripts
 
 emacs::
 	@ln -fs $(DOTFILES)/.emacs	${HOME}/.emacs
@@ -21,6 +22,11 @@ git::
 tmux::
 	@ln -fs $(DOTFILES)/.tmux.conf	${HOME}/.tmux.conf
 	@echo tmux is symlinked.
+
+config::
+	@ln -fns $(DOTFILES)/.config	$(HOME)/.config
+	@ln -fns $(DOTFILES)/.weechat	$(HOME)/.weechat
+	@echo Misc config files are symlinked.
 
 # Not finished yet.
 #scripts::
