@@ -9,7 +9,7 @@ mozilla:: core mozilla-core mozilla-config
 
 core::
 	@sudo apt-get update && apt-get upgrade && apt-get install git-core sqlite3 \
-	build-essential nginx emacs23 curl libcurl3
+	build-essential nginx emacs23 curl libcurl3 git-gui
 	@echo Core libraries are installed.
 
 python-core::
