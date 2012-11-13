@@ -4,7 +4,7 @@ SCRIPTS = $(DOTFILES)/scripts
 work:: basic
 basic:: emacs tmux bash git config python
 home:: basic scripts mozilla
-python:: core python-core python-tools
+python:: core python-core python-tools python-config
 mozilla:: core mozilla-core mozilla-config
 
 core::
@@ -22,6 +22,11 @@ python-tools::
 	@sudo apt-get install terminator
 	@ln -fns $(DOTFILES)/.config/terminator	$(HOME)/.config/terminator
 	@echo Python tools are installed.
+
+python-config::
+	@ln -fs $(DOTFILES)/.pythonrc.py ${HOME}/.pythonrc.py
+	@ln -fns $(DOTFILES)/.autoenv	${HOME}/.autoenv
+	@echo Python confif files are symlinked.
 
 mozilla-core::
 	@sudo apt-get install mercurial
