@@ -13,7 +13,7 @@ tmux::
 	@echo tmux is symlinked.
 
 # Not finished yet.
-scripts::
-	@cp $(SCRIPTS)/x-art.sample.sh $(SCRIPTS)/met-art
+#scripts::
+#	@cp $(SCRIPTS)/x-art.sample.sh $(SCRIPTS)/met-art
 
 # TODO(berker): Add `clean` command.
