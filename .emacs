@@ -9,6 +9,10 @@
 
 ;;; Modes
 
+(require 'whitespace)
+(setq whitespace-style '(face empty tabs lines-tail trailing))
+(global-whitespace-mode t)
+
 (require 'fullscreen)
 (fullscreen-toggle)
 
@@ -93,7 +97,8 @@
  '(cua-mode t nil (cua-base))
  '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(indicate-empty-lines t)
- '(safe-local-variable-values (quote ((eval add-hook (quote write-file-hooks) (quote time-stamp)))))
+ '(safe-local-variable-values
+   (quote ((eval add-hook (quote write-file-hooks) (quote time-stamp)))))
  '(save-place t nil (saveplace))
  '(scroll-bar-mode (quote right))
  '(tool-bar-mode nil)
