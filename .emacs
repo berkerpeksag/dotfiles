@@ -94,7 +94,8 @@
  '(scroll-bar-mode (quote right))
  '(tool-bar-mode nil)
  '(indent-tabs-mode nil)
- '(require-final-newline t)) ; Add newline at end of files
+ '(require-final-newline t) ; Add newline at end of files
+ '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
 
 (custom-set-faces
  '(diff-added ((t (:foreground "Green"))) 'now)
