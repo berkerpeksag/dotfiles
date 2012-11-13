@@ -20,6 +20,7 @@ python-core::
 python-tools::
 	@sudo pip install virtualenv
 	@sudo apt-get install terminator
+	@ln -fns $(DOTFILES)/.config/terminator	$(HOME)/.config/terminator
 	@echo Python tools are installed.
 
 mozilla-core::
@@ -50,7 +51,6 @@ tmux::
 	@echo tmux is symlinked.
 
 config::
-	@ln -fns $(DOTFILES)/.config	$(HOME)/.config
 	@ln -fns $(DOTFILES)/.weechat	$(HOME)/.weechat
 	@echo Misc config files are symlinked.
 
