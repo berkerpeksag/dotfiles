@@ -45,8 +45,6 @@
 
 (require 'cl)
 
-(require 'php-mode)
-
 (require 'gist)
 
 ; Save the old theme for now.
