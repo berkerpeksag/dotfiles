@@ -9,6 +9,8 @@
 
 ;;; Modes
 
+(require 'fullscreen)
+
 (require 'auto-complete)
 (global-auto-complete-mode t)
 
