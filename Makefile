@@ -4,7 +4,7 @@ SCRIPTS = $(DOTFILES)/scripts
 work:: basic
 basic:: emacs tmux bash git config python
 home:: basic scripts mozilla
-python:: core python-core
+python:: core python-core python-virtualenv
 mozilla:: core mozilla-core mozilla-config
 
 core::
@@ -15,6 +15,10 @@ core::
 python-core::
 	@sudo apt-get install python-sqlite python-setuptools python-pip python-dev
 	@echo Python environment is installed.
+
+python-virtualenv::
+	@sudo pip install virtualenv
+	echo Virtualenv is installed.
 
 mozilla-core::
 	@sudo apt-get install mercurial
