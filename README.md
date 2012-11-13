@@ -1,7 +1,15 @@
 ## Installation
 
-To install all dotfiles, you can run:
+To install all `dotfiles`, you can run:
+
+### Work
 
 ```sh
-make all
+$ make work
+```
+
+### Home
+
+```sh
+$ make home
 ```
