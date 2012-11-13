@@ -1,7 +1,7 @@
 DOTFILES = $(PWD)
 SCRIPTS = $(DOTFILES)/scripts
 
-all:: emacs tmux bash scripts
+all:: emacs tmux bash git scripts
 
 emacs::
 	@ln -fs $(DOTFILES)/.emacs	${HOME}/.emacs
