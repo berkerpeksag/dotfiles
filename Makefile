@@ -1,8 +1,28 @@
 DOTFILES = $(PWD)
 SCRIPTS = $(DOTFILES)/scripts
 
-all:: emacs tmux bash git config
-home:: all scripts
+work:: basic
+basic:: emacs tmux bash git config python
+home:: basic scripts mozilla
+python:: core python-core
+mozilla:: core mozilla-core mozilla-config
+
+core::
+	@sudo apt-get update && apt-get upgrade && apt-get install git-core sqlite3 \
+	build-essential nginx emacs23 curl libcurl3
+	@echo Core libraries are installed.
+
+python-core::
+	@sudo apt-get install python-sqlite python-setuptools python-pip python-dev
+	@echo Python environment is installed.
+
+mozilla-core::
+	@sudo apt-get install mercurial
+	@echo Mozilla dependencies are installed.
+
+mozilla-config::
+	@ln -fs $(DOTFILES)/.mozconfig ${HOME}/.mozconfig
+	@echo .mozconfig is symlinked.
 
 emacs::
 	@ln -fs $(DOTFILES)/.emacs	${HOME}/.emacs
