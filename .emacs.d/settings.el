@@ -67,9 +67,6 @@ Emacs buffers are those whose name starts with *."
 
 (global-visual-line-mode 1) ; 1 for on, 0 for off.
 
-;; make whitespace-mode use just basic coloring
-(setq whitespace-style (quote (spaces tabs newline space-mark tab-mark newline-mark)))
-
 ;; save session state when you quit emacs
 (setq desktop-dirname             "~"
       desktop-base-file-name      "emacs.desktop"
