@@ -81,6 +81,11 @@
  make-backup-files nil ; stop creating those backup~ files
  auto-save-default nil) ; stop creating those #autosave# files
 
+;; Taken from http://stackoverflow.com/a/2706660/57823
+(defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
+ "Prevent annoying \"Active processes exist\" query when you quit Emacs."
+ (flet ((process-list ())) ad-do-it))
+
 ;;; Customization
 
 (custom-set-variables
