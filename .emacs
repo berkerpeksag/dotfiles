@@ -1,4 +1,12 @@
 (add-to-list 'load-path "~/.emacs.d/")
+; Modes path
+(add-to-list 'load-path "~/.emacs.d/modes/")
+
+(byte-recompile-directory "." 0)
+
+(load "modes-init")
+(load "variables")
+(load "keys")
 
 (load "python-config")
 (load "settings")
@@ -24,29 +32,6 @@
      (frame-char-height)))))))
 (set-frame-size-according-to-resolution)
 
-(require 'auto-complete)
-(global-auto-complete-mode t)
-
-(require 'whitespace)
-(global-set-key (kbd "\C-c w") 'whitespace-mode)
-(setq whitespace-style '(face empty tabs lines-tail trailing))
-(global-whitespace-mode t)
-
-(autoload 'markdown-mode "markdown-mode.el"
- "Major mode for editing Markdown files" t)
-(setq auto-mode-alist
- (cons '("\\.md" . markdown-mode) auto-mode-alist))
-
-(require 'ido)
-(ido-mode t)
-(setq ido-enable-flex-matching t)
-
-(require 'linum)
-
-(require 'cl)
-
-(require 'gist)
-
 ; Save the old theme for now.
 ;(require 'color-theme)
 ;(setq color-theme-is-global t)
@@ -54,29 +39,7 @@
 (add-to-list 'load-path "~/.emacs.d/emacs-color-theme-solarized/")
 (require 'color-theme-solarized)
 
-(require 'smooth-scrolling)
-
-(add-to-list 'load-path "~/.emacs.d/rust-mode/")
-(require 'rust-mode)
-
-(custom-set-variables
- '(column-number-mode t)
- '(cua-mode t nil (cua-base))
- '(erc-modules (quote (autojoin button completion fill irccontrols list log match menu move-to-prompt netsplit networks noncommands readonly ring stamp track)))
- '(fringe-mode (quote (nil . 0)) nil (fringe))
- '(indicate-empty-lines t)
- '(safe-local-variable-values (quote ((eval add-hook (quote write-file-hooks) (quote time-stamp)))))
- '(save-place t nil (saveplace))
- '(scroll-bar-mode (quote right))
- '(tool-bar-mode nil)
- '(indent-tabs-mode nil)
- '(require-final-newline t)) ;; Add newline at end of files
-
 ;; Taken from http://stackoverflow.com/a/2706660/57823
 (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
  "Prevent annoying \"Active processes exist\" query when you quit Emacs."
  (flet ((process-list ())) ad-do-it))
-
-(custom-set-faces
- '(diff-added ((t (:foreground "Green"))) 'now)
- '(diff-removed ((t (:foreground "Red"))) 'now))

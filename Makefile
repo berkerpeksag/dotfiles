@@ -59,6 +59,9 @@ config::
 	@ln -fns $(DOTFILES)/.weechat	$(HOME)/.weechat
 	@echo Misc config files are symlinked.
 
+clean::
+	@find . -name "*.elc" -exec rm {} \;
+
 # Not finished yet.
 #scripts::
 #	@cp $(SCRIPTS)/x-art.sample.sh $(SCRIPTS)/met-art
