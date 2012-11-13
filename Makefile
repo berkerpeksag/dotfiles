@@ -19,7 +19,7 @@ python-core::
 python-tools::
 	@sudo pip install virtualenv
 	@sudo apt-get install terminator
-	echo Python tools are installed.
+	@echo Python tools are installed.
 
 mozilla-core::
 	@sudo apt-get install mercurial
