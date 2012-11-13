@@ -45,7 +45,7 @@
  desktop-base-lock-name "lock"
  desktop-path (list desktop-dirname)
  desktop-save t
- desktop-files-not-to-save "^$" ;reload tramp paths
+ desktop-files-not-to-save "^$" ; reload tramp paths
  desktop-load-locked-desktop nil)
 (desktop-save-mode 1)
 
@@ -69,15 +69,15 @@
 
 ;;; Settings
 
-;(set-default-font "Ubuntu Mono-15")
+; (set-default-font "Ubuntu Mono-15")
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
 ;; See: http://www.emacswiki.org/cgi-bin/wiki/CopyAndPaste#toc5
 (setq
- ;x-select-enable-clipboard t
- ;inter-program-paste-function 'x-cut-buffer-or-selection-value
+ ; x-select-enable-clipboard t
+ ; inter-program-paste-function 'x-cut-buffer-or-selection-value
  make-backup-files nil ; stop creating those backup~ files
  auto-save-default nil) ; stop creating those #autosave# files
 
@@ -86,7 +86,6 @@
 (custom-set-variables
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
- '(erc-modules (quote (autojoin button completion fill irccontrols list log match menu move-to-prompt netsplit networks noncommands readonly ring stamp track)))
  '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(indicate-empty-lines t)
  '(safe-local-variable-values (quote ((eval add-hook (quote write-file-hooks) (quote time-stamp)))))
