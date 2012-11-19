@@ -22,3 +22,5 @@ alias hcm='hg commit -m'
 
 # Mozilla
 alias fx='dist/bin/firefox -P clean -no-remote'
+
+alias uname='python -m platform'
