@@ -18,6 +18,13 @@ export PIP_DOWNLOAD_CACHE=~/.pip-cache
 
 # }}}
 
+# {{{ Git
+
+export GIT_COMMITTER_NAME="Berker Peksag"
+export GIT_COMMITTER_EMAIL="berker.peksag@gmail.com"
+
+# }}}
+
 # {{{ Helpers
 
 pathremove() {
