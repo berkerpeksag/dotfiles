@@ -1,0 +1,77 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+"""
+Kullanım
+========
+
+::
+
+    $ git config pullrequest.user.name <USERNAME>
+    $ git config pullrequest.user.password <PASSWORD>
+
+Ayarlar
+-------
+
+* ``pullrequest.repo.branch``: master
+
+Örnek Kullanım
+--------------
+
+::
+
+    $ git pullrequest -i 2 -r berkerpeksag-archive:test -H berkerpeksag-archive:fix-b -b master
+
+"""
+
+import argparse
+import json
+import subprocess
+
+import requests
+
+GH_API_URL = 'https://api.github.com/repos/{user:s}/{repo:s}/pulls'
+CFG_USER_NAME = 'pullrequest.user.name'
+CFG_USER_PASSWORD = 'pullrequest.user.password'
+
+
+class GitHubConfigError(KeyError):
+    pass
+
+
+def _git_config(key, value=None):
+    if value is None:
+        value = ''
+    cmd_tpl = 'git config {key:s} {value:s}'
+    cmd = cmd_tpl.format(key=key, value=value)
+    run = subprocess.check_output(cmd.split(), universal_newlines=True)
+    print 'Command', cmd
+    print 'Output', run
+    output = run.rstrip()
+    if not output:
+        raise GitHubConfigError
+    return output
+
+
+def _create_pull_request(**config):
+    print config
+    user, repo = config['repo'].split(':')
+    url =  GH_API_URL.format(user=user, repo=repo)
+    print url
+    auth = (_git_config(CFG_USER_NAME), _git_config(CFG_USER_PASSWORD))
+    r = requests.post(url, auth=auth, data=json.dumps(config))
+    print r.headers
+    print r.text
+
+def main():
+    parser = argparse.ArgumentParser(prog='git-pullrequest')
+    parser.add_argument('-i', '--issue', type=int, required=True)
+    parser.add_argument('-H', '--head', type=str, required=True)
+    parser.add_argument('-r', '--repo', type=str, required=True)
+    parser.add_argument('-b', '--base', type=str, default='master')
+    args = parser.parse_args()
+
+    _create_pull_request(**args.__dict__)
+
+if __name__ == '__main__':
+    main()
