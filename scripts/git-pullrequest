@@ -5,10 +5,17 @@
 Kullanım
 ========
 
-.. warning:: ``git-pullrequest`` betiğinin çalıştırmak için ``PATH``'te yer
-             alan bir klasörün içine koymak yeterlidir.
+``git-pullrequest`` GitHub üzerine açılmış bir issueyu pull request'e
+çevirmeye yarayan bir Python betiğidir.
 
-::
+
+Kurulum
+-------
+
+.. warning:: ``git-pullrequest`` betiğini çalıştırmak için ``PATH``'te yer
+             alan herhangi bir klasörün içine koymak yeterlidir.
+
+Kullanmaya başlamak için GitHub kullanıcı bilgilerinizi girmelisiniz::
 
     $ git config pullrequest.user.name <USERNAME>
     $ git config pullrequest.user.password <PASSWORD>
