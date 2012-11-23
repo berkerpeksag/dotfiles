@@ -24,7 +24,7 @@ Kullanmaya başlamak için GitHub kullanıcı bilgilerinizi girmelisiniz::
 Ayarlar
 -------
 
-* ``pullrequest.repo.branch``: master
+* ``pullrequest.repo.base``: Varsayılan değer ``master``.
 
 
 Örnek Kullanım
