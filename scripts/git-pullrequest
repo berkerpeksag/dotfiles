@@ -51,7 +51,7 @@ class GitHubConfigError(KeyError):
     pass
 
 
-def _git_config(key, value=None):
+def _git_config(key, value=None, default=None):
     if value is None:
         value = ''
     cmd_tpl = 'git config {key:s} {value:s}'
@@ -59,6 +59,8 @@ def _git_config(key, value=None):
     run = subprocess.check_output(cmd.split(), universal_newlines=True)
     output = run.rstrip()
     if not output:
+        if default is not None:
+            return default
         raise GitHubConfigError
     return output
 
