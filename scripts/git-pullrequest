@@ -32,7 +32,7 @@ Ayarlar
 
 ::
 
-    $ git pullrequest -i 2 -r berkerpeksag-archive:test -H berkerpeksag-archive:fix-b -b master
+    $ git pullrequest -i 2 -r user:test -H me:fix-b -b master
 
 """
 
@@ -65,11 +65,12 @@ def _git_config(key, value=None):
 
 def _create_pull_request(**config):
     user, repo = config['repo'].split(':')
-    url =  GH_API_URL.format(user=user, repo=repo)
+    url = GH_API_URL.format(user=user, repo=repo)
     auth = (_git_config(CFG_USER_NAME), _git_config(CFG_USER_PASSWORD))
     r = requests.post(url, auth=auth, data=json.dumps(config))
     print r.headers
     print r.text
+
 
 def main():
     parser = argparse.ArgumentParser(prog='git-pullrequest')
