@@ -42,9 +42,14 @@ import subprocess
 
 import requests
 
+# Settings
 GH_API_URL = 'https://api.github.com/repos/{user:s}/{repo:s}/pulls'
+GH_REPO_BASE = 'master'
+
+# Git config keys
 CFG_USER_NAME = 'pullrequest.user.name'
 CFG_USER_PASSWORD = 'pullrequest.user.password'
+CFG_REPO_BASE = 'pullrequest.repo.base'
 
 
 class GitHubConfigError(KeyError):
@@ -79,7 +84,8 @@ def main():
     parser.add_argument('-i', '--issue', type=int, required=True)
     parser.add_argument('-H', '--head', type=str, required=True)
     parser.add_argument('-r', '--repo', type=str, required=True)
-    parser.add_argument('-b', '--base', type=str, default='master')
+    parser.add_argument('-b', '--base', type=str,
+        default=_git_config(CFG_REPO_BASE, default=GH_REPO_BASE))
     args = parser.parse_args()
 
     _create_pull_request(**args.__dict__)
