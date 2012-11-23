@@ -4,7 +4,8 @@ if [[ -n "$PS1" ]] ; then
 
 GAE_HOME=/home/berker/google/appengine
 export JAVA_HOME=/usr/lib/jvm/java-6-sun
-PATH=$PATH:$GAE_HOME:$JAVA_HOME/bin
+export SCRIPTS_HOME=/home/berker/dotfiles/scripts/
+PATH=$PATH:$GAE_HOME:$JAVA_HOME/bin:$SCRIPTS_HOME
 export PATH
 
 export PYTHONSTARTUP=$HOME/.pythonrc.py
