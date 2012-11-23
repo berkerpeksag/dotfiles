@@ -5,15 +5,20 @@
 Kullanım
 ========
 
+.. warning:: ``git-pullrequest`` betiğinin çalıştırmak için ``PATH``'te yer
+             alan bir klasörün içine koymak yeterlidir.
+
 ::
 
     $ git config pullrequest.user.name <USERNAME>
     $ git config pullrequest.user.password <PASSWORD>
 
+
 Ayarlar
 -------
 
 * ``pullrequest.repo.branch``: master
+
 
 Örnek Kullanım
 --------------
@@ -45,8 +50,6 @@ def _git_config(key, value=None):
     cmd_tpl = 'git config {key:s} {value:s}'
     cmd = cmd_tpl.format(key=key, value=value)
     run = subprocess.check_output(cmd.split(), universal_newlines=True)
-    print 'Command', cmd
-    print 'Output', run
     output = run.rstrip()
     if not output:
         raise GitHubConfigError
@@ -54,10 +57,8 @@ def _git_config(key, value=None):
 
 
 def _create_pull_request(**config):
-    print config
     user, repo = config['repo'].split(':')
     url =  GH_API_URL.format(user=user, repo=repo)
-    print url
     auth = (_git_config(CFG_USER_NAME), _git_config(CFG_USER_PASSWORD))
     r = requests.post(url, auth=auth, data=json.dumps(config))
     print r.headers
