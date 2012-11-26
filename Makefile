@@ -41,6 +41,11 @@ emacs::
 	@ln -fns $(DOTFILES)/.emacs.d	${HOME}/.emacs.d
 	@echo Emacs is symlinked.
 
+vim::
+	@ln -fs ${DOTFILES}/.vimrc	${HOME}/.vimrc
+	@ln -fns ${DOTFILES}/.vim	${HOME}/.vim
+	@echo Vim is symlinked.
+
 bash::
 	@ln -fs $(DOTFILES)/.bashrc ${HOME}/.bashrc
 	@ln -fs $(DOTFILES)/.bash_aliases ${HOME}/.bash_aliases
