@@ -1,7 +1,11 @@
-"Turn off compability mode with Vi, we don't need that anymore
+" Turn off compability mode with Vi, we don't need that anymore
 set nocompatible
 
-" show line and column number
+" Activate Pathogen
+runtime bundle/pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
+" Show line and column number
 set ruler
 
 " Show line numbers
@@ -21,6 +25,11 @@ autocmd FileType python set completeopt=menu
 " Tabs are converted to spaces
 autocmd FileType python set expandtab
 
-" syntax formatting for languages
+" Syntax formatting for languages
 syntax enable
 set background=dark
+
+" Nerdtree
+
+" Open a NERDTree automatically when vim starts up
+autocmd vimenter * NERDTree
