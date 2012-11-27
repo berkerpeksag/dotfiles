@@ -16,3 +16,24 @@
 [submodule ".vim/bundle/pathogen"]
 	path = .vim/bundle/pathogen
 	url = git://github.com/tpope/vim-pathogen.git
+[submodule ".emacs.d/modes/auto-complete"]
+	path = .emacs.d/modes/auto-complete
+	url = git://github.com/auto-complete/auto-complete.git
+[submodule ".emacs.d/modes/fullscreen"]
+	path = .emacs.d/modes/fullscreen
+	url = git://github.com/emacsmirror/fullscreen.git
+[submodule ".emacs.d/modes/linum"]
+	path = .emacs.d/modes/linum
+	url = git://github.com/emacsmirror/linum.git
+[submodule ".emacs.d/modes/markdown-mode"]
+	path = .emacs.d/modes/markdown-mode
+	url = git://jblevins.org/git/markdown-mode.git
+[submodule ".emacs.d/modes/python-mode"]
+	path = .emacs.d/modes/python-mode
+	url = git://github.com/emacsmirror/python-mode.git
+[submodule ".emacs.d/modes/smooth-scrolling"]
+	path = .emacs.d/modes/smooth-scrolling
+	url = git://github.com/emacsmirror/smooth-scrolling.git
+[submodule ".emacs.d/modes/whitespace"]
+	path = .emacs.d/modes/whitespace
+	url = git://github.com/emacsmirror/whitespace.git
