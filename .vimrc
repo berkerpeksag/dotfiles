@@ -60,6 +60,15 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 nmap <C-t> :tabnew<cr>
 imap <C-t> <ESC>:tabnew<cr>
 
+"" Disable classic L-R-T-B keys
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+
+"" Switch to visual mode
+inoremap jj <Esc>
+
 
 " Line wrapping
 set wrap
