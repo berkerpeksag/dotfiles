@@ -1,6 +1,7 @@
 " Turn off compability mode with Vi, we don't need that anymore
 set nocompatible
 
+set t_Co=256
 
 " Activate Pathogen
 runtime bundle/pathogen/autoload/pathogen.vim
