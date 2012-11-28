@@ -115,8 +115,3 @@
 (custom-set-faces
  '(diff-added ((t (:foreground "Green"))) 'now)
  '(diff-removed ((t (:foreground "Red"))) 'now))
-
-;;; Mozilla
-
-;; See: https://developer.mozilla.org/En/Developer_Guide/Coding_Style#Naming_and_formatting_code
-(c-set-offset 'innamespace 0)
