@@ -44,6 +44,12 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Line wrapping
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=79
+
 
 " Statusline
 
@@ -69,8 +75,6 @@ autocmd FileType python set expandtab shiftwidth=4 softtabstop=4
 autocmd FileType python set completeopt=menu
 " Run the Flake8 check every time you write a Python file
 autocmd BufWritePost *.py call Flake8()
-" PEP8: Always limit the width of text to 79 characters
-autocmd BufRead *.py set tw=79
 
 " Tabs are converted to spaces
 autocmd FileType python set expandtab
