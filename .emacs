@@ -1,11 +1,15 @@
 ;;; Modes path
-(add-to-list 'load-path "~/.emacs.d/modes/")
+(setq emacs-submodules-path "~/.emacs.d/modes/")
+
+(dolist (submodule (directory-files emacs-submodules-path t "\\w+"))
+    (when (file-directory-p submodule)
+          (add-to-list 'load-path submodule)))
 
 ;;; Theme
 
-(require 'color-theme)
-(setq color-theme-is-global t)
-(color-theme-clarity)
+;(require 'color-theme)
+;(setq color-theme-is-global t)
+;(color-theme-clarity)
 
 ;;; Modes
 
