@@ -39,11 +39,15 @@ mozilla-config::
 emacs::
 	@ln -fs $(DOTFILES)/.emacs	${HOME}/.emacs
 	@ln -fns $(DOTFILES)/.emacs.d	${HOME}/.emacs.d
+	@git gsu
+	@echo Submodules are activated.
 	@echo Emacs is symlinked.
 
 vim::
 	@ln -fs ${DOTFILES}/.vimrc	${HOME}/.vimrc
 	@ln -fns ${DOTFILES}/.vim	${HOME}/.vim
+	@git gsu
+	@echo Submodules are activated.
 	@echo Vim is symlinked.
 
 bash::
@@ -67,8 +71,9 @@ config::
 clean::
 	@find . -name "*.elc" -exec rm {} \;
 
-# Not finished yet.
-#scripts::
-#	@cp $(SCRIPTS)/x-art.sample.sh $(SCRIPTS)/met-art
+# Test command
+foo::
+	@git gsu
+	@echo Submodules are activated.
 
 # TODO(berker): Add `clean` command.
