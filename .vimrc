@@ -30,6 +30,20 @@ set hlsearch
 " baz is enough to go to the baz.py file.
 set autochdir
 
+" Never ever let Vim write a backup file!
+set nobackup
+set noswapfile
+
+" Hightlight whitespaces
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 
 " Statusline
 
