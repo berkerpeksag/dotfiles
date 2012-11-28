@@ -8,6 +8,22 @@ runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 
+" Default to UTF-8 encoding
+set encoding=utf8
+set fileencoding=utf8
+
+
+" Syntax formatting for languages
+syntax enable
+set background=dark
+
+" Color scheme
+colorscheme molokai
+
+
+" Keep track of last commands
+set history=1000
+
 " Show line and column number
 set ruler
 
@@ -39,11 +55,11 @@ set noswapfile
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
-" Easy window navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+" Custom keybindings
+"" Create a new tab like Firefox
+nmap <C-t> :tabnew<cr>
+imap <C-t> <ESC>:tabnew<cr>
+
 
 " Line wrapping
 set wrap
@@ -53,12 +69,11 @@ set colorcolumn=79
 
 
 " Statusline
-
-" File name
+"" File name
 set statusline=%<%f\
-" Git current branch
+"" Git current branch
 set statusline+=%{fugitive#statusline()}
-" Current dir
+"" Current dir
 set statusline+=\ [%{getcwd()}]
 
 
@@ -68,30 +83,23 @@ filetype plugin on
 filetype plugin indent on
 
 
-" Python stuff
+" Python
 autocmd FileType python let python_highlight_all = 1
 autocmd FileType python let python_slow_sync = 1
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType python set expandtab shiftwidth=4 softtabstop=4
 autocmd FileType python set completeopt=menu
-" Run the Flake8 check every time you write a Python file
+"" Run the Flake8 check every time you write a Python file
 autocmd BufWritePost *.py call Flake8()
-
-" Tabs are converted to spaces
+"" Tabs are converted to spaces
 autocmd FileType python set expandtab
 
-" Syntax formatting for languages
-syntax enable
-set background=dark
-
-
 " Nerdtree
+"" Open a NERDTree automatically when vim starts up
+"autocmd vimenter * NERDTree
 
-" Open a NERDTree automatically when vim starts up
-autocmd vimenter * NERDTree
-
-" Map the toggle command :NERDTreeToggle to the F2 key
+"" Map the toggle command :NERDTreeToggle to the F2 key
 map <F2> :NERDTreeToggle<CR>
 
-" Ignore list
+"" Ignore list
 let NERDTreeIgnore=['\.pyc', '\.pyo', '\.pyd', '\~$', '\.bak', '\.git', '\.hg']
