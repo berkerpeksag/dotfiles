@@ -43,3 +43,6 @@
 [submodule ".emacs.d/modes/popup-el"]
 	path = .emacs.d/modes/popup-el
 	url = git://github.com/auto-complete/popup-el.git
+[submodule ".vim/bundle/molokai"]
+	path = .vim/bundle/molokai
+	url = git://github.com/tomasr/molokai.git
