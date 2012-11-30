@@ -53,6 +53,7 @@ set autochdir
 set nobackup
 set noswapfile
 
+" Always show the status line
 set laststatus=2
 
 " Hightlight whitespaces
@@ -116,3 +117,7 @@ map <F2> :NERDTreeToggle<CR>
 
 "" Ignore list
 let NERDTreeIgnore=['\.pyc', '\.pyo', '\.pyd', '\~$', '\.bak', '\.git', '\.hg']
+
+
+" Powerline
+let g:Powerline_symbols = 'fancy'
