@@ -125,6 +125,9 @@ autocmd FileType python set expandtab
 "" Map the toggle command :NERDTreeToggle to the F2 key
 map <F2> :NERDTreeToggle<CR>
 
+" Close Vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 "" Ignore list
 let NERDTreeIgnore=['\.pyc', '\.pyo', '\.pyd', '\~$', '\.bak', '\.git', '\.hg']
 
