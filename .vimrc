@@ -1,7 +1,9 @@
 " Turn off compability mode with Vi, we don't need that anymore
 set nocompatible
 
+" Terminal color settings
 set t_Co=256
+
 
 " Activate Pathogen
 runtime bundle/pathogen/autoload/pathogen.vim
@@ -50,6 +52,8 @@ set autochdir
 " Never ever let Vim write a backup file!
 set nobackup
 set noswapfile
+
+set laststatus=2
 
 " Hightlight whitespaces
 set list
