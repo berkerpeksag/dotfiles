@@ -60,6 +60,12 @@ set laststatus=2
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
+" Search settings
+set smartcase
+set ignorecase
+set incsearch
+set hlsearch
+
 " Custom keybindings
 "" Create a new tab like Firefox
 nmap <C-t> :tabnew<cr>
@@ -73,6 +79,10 @@ inoremap <Right> <nop>
 
 "" Switch to visual mode
 inoremap jj <Esc>
+
+"" Row based j and k
+map k gk
+map j gj
 
 
 " Line wrapping
