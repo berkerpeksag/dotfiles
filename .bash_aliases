@@ -24,3 +24,6 @@ alias hcm='hg commit -m'
 alias fx='dist/bin/firefox -P clean -no-remote'
 
 alias uname='python -m platform'
+
+# Tmux
+alias tmux='tmux -2'
