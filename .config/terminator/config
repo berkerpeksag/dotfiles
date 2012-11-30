@@ -11,8 +11,10 @@
 [profiles]
   [[default]]
     custom_command = tmux
-    scrollbar_position = hidden
+    use_system_font = False
+    font = Monaco for Powerline 10
     icon_bell = False
+    scrollbar_position = hidden
 [layouts]
   [[default]]
     [[[child1]]]
