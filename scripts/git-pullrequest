@@ -88,7 +88,7 @@ def main():
         default=_git_config(CFG_REPO_BASE, default=GH_REPO_BASE))
     args = parser.parse_args()
 
-    _create_pull_request(**args.__dict__)
+    _create_pull_request(**vars(args))
 
 if __name__ == '__main__':
     main()
