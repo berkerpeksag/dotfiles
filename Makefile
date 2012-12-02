@@ -2,7 +2,7 @@ DOTFILES = $(PWD)
 SCRIPTS = $(DOTFILES)/scripts
 
 work:: basic
-basic:: emacs tmux bash git config python
+basic:: emacs tmux bash git config python vim
 home:: basic scripts mozilla
 python:: core python-core python-tools python-config
 mozilla:: core mozilla-core mozilla-config
@@ -43,7 +43,9 @@ emacs::
 	@echo Submodules are activated.
 	@echo Emacs is symlinked.
 
-vim::
+vim:: vim-config vim-fonts
+
+vim-config::
 	@ln -fs ${DOTFILES}/.vimrc	${HOME}/.vimrc
 	@ln -fns ${DOTFILES}/.vim	${HOME}/.vim
 	@git gsu
