@@ -50,6 +50,10 @@ vim::
 	@echo Submodules are activated.
 	@echo Vim is symlinked.
 
+vim-fonts::
+	@ln -fns ${DOTFILES}/.fonts	${HOME}/.fonts
+	@echo .fonts are symlinked.
+
 bash::
 	@ln -fs $(DOTFILES)/.bashrc ${HOME}/.bashrc
 	@ln -fs $(DOTFILES)/.bash_aliases ${HOME}/.bash_aliases
@@ -66,6 +70,7 @@ tmux::
 
 config::
 	@ln -fns $(DOTFILES)/.weechat	$(HOME)/.weechat
+	@ln -fns ${DOTFILES}/.config	${HOME}/.config
 	@echo Misc config files are symlinked.
 
 clean::
