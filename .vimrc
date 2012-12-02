@@ -84,6 +84,10 @@ inoremap jj <Esc>
 map k gk
 map j gj
 
+"" Use jk and kj as <Esc> alternative
+inoremap jk <Esc>
+inoremap kj <Esc>
+
 
 " Line wrapping
 set wrap
