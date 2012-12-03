@@ -66,6 +66,10 @@ set ignorecase
 set incsearch
 set hlsearch
 
+" Allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+
 " Custom keybindings
 "" Create a new tab like Firefox
 nmap <C-t> :tabnew<cr>
