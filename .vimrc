@@ -51,6 +51,7 @@ set autochdir
 
 " Never ever let Vim write a backup file!
 set nobackup
+set nowritebackup
 set noswapfile
 
 " Always show the status line
