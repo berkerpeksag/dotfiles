@@ -71,6 +71,14 @@ set hlsearch
 set backspace=indent,eol,start
 
 
+" Tab completion settings
+"" Wilcard matches show a list, matching the longest first
+set wildmode=list:longest
+set wildignore+=.git,.hg,.svn " Ignore version control repos
+set wildignore+=*.pyc " Ignore Python compiled files
+set wildignore+=*.swp " Ignore vim backups
+
+
 " Custom keybindings
 "" Create a new tab like Firefox
 nmap <C-t> :tabnew<cr>
@@ -88,10 +96,6 @@ inoremap jj <Esc>
 "" Row based j and k
 map k gk
 map j gj
-
-"" Use jk and kj as <Esc> alternative
-inoremap jk <Esc>
-inoremap kj <Esc>
 
 
 " Line wrapping
@@ -116,15 +120,19 @@ filetype plugin on
 filetype plugin indent on
 
 
-" Python
+" Auto commands
+" Clear whitespace at the end of lines automatically
+autocmd BufWritePre * :%s/\s\+$//e
+
+"" Python
 autocmd FileType python let python_highlight_all = 1
 autocmd FileType python let python_slow_sync = 1
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType python set expandtab shiftwidth=4 softtabstop=4
 autocmd FileType python set completeopt=menu
-"" Run the Flake8 check every time you write a Python file
+""" Run the Flake8 check every time you write a Python file
 autocmd BufWritePost *.py call Flake8()
-"" Tabs are converted to spaces
+""" Tabs are converted to spaces
 autocmd FileType python set expandtab
 
 " Nerdtree
