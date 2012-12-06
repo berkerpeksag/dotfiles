@@ -121,7 +121,7 @@ filetype plugin indent on
 
 
 " Auto commands
-" Clear whitespace at the end of lines automatically
+"" Clear whitespace at the end of lines automatically
 autocmd BufWritePre * :%s/\s\+$//e
 
 "" Python
@@ -134,6 +134,10 @@ autocmd FileType python set completeopt=menu
 autocmd BufWritePost *.py call Flake8()
 """ Tabs are converted to spaces
 autocmd FileType python set expandtab
+
+"" Convert indentation to 2 spaces in HTML files
+autocmd BufNewFile,BufReadPost *.html set shiftwidth=2 expandtab
+
 
 " Nerdtree
 "" Open a NERDTree automatically when vim starts up
