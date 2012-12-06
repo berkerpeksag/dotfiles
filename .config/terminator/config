@@ -1,6 +1,6 @@
 [global_config]
   window_state = maximise
-  handle_size = 0
+  handle_size = 1
   title_hide_sizetext = True
   title_inactive_fg_color = "#4e4e4e"
   borderless = True
