@@ -155,3 +155,14 @@ let NERDTreeIgnore=['\.pyc', '\.pyo', '\.pyd', '\~$', '\.bak', '\.git', '\.hg']
 
 " Powerline
 let g:Powerline_symbols = 'fancy'
+
+
+" Gist
+"" Detect filetype from the filename
+let g:gist_detect_filetype = 1
+
+"" Open browser after the post
+let g:gist_open_browser_after_post = 1
+
+"" Private by default
+let g:gist_post_private = 1
