@@ -76,6 +76,9 @@ config::
 	@echo Misc config files are symlinked.
 
 clean::
+	@rm -rf .weechat .gitignore .gitconfig .bashrc .bash_aliases
+	@rm -rf .fonts .vim .vimrc .emacs .emacs.d .mozconfig .autoenv
+	@rm -rf .pythonrc.py .config/terminator
 	@find . -name "*.elc" -exec rm {} \;
 
 # Test command
