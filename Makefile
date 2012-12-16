@@ -85,5 +85,3 @@ clean::
 foo::
 	@git gsu
 	@echo Submodules are activated.
-
-# TODO(berker): Add `clean` command.
