@@ -80,6 +80,9 @@ set wildignore+=*.swp " Ignore vim backups
 
 
 " Custom keybindings
+let mapleader = ","
+let g:mapleader = ","
+
 "" Create a new tab like Firefox
 nmap <C-t> :tabnew<cr>
 imap <C-t> <ESC>:tabnew<cr>
