@@ -54,6 +54,10 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Enable undo even if the file is closed
+set undofile
+set undodir=/tmp
+
 " Always show the status line
 set laststatus=2
 
