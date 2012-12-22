@@ -112,6 +112,17 @@ set formatoptions=qrn1
 set colorcolumn=79
 
 
+" Indentation
+"" Sets display width of tabs
+set tabstop=4
+"" Sets indentation with
+set shiftwidth=4
+"" Turns on auto-indenting
+set autoindent
+"" Remembers previous indent when creating new lines
+set smartindent
+
+
 " Statusline
 "" File name
 set statusline=%<%f\
