@@ -82,6 +82,9 @@
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
+;; make "yes or no" "y or n"
+(fset 'yes-or-no-p 'y-or-n-p)
+
 ;; See: http://www.emacswiki.org/cgi-bin/wiki/CopyAndPaste#toc5
 (setq
  ; inter-program-paste-function 'x-cut-buffer-or-selection-value
