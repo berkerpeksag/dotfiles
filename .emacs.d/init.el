@@ -7,9 +7,12 @@
 
 ;;; Theme
 
-;(require 'color-theme)
-;(setq color-theme-is-global t)
-;(color-theme-clarity)
+(require 'color-theme)
+(setq color-theme-is-global t)
+(eval-after-load "color-theme"
+  '(progn
+     (color-theme-initialize)
+     (color-theme-clarity)))
 
 ;;; Modes
 
