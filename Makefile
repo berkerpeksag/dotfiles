@@ -20,12 +20,12 @@ python-core::
 python-tools::
 	@sudo pip install virtualenv
 	@sudo apt-get install terminator
-	@ln -fns $(DOTFILES)/.config/terminator	$(HOME)/.config/terminator
+	@ln -fns $(DOTFILES)/config/terminator	$(HOME)/.config/terminator
 	@echo Python tools are installed.
 
 python-config::
-	@ln -fs $(DOTFILES)/.pythonrc.py ${HOME}/.pythonrc.py
-	@ln -fns $(DOTFILES)/.autoenv	${HOME}/.autoenv
+	@ln -fs $(DOTFILES)/pythonrc.py ${HOME}/.pythonrc.py
+	@ln -fns $(DOTFILES)/autoenv	${HOME}/.autoenv
 	@echo Python confif files are symlinked.
 
 mozilla-core::
@@ -33,12 +33,11 @@ mozilla-core::
 	@echo Mozilla dependencies are installed.
 
 mozilla-config::
-	@ln -fs $(DOTFILES)/.mozconfig ${HOME}/.mozconfig
+	@ln -fs $(DOTFILES)/mozconfig ${HOME}/.mozconfig
 	@echo .mozconfig is symlinked.
 
 emacs::
-	@ln -fs $(DOTFILES)/.emacs	${HOME}/.emacs
-	@ln -fns $(DOTFILES)/.emacs.d	${HOME}/.emacs.d
+	@ln -fns $(DOTFILES)/emacs.d	${HOME}/.emacs.d
 	@git gsu
 	@echo Submodules are activated.
 	@echo Emacs is symlinked.
@@ -46,40 +45,38 @@ emacs::
 vim:: vim-config vim-fonts
 
 vim-config::
-	@ln -fs ${DOTFILES}/.vimrc	${HOME}/.vimrc
-	@ln -fns ${DOTFILES}/.vim	${HOME}/.vim
+	@ln -fs ${DOTFILES}/vimrc	${HOME}/.vimrc
+	@ln -fns ${DOTFILES}/vim	${HOME}/.vim
 	@git gsu
 	@echo Submodules are activated.
 	@echo Vim is symlinked.
 
 vim-fonts::
-	@ln -fns ${DOTFILES}/.fonts	${HOME}/.fonts
+	@ln -fns ${DOTFILES}/fonts	${HOME}/.fonts
 	@echo .fonts are symlinked.
 
 bash::
-	@ln -fs $(DOTFILES)/.bashrc ${HOME}/.bashrc
-	@ln -fs $(DOTFILES)/.bash_aliases ${HOME}/.bash_aliases
+	@ln -fs $(DOTFILES)/bashrc ${HOME}/.bashrc
+	@ln -fs $(DOTFILES)/bash_aliases ${HOME}/.bash_aliases
 	@echo .bashrc and .bash_aliases are symlinked.
 
 git::
-	@ln -fs $(DOTFILES)/.gitconfig ${HOME}/.gitconfig
-	@ln -fs $(DOTFILES)/.gitignore ${HOME}/.gitignore
+	@ln -fs $(DOTFILES)/gitconfig ${HOME}/.gitconfig
 	@echo .gitconfig and .gitignre are symlinked.
 
 tmux::
-	@ln -fs $(DOTFILES)/.tmux.conf	${HOME}/.tmux.conf
+	@ln -fs $(DOTFILES)/tmux.conf	${HOME}/.tmux.conf
 	@echo tmux is symlinked.
 
 config::
-	@ln -fns $(DOTFILES)/.weechat	$(HOME)/.weechat
-	@ln -fns ${DOTFILES}/.config	${HOME}/.config
+	@ln -fns $(DOTFILES)/weechat	$(HOME)/.weechat
+	@ln -fns ${DOTFILES}/config	${HOME}/.config
 	@echo Misc config files are symlinked.
 
 clean::
-	@rm -rf .weechat .gitignore .gitconfig .bashrc .bash_aliases
-	@rm -rf .fonts .vim .vimrc .emacs .emacs.d .mozconfig .autoenv
-	@rm -rf .pythonrc.py .config/terminator
-	@find . -name "*.elc" -exec rm {} \;
+	@rm -rf ~/.weechat ~/.gitconfig ~/.bashrc ~/.bash_aliases ~/.themes
+	@rm -rf ~/.fonts ~/.vim ~/.vimrc ~/.emacs.d ~/.mozconfig ~/.autoenv
+	@rm -rf ~/.pythonrc.py ~/.config/terminator ~/.hgrc ~/.tmux.conf
 
 # Test command
 foo::
