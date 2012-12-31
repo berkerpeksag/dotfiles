@@ -16,33 +16,6 @@
 [submodule "vim/bundle/pathogen"]
 	path = vim/bundle/pathogen
 	url = git://github.com/tpope/vim-pathogen.git
-[submodule "emacs.d/modes/auto-complete"]
-	path = emacs.d/modes/auto-complete
-	url = git://github.com/auto-complete/auto-complete.git
-[submodule "emacs.d/modes/fullscreen"]
-	path = emacs.d/modes/fullscreen
-	url = git://github.com/emacsmirror/fullscreen.git
-[submodule "emacs.d/modes/linum"]
-	path = emacs.d/modes/linum
-	url = git://github.com/emacsmirror/linum.git
-[submodule "emacs.d/modes/markdown-mode"]
-	path = emacs.d/modes/markdown-mode
-	url = git://jblevins.org/git/markdown-mode.git
-[submodule "emacs.d/modes/python-mode"]
-	path = emacs.d/modes/python-mode
-	url = git://github.com/emacsmirror/python-mode.git
-[submodule "emacs.d/modes/smooth-scrolling"]
-	path = emacs.d/modes/smooth-scrolling
-	url = git://github.com/emacsmirror/smooth-scrolling.git
-[submodule "emacs.d/modes/whitespace"]
-	path = emacs.d/modes/whitespace
-	url = git://github.com/emacsmirror/whitespace.git
-[submodule "emacs.d/modes/color-theme"]
-	path = emacs.d/modes/color-theme
-	url = git://github.com/5D/emacs-color-theme.git
-[submodule "emacs.d/modes/popup-el"]
-	path = emacs.d/modes/popup-el
-	url = git://github.com/auto-complete/popup-el.git
 [submodule "vim/bundle/molokai"]
 	path = vim/bundle/molokai
 	url = git://github.com/tomasr/molokai.git
@@ -57,7 +30,7 @@
 	url = git://github.com/mattn/webapi-vim.git
 [submodule "vim/bundle/ctrlp"]
 	path = vim/bundle/ctrlp
-	url = https://github.com/kien/ctrlp.vim.git
+	url = git://github.com/kien/ctrlp.vim.git
 [submodule "vim/bundle/autoclose"]
 	path = vim/bundle/autoclose
 	url = git://github.com/Townk/vim-autoclose.git
@@ -67,3 +40,27 @@
 [submodule "autoenv"]
 	path = autoenv
 	url = git://github.com/kennethreitz/autoenv.git
+[submodule "emacs.d/modes/auto-complete"]
+	path = emacs.d/modes/auto-complete
+	url = git://github.com/auto-complete/auto-complete.git
+[submodule "emacs.d/modes/fullscreen"]
+	path = emacs.d/modes/fullscreen
+	url = git://github.com/emacsmirror/fullscreen.git
+[submodule "emacs.d/modes/linum"]
+	path = emacs.d/modes/linum
+	url = git://github.com/emacsmirror/linum.git
+[submodule "emacs.d/modes/markdown"]
+	path = emacs.d/modes/markdown
+	url = git://jblevins.org/git/markdown-mode.git
+[submodule "emacs.d/modes/smooth-scrolling"]
+	path = emacs.d/modes/smooth-scrolling
+	url = git://github.com/emacsmirror/smooth-scrolling.git
+[submodule "emacs.d/modes/whitespace"]
+	path = emacs.d/modes/whitespace
+	url = git://github.com/emacsmirror/whitespace.git
+[submodule "emacs.d/modes/color-theme"]
+	path = emacs.d/modes/color-theme
+	url = git://github.com/5D/emacs-color-theme.git
+[submodule "emacs.d/modes/popup"]
+	path = emacs.d/modes/popup
+	url = git://github.com/auto-complete/popup-el.git
