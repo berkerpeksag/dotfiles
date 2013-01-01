@@ -64,3 +64,6 @@
 [submodule "emacs.d/modes/popup"]
 	path = emacs.d/modes/popup
 	url = git://github.com/auto-complete/popup-el.git
+[submodule "vim/bundle/rust"]
+	path = vim/bundle/rust
+	url = git://github.com/berkerpeksag/vim-rust.git
