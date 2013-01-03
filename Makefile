@@ -38,7 +38,7 @@ mozilla-config::
 
 emacs::
 	@ln -fns $(DOTFILES)/emacs.d	${HOME}/.emacs.d
-	@git gsu
+	@git submodule update --init --recursive
 	@echo Submodules are activated.
 	@echo Emacs is symlinked.
 
@@ -47,7 +47,7 @@ vim:: vim-config vim-fonts
 vim-config::
 	@ln -fs ${DOTFILES}/vimrc	${HOME}/.vimrc
 	@ln -fns ${DOTFILES}/vim	${HOME}/.vim
-	@git gsu
+	@git submodule update --init --recursive
 	@echo Submodules are activated.
 	@echo Vim is symlinked.
 
