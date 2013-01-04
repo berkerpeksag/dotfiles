@@ -1,14 +1,14 @@
 ## Installation
 
-To install all `dotfiles`, you can run:
-
-### Work
+### Work mode
 
 ```sh
 $ make work
 ```
 
-### Home
+### Home mode
+
+This mode includes Mozilla and CPython related configurations.
 
 ```sh
 $ make home
