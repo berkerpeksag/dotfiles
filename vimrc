@@ -71,6 +71,11 @@ set ignorecase
 set incsearch
 set hlsearch
 
+
+" All operations work with the OS clipboard. No need for \"+, \"*
+set clipboard=unnamed
+
+
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
