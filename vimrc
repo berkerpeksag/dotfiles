@@ -121,6 +121,8 @@ set colorcolumn=79
 
 
 " Indentation
+"" Use spaces instead of tabs
+set expandtab
 "" Sets display width of tabs
 set tabstop=4
 "" Sets indentation with
@@ -154,15 +156,13 @@ autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType python let python_highlight_all = 1
 autocmd FileType python let python_slow_sync = 1
 autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType python set expandtab shiftwidth=4 softtabstop=4
 autocmd FileType python set completeopt=menu
 """ Run the Flake8 check every time you write a Python file
 autocmd BufWritePost *.py call Flake8()
-""" Tabs are converted to spaces
-autocmd FileType python set expandtab
 
+" HTML
 "" Convert indentation to 2 spaces in HTML files
-autocmd BufNewFile,BufReadPost *.html set shiftwidth=2 expandtab
+autocmd BufNewFile,BufReadPost *.html set shiftwidth=2
 
 
 " Nerdtree
