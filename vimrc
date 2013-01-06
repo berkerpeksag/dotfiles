@@ -52,6 +52,13 @@ set hlsearch
 " baz is enough to go to the baz.py file.
 set autochdir
 
+" Manage multiple buffers effectively:
+"
+" 1) The current buffer can be put to the background without writing to disk;
+" 2) When a background buffer becomes current again, marks and undo-history are
+"    remembered.
+set hidden
+
 " Never ever let Vim write a backup file!
 set nobackup
 set nowritebackup
