@@ -81,6 +81,11 @@ set ignorecase
 set incsearch
 set hlsearch
 
+" Set the terminal title
+"
+" This gives e.g. | spam.py (~) - VIM |.
+set title
+
 
 " All operations work with the OS clipboard. No need for \"+, \"*
 set clipboard=unnamed
