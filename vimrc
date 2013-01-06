@@ -23,6 +23,9 @@ set background=dark
 colorscheme molokai
 
 
+" Set to auto read when a file is changed from the outside
+set autoread
+
 " Keep track of last commands
 set history=1000
 
