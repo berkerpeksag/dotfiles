@@ -86,6 +86,11 @@ set hlsearch
 " This gives e.g. | spam.py (~) - VIM |.
 set title
 
+" Short prompt. No more |Press ENTER or type command to continue|.
+"
+" See for more info :help shortmess
+set shortmess=atI
+
 
 " All operations work with the OS clipboard. No need for \"+, \"*
 set clipboard=unnamed
