@@ -91,9 +91,6 @@ set title
 " See for more info :help shortmess
 set shortmess=atI
 
-" Make the bell visual
-set visualbell
-
 " All operations work with the OS clipboard. No need for \"+, \"*
 set clipboard=unnamed
 
