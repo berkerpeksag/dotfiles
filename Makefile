@@ -71,6 +71,7 @@ tmux::
 config::
 	@ln -fns $(DOTFILES)/weechat	$(HOME)/.weechat
 	@ln -fns ${DOTFILES}/config	${HOME}/.config
+	@ln -fns ${DOTFILES}/themes	${HOME}/.themes
 	@echo Misc config files are symlinked.
 
 clean::
