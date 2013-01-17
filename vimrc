@@ -85,6 +85,8 @@ set hlsearch
 "
 " This gives e.g. | spam.py (~) - VIM |.
 set title
+set titleold=""
+set titlestring=Vim:\ %F
 
 " Short prompt. No more |Press ENTER or type command to continue|.
 "
