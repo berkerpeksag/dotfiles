@@ -24,3 +24,4 @@ alias tmux='tmux -2'
 alias work='ssh -C2qTnN -D 8080 wakefield@berkerpeksag.com'
 
 alias fap='fab'
+alias fapfapfap='fab'
