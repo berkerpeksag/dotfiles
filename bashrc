@@ -53,8 +53,14 @@ pathappend() {
 }
 
 # Create a new directory and enter it
-function mkd() {
+mkd() {
     mkdir -p "$@" && cd "$@"
+}
+
+# Create a new "Python" directory, enter it, create
+# a virtualenv and activate it
+pymkd() {
+    mkdir -p "$@" && cd "$@" && virtualenv "venv" && source ./venv/bin/activate
 }
 
 # }}}
