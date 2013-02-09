@@ -3,7 +3,7 @@ SCRIPTS = $(DOTFILES)/scripts
 
 work:: basic
 basic:: emacs tmux bash git config python vim
-home:: basic scripts mozilla
+home:: basic scripts mozilla hg
 python:: core python-core python-tools python-config
 mozilla:: core mozilla-core mozilla-config
 
@@ -62,7 +62,11 @@ bash::
 
 git::
 	@ln -fs $(DOTFILES)/gitconfig ${HOME}/.gitconfig
-	@echo .gitconfig and .gitignre are symlinked.
+	@echo .gitconfig and .gitignore are symlinked.
+
+hg::
+	@ln -fs $(DOTFILES)/hgrc ${HOME}/.hgrc
+	@echo .hgrc is symlinked.
 
 tmux::
 	@ln -fs $(DOTFILES)/tmux.conf	${HOME}/.tmux.conf
