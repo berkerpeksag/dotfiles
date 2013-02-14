@@ -21,6 +21,9 @@
 (add-to-list 'auto-mode-alist '("\\.jsm$" . js2-mode))
 (setq js2-language-version 180)
 
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
 (require 'whitespace)
 (setq whitespace-style '(face empty tabs lines-tail trailing))
 (global-whitespace-mode t)

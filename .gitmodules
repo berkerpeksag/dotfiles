@@ -76,3 +76,6 @@
 [submodule "emacs.d/modes/js2"]
 	path = emacs.d/modes/js2
 	url = git://github.com/mooz/js2-mode.git
+[submodule "emacs.d/modes/web"]
+	path = emacs.d/modes/web
+	url = git://github.com/fxbois/web-mode.git
