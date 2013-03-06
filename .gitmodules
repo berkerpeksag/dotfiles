@@ -79,3 +79,6 @@
 [submodule "emacs.d/modes/web"]
 	path = emacs.d/modes/web
 	url = git://github.com/fxbois/web-mode.git
+[submodule "vim/bundle/gitgutter"]
+	path = vim/bundle/gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
