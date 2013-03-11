@@ -49,6 +49,13 @@
 
 (require 'smooth-scrolling)
 
+(require 'golden-ratio)
+(golden-ratio-enable)
+; If you want to disable automatic resizing done by golden-ratio,
+; just invoke (golden-ratio-disable)
+
+;;; Settings
+
 (global-hl-line-mode 1) ; turn on highlighting current line
 
 ; Visual Line mode provides support for editing by visual lines.

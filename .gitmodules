@@ -82,3 +82,6 @@
 [submodule "vim/bundle/gitgutter"]
 	path = vim/bundle/gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
+[submodule "emacs.d/modes/golden-ratio"]
+	path = emacs.d/modes/golden-ratio
+	url = git://github.com/roman/golden-ratio.el.git
