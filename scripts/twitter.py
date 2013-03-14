@@ -59,5 +59,5 @@ if __name__ == '__main__':
         usage()
     _reversed = False
     if len(argv) == 3 and argv[2] == '--reversed':
-       _reversed = True
+        _reversed = True
     main(argv[1], _reversed)
