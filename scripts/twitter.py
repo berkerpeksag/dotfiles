@@ -52,7 +52,8 @@ def main(screen_name, _reversed=False):
 
 
 def usage():
-    exit('Usage: python {0} <TWITTER_SCREEN_NAME> [--reversed]'.format(__file__))
+    msg = 'Usage: python {0} <TWITTER_SCREEN_NAME> [--reversed]'.format
+    exit(msg(__file__))
 
 if __name__ == '__main__':
     if len(argv) > 3 or not isinstance(argv[1], basestring):
