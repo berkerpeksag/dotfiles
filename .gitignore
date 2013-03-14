@@ -1,2 +1,6 @@
 *.pyc
 *~
+*.dat
+*.log
+*.weechatlog
+node_modules
