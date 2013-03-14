@@ -16,23 +16,23 @@ def convert_date(date_string):
 
 def request(url):
     r = requests.get(BASE_URL + url)
-    if r.status_code is requests.codes.ok:
-        return r
+    if r.status_code == requests.codes.ok:
+        return r.json()
     r.raise_for_status()
 
 
 def get_following_ids(screen_name):
     r = request('friends/ids.json?screen_name={0:s}'.format(screen_name))
-    return r.json['ids']
+    return r['ids']
 
 
 def get_user_tweets(user_id):
     r = request('users/show.json?user_id={0:d}'.format(user_id))
-    if 'status' in r.json:
-        result = (r.json['screen_name'],
-                  convert_date(r.json['status']['created_at']))
+    if 'status' in r:
+        result = (r['screen_name'],
+                  convert_date(r['status']['created_at']))
     else:
-        result = (r.json['screen_name'], None)
+        result = (r['screen_name'], None)
     return result
 
 
