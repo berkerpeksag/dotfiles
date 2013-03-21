@@ -92,8 +92,8 @@
 ;; If you want to be able to M-x without meta (phones, etc)
 (global-set-key (kbd "C-c x") 'execute-extended-command)
 
-;; Bind C-c s to shell globally
-(global-set-key (kbd "C-c s") 'shell)
+;; Bind C-c s to eshell globally
+(global-set-key (kbd "C-c s") 'eshell)
 
 ;;; Settings
 
