@@ -92,6 +92,9 @@
 ;; If you want to be able to M-x without meta (phones, etc)
 (global-set-key (kbd "C-c x") 'execute-extended-command)
 
+;; Bind C-c s to shell globally
+(global-set-key (kbd "C-c s") 'shell)
+
 ;;; Settings
 
 (set-default-font "Ubuntu Mono-14")
