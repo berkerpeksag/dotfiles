@@ -141,6 +141,7 @@
 
 ;;; Functions
 
+; http://whattheemacsd.com/file-defuns.el-01.html
 (defun rename-current-buffer-file ()
   "Renames current buffer and file it is visiting."
   (interactive)
