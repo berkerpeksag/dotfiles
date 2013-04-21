@@ -160,3 +160,23 @@
                    name (file-name-nondirectory new-name)))))))
 
 (global-set-key (kbd "C-x C-r") 'rename-current-buffer-file)
+
+;; A function to create new functions that look for a specific pattern
+;; http://whattheemacsd.com/key-bindings.el-04.html
+(require 'find-file-in-project)
+
+(defun ffip-create-pattern-file-finder (&rest patterns)
+  (lexical-let ((patterns patterns))
+    (lambda ()
+      (interactive)
+      (let ((ffip-patterns patterns))
+        (find-file-in-project)))))
+
+;; Find file in project, with specific patterns
+(global-unset-key (kbd "C-x C-o"))
+(global-set-key (kbd "C-x C-o el")
+                (ffip-create-pattern-file-finder "*.el"))
+(global-set-key (kbd "C-x C-o js")
+                (ffip-create-pattern-file-finder "*.js"))
+(global-set-key (kbd "C-x C-o py")
+                (ffip-create-pattern-file-finder "*.py"))
