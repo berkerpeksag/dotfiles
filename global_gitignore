@@ -1,4 +1,10 @@
+# Python
 *.py[cod]
-.idea
+__pycache__
 venv
+
+# PyCharm
+.idea
+
+# Node :(
 node_modules/
