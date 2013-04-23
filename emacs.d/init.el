@@ -1,9 +1,8 @@
 ;;; Modes path
-(setq emacs-submodules-path "~/.emacs.d/modes/")
 
-(dolist (submodule (directory-files emacs-submodules-path t "\\w+"))
-    (when (file-directory-p submodule)
-          (add-to-list 'load-path submodule)))
+(let ((default-directory "~/.emacs.d/modes/"))
+  (normal-top-level-add-to-load-path '("."))
+  (normal-top-level-add-subdirs-to-load-path))
 
 ;;; Theme
 
