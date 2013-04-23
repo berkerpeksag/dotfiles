@@ -3,4 +3,4 @@
 *.dat
 *.log
 *.weechatlog
-node_modules
+emacs.d/eshell
