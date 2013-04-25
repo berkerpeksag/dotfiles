@@ -7,7 +7,7 @@ alias l1='ls -1 --color=auto'
 
 alias ..='cd ..' # Go up one directory
 alias ...='cd ../..' # Go up two directories
-alias ....='cd ../../..' # Go up two directories
+alias ....='cd ../../..' # Go up three directories
 
 # Mozilla
 alias fx='dist/bin/firefox -P clean -no-remote'
