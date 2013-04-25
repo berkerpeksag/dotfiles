@@ -46,12 +46,21 @@
 (require 'linum)
 (global-linum-mode 1) ; display line numbers in margin.
 
+(require 'ido)
+(ido-mode t)
+
 (require 'smooth-scrolling)
 
 (require 'golden-ratio)
 (golden-ratio-enable)
 ; If you want to disable automatic resizing done by golden-ratio,
 ; just invoke (golden-ratio-disable)
+
+;; highlight matching closing brackets
+(show-paren-mode 1)
+
+;; insert closing brackets automagically
+(electric-pair-mode 1)
 
 ;;; Settings
 
