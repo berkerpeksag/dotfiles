@@ -8,7 +8,8 @@
 
 ;;; Theme
 
-(load-theme 'molokai t)
+;(load-theme 'molokai t)
+(load-theme 'monokai t)
 
 ;;; Modes
 
