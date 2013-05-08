@@ -85,3 +85,6 @@
 [submodule "emacs.d/modes/golden-ratio"]
 	path = emacs.d/modes/golden-ratio
 	url = git://github.com/roman/golden-ratio.el.git
+[submodule "emacs.d/modes/powerline"]
+	path = emacs.d/modes/powerline
+	url = git://github.com/milkypostman/powerline.git
