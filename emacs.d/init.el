@@ -4,9 +4,11 @@
   (normal-top-level-add-to-load-path '("."))
   (normal-top-level-add-subdirs-to-load-path))
 
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+
 ;;; Theme
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'molokai t)
 
 ;;; Modes
 
@@ -129,8 +131,6 @@
 (custom-set-variables
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (molokai)))
- '(custom-safe-themes (quote ("9fd20670758db15cc4d0b4442a74543888d2e445646b25f2755c65dcd6f1504b" default)))
  '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(indicate-empty-lines t)
  '(safe-local-variable-values
