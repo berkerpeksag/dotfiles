@@ -146,6 +146,7 @@
  '(save-place t nil (saveplace))
  '(scroll-bar-mode (quote right))
  '(tool-bar-mode nil)
+ '(menu-bar-mode nil)
  '(indent-tabs-mode nil)
  '(tabs-width 4)
  '(require-final-newline t) ; Add newline at end of files
