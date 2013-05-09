@@ -1,4 +1,4 @@
-;;; Modes path
+;;; Paths
 
 (let ((default-directory "~/.emacs.d/modes/"))
   (normal-top-level-add-to-load-path '("."))
@@ -8,7 +8,9 @@
 
 ;;; Theme
 
-;(load-theme 'molokai t)
+;; Alternative theme:
+;; (load-theme 'molokai t)
+
 (load-theme 'monokai t)
 
 ;;; Modes
@@ -49,18 +51,18 @@
 
 (require 'smooth-scrolling)
 
-(require 'golden-ratio)
-(golden-ratio-enable)
 ; If you want to disable automatic resizing done by golden-ratio,
 ; just invoke (golden-ratio-disable)
+(require 'golden-ratio)
+(golden-ratio-enable)
+
+;;; Settings
 
 ;; highlight matching closing brackets
 (show-paren-mode 1)
 
 ;; insert closing brackets automagically
 (electric-pair-mode 1)
-
-;;; Settings
 
 (global-hl-line-mode 1) ; turn on highlighting current line
 
@@ -174,6 +176,7 @@
                    name (file-name-nondirectory new-name)))))))
 
 (global-set-key (kbd "C-x C-r") 'rename-current-buffer-file)
+
 
 ;; A function to create new functions that look for a specific pattern
 ;; http://whattheemacsd.com/key-bindings.el-04.html
