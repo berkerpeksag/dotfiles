@@ -121,10 +121,9 @@
 ;; See: http://www.emacswiki.org/cgi-bin/wiki/CopyAndPaste#toc5
 (setq
  ; inter-program-paste-function 'x-cut-buffer-or-selection-value
+ x-select-enable-clipboard t ; X11 Copy & Paste to/from Emacs
  make-backup-files nil ; stop creating those backup~ files
  auto-save-default nil) ; stop creating those #autosave# files
-
-(setq x-select-enable-clipboard t) ; X11 Copy & Paste to/from Emacs
 
 ;; Taken from http://stackoverflow.com/a/2706660/57823
 (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
