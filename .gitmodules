@@ -43,9 +43,6 @@
 [submodule "emacs.d/modes/auto-complete"]
 	path = emacs.d/modes/auto-complete
 	url = git://github.com/auto-complete/auto-complete.git
-[submodule "emacs.d/modes/fullscreen"]
-	path = emacs.d/modes/fullscreen
-	url = git://github.com/emacsmirror/fullscreen.git
 [submodule "emacs.d/modes/linum"]
 	path = emacs.d/modes/linum
 	url = git://github.com/emacsmirror/linum.git

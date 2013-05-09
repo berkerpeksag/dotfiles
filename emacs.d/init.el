@@ -28,9 +28,6 @@
 (setq whitespace-style '(face empty tabs lines-tail trailing))
 (global-whitespace-mode t)
 
-(require 'fullscreen)
-(fullscreen-toggle)
-
 (require 'auto-complete)
 (global-auto-complete-mode t)
 
@@ -132,6 +129,9 @@
  "Prevent annoying \"Active processes exist\" query when you quit Emacs."
  (flet ((process-list ())) ad-do-it))
 
+;; Start with maximized window
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ;;; Customization
 
 (custom-set-variables
@@ -194,3 +194,11 @@
                 (ffip-create-pattern-file-finder "*.js"))
 (global-set-key (kbd "C-x C-o py")
                 (ffip-create-pattern-file-finder "*.py"))
+
+
+;; Shutdown emacs server instance
+;; Usage: M-x server-shutdown
+(defun server-shutdown ()
+  "Save buffers and kill the server"
+  (interactive)
+  (save-buffers-kill-emacs))
