@@ -72,6 +72,10 @@ tmux::
 	@ln -fs $(DOTFILES)/tmux.conf	$(HOME)/.tmux.conf
 	@echo tmux is symlinked.
 
+scripts::
+	@ln -fns $(DOTFILES)/scripts	$(HOME)/scripts
+	@echo scripts/ is symlinked.
+
 config::
 	@ln -fns $(DOTFILES)/weechat	$(HOME)/.weechat
 	@ln -fns $(DOTFILES)/config	$(HOME)/.config
@@ -82,3 +86,4 @@ clean::
 	@rm -rf ~/.weechat ~/.gitconfig ~/.bashrc ~/.bash_aliases ~/.themes
 	@rm -rf ~/.fonts ~/.vim ~/.vimrc ~/.emacs.d ~/.mozconfig ~/.autoenv
 	@rm -rf ~/.pythonrc.py ~/.config/terminator ~/.hgrc ~/.tmux.conf
+	@rm -rf ~/scripts
