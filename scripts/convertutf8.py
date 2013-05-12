@@ -29,11 +29,13 @@ def _convert_utf8(source, dir_path):
 def main(dir_path):
     if not dir_path.endswith('/'):
         dir_path += '/'
+    count = 0
     files = os.listdir(dir_path)
     for _file in files:
         if _file.lower().endswith(extensions):
+            count += 1
             _convert_utf8(_file, dir_path)
-    print 'Done.'
+    print 'Done. {:d} file(s) converted.'.format(count)
 
 
 def usage():
