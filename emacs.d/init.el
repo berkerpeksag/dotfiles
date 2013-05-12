@@ -199,9 +199,9 @@
                 (ffip-create-pattern-file-finder "*.py"))
 
 
-;; Shutdown emacs server instance
-;; Usage: M-x server-shutdown
-(defun server-shutdown ()
+;; Shutdown Emacs server instance
+;; Usage: M-x shutdown-server
+(defun shutdown-server ()
   "Save buffers and kill the server"
   (interactive)
   (save-buffers-kill-emacs))
