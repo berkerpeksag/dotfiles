@@ -4,3 +4,4 @@
 *.log
 *.weechatlog
 emacs.d/eshell
+emacs.d/session*
