@@ -58,7 +58,8 @@ vim-fonts::
 bash::
 	@ln -fs $(DOTFILES)/bashrc $(HOME)/.bashrc
 	@ln -fs $(DOTFILES)/bash_aliases $(HOME)/.bash_aliases
-	@echo .bashrc and .bash_aliases are symlinked.
+	@ln -fs $(DOTFILES)/bash_profile $(HOME)/.bash_profile
+	@echo .bashrc, .bash_aliases and .bash_profile are symlinked.
 
 git::
 	@ln -fs $(DOTFILES)/gitconfig $(HOME)/.gitconfig
@@ -86,4 +87,4 @@ clean::
 	@rm -rf ~/.weechat ~/.gitconfig ~/.bashrc ~/.bash_aliases ~/.themes
 	@rm -rf ~/.fonts ~/.vim ~/.vimrc ~/.emacs.d ~/.mozconfig ~/.autoenv
 	@rm -rf ~/.pythonrc.py ~/.config/terminator ~/.hgrc ~/.tmux.conf
-	@rm -rf ~/scripts
+	@rm -rf ~/scripts .bash_profile
