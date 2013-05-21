@@ -205,3 +205,11 @@
   "Save buffers and kill the server"
   (interactive)
   (save-buffers-kill-emacs))
+
+
+(defun find-user-init-file ()
+  "Edit the user-init-file, in another window"
+  (interactive)
+  (find-file-other-window user-init-file))
+
+(global-set-key (kbd "C-c I") 'find-user-init-file)
