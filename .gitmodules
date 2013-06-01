@@ -46,18 +46,12 @@
 [submodule "emacs.d/modes/markdown"]
 	path = emacs.d/modes/markdown
 	url = git://jblevins.org/git/markdown-mode.git
-[submodule "emacs.d/modes/whitespace"]
-	path = emacs.d/modes/whitespace
-	url = git://github.com/emacsmirror/whitespace.git
 [submodule "emacs.d/modes/color-theme"]
 	path = emacs.d/modes/color-theme
 	url = git://github.com/5D/emacs-color-theme.git
 [submodule "emacs.d/modes/popup"]
 	path = emacs.d/modes/popup
 	url = git://github.com/auto-complete/popup-el.git
-[submodule "vim/bundle/rust"]
-	path = vim/bundle/rust
-	url = git://github.com/berkerpeksag/vim-rust.git
 [submodule "vim/bundle/jedi"]
 	path = vim/bundle/jedi
 	url = git://github.com/davidhalter/jedi-vim.git
