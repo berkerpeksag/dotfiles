@@ -43,9 +43,6 @@
 [submodule "emacs.d/modes/auto-complete"]
 	path = emacs.d/modes/auto-complete
 	url = git://github.com/auto-complete/auto-complete.git
-[submodule "emacs.d/modes/linum"]
-	path = emacs.d/modes/linum
-	url = git://github.com/emacsmirror/whitespace.git
 [submodule "emacs.d/modes/markdown"]
 	path = emacs.d/modes/markdown
 	url = git://jblevins.org/git/markdown-mode.git
