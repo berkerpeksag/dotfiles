@@ -21,3 +21,6 @@ vendor
 
 # Node :(
 node_modules/
+
+# Emacs
+emacs.desktop
