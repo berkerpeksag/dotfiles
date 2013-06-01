@@ -46,9 +46,6 @@
 [submodule "emacs.d/modes/markdown"]
 	path = emacs.d/modes/markdown
 	url = git://jblevins.org/git/markdown-mode.git
-[submodule "emacs.d/modes/smooth-scrolling"]
-	path = emacs.d/modes/smooth-scrolling
-	url = git://github.com/emacsmirror/smooth-scrolling.git
 [submodule "emacs.d/modes/whitespace"]
 	path = emacs.d/modes/whitespace
 	url = git://github.com/emacsmirror/whitespace.git

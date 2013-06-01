@@ -49,8 +49,6 @@
 (require 'ido)
 (ido-mode t)
 
-(require 'smooth-scrolling)
-
 ; If you want to disable automatic resizing done by golden-ratio,
 ; just invoke (golden-ratio-disable)
 (require 'golden-ratio)
