@@ -104,6 +104,10 @@
 (global-set-key (kbd "C-c <up>")    'windmove-up)
 (global-set-key (kbd "C-c <down>")  'windmove-down)
 
+;; Automatic white-space insertion after comma
+(global-set-key (kbd ",")
+                (lambda() (interactive) (insert ", ")))
+
 ;;; Settings
 
 (set-default-font "Ubuntu Mono-14")
