@@ -111,6 +111,8 @@
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
+(setq mouse-wheel-scroll-amount '(1))
+
 ;; make "yes or no" "y or n"
 (fset 'yes-or-no-p 'y-or-n-p)
 
