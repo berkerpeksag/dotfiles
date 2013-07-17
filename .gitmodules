@@ -73,3 +73,6 @@
 [submodule "emacs.d/modes/powerline"]
 	path = emacs.d/modes/powerline
 	url = git://github.com/milkypostman/powerline.git
+[submodule "emacs.d/modes/git-gutter"]
+	path = emacs.d/modes/git-gutter
+	url = https://github.com/nonsequitur/git-gutter-plus.git

@@ -52,6 +52,17 @@
 (require 'golden-ratio)
 (golden-ratio-enable)
 
+(require 'git-gutter+)
+(global-git-gutter+-mode t)
+
+; Jump between hunks
+(global-set-key (kbd "C-x n") 'git-gutter+-next-hunk)
+(global-set-key (kbd "C-x p") 'git-gutter+-previous-hunk)
+
+; Turn on/off in the current buffer
+(global-set-key (kbd "C-x g") 'git-gutter+-mode)
+(global-set-key (kbd "C-x G") 'global-git-gutter+-mode) ; Turn on/off globally
+
 ;;; Settings
 
 ;; highlight matching closing brackets
