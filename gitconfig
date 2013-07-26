@@ -5,7 +5,7 @@
 	ui = auto
 [core]
 	filemode = false
-	editor = nano
+	editor = vim
 	excludesfile = /home/berker/dotfiles/global_gitignore
 [status]
 	showUntrackedFiles = no
