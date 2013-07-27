@@ -63,6 +63,14 @@ pymkd() {
     mkdir -p "$@" && cd "$@" && virtualenv "venv" && source ./venv/bin/activate
 }
 
+venv() {
+    source venv/bin/activate
+}
+
+dvenv() {
+    deactivate
+}
+
 # }}}
 
 # {{{ Prompt
