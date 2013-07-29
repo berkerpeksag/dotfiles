@@ -24,8 +24,7 @@ alias tmux='tmux -2'
 alias work='ssh -C2qTnN -D 8080 wakefield@berkerpeksag.com'
 
 # Emacs
-alias em='emacsclient -c'
-alias e='emacsclient -t'
+alias e='emacsclient -c'
 
 alias fap='fab'
 alias fapfapfap='fab'
