@@ -105,6 +105,7 @@ set wildmode=list:longest
 set wildignore+=.git,.hg,.svn " Ignore version control repos
 set wildignore+=*.pyc " Ignore Python compiled files
 set wildignore+=*.swp " Ignore vim backups
+set wildignore+=*.o " Ignore object files
 
 
 " Custom keybindings
