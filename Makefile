@@ -89,3 +89,5 @@ clean::
 	@rm -rf ~/.fonts ~/.vim ~/.vimrc ~/.emacs.d ~/.mozconfig ~/.autoenv
 	@rm -rf ~/.pythonrc.py ~/.config/terminator ~/.hgrc ~/.tmux.conf
 	@rm -rf ~/scripts .bash_profile
+
+.PHONY: clean config scripts
