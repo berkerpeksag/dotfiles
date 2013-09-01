@@ -6,6 +6,14 @@
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
+;;; Packaging
+
+(require 'package)
+(add-to-list 'package-archives
+    '("marmalade" .
+      "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
 ;;; Theme
 
 ;; Alternative theme:
