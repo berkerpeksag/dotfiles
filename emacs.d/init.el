@@ -16,10 +16,11 @@
 
 ;;; Theme
 
-;; Alternative theme:
+;; Alternative themes:
 ;; (load-theme 'molokai t)
+;; (load-theme 'monokai t)
 
-(load-theme 'monokai t)
+(load-theme 'soothe t)
 
 ;;; Modes
 
