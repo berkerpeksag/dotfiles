@@ -235,3 +235,15 @@
   (find-file-other-window user-init-file))
 
 (global-set-key (kbd "C-c I") 'find-user-init-file)
+
+
+(defun comment-or-uncomment-line-or-region ()
+  "Toggles commenting on the current line if no region is defined,
+   otherwise toggles comments on the region."
+  (interactive "*")
+  (let ((use-empty-active-region t) (mark-even-if-inactive nil))
+    (cond
+     ((use-region-p) (comment-or-uncomment-region
+                      (region-beginning) (region-end)))
+     (t (comment-or-uncomment-region
+         (line-beginning-position) (line-end-position))))))
