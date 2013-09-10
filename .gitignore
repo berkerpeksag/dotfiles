@@ -5,3 +5,4 @@
 *.weechatlog
 emacs.d/eshell
 emacs.d/session*
+emacs.d/elpa
