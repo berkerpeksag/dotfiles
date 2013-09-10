@@ -27,19 +27,8 @@
 (require 'powerline)
 (powerline-default-theme)
 
-(autoload 'js2-mode "js2-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.jsm$" . js2-mode))
-(setq js2-language-version 180)
-
-(require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-
 (setq whitespace-style '(face empty tabs lines-tail trailing))
 (global-whitespace-mode t)
-
-(require 'auto-complete)
-(global-auto-complete-mode t)
 
 (autoload 'markdown-mode "markdown-mode.el"
  "Major mode for editing Markdown files" t)
@@ -60,17 +49,6 @@
 ; just invoke (golden-ratio-disable)
 (require 'golden-ratio)
 (golden-ratio-enable)
-
-(require 'git-gutter+)
-(global-git-gutter+-mode t)
-
-; Jump between hunks
-(global-set-key (kbd "C-x n") 'git-gutter+-next-hunk)
-(global-set-key (kbd "C-x p") 'git-gutter+-previous-hunk)
-
-; Turn on/off in the current buffer
-(global-set-key (kbd "C-x g") 'git-gutter+-mode)
-(global-set-key (kbd "C-x G") 'global-git-gutter+-mode) ; Turn on/off globally
 
 ;;; Settings
 

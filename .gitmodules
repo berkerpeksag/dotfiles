@@ -40,30 +40,15 @@
 [submodule "autoenv"]
 	path = autoenv
 	url = git://github.com/kennethreitz/autoenv.git
-[submodule "emacs.d/modes/auto-complete"]
-	path = emacs.d/modes/auto-complete
-	url = git://github.com/auto-complete/auto-complete.git
 [submodule "emacs.d/modes/markdown"]
 	path = emacs.d/modes/markdown
 	url = git://jblevins.org/git/markdown-mode.git
-[submodule "emacs.d/modes/color-theme"]
-	path = emacs.d/modes/color-theme
-	url = git://github.com/5D/emacs-color-theme.git
-[submodule "emacs.d/modes/popup"]
-	path = emacs.d/modes/popup
-	url = git://github.com/auto-complete/popup-el.git
 [submodule "vim/bundle/jedi"]
 	path = vim/bundle/jedi
 	url = git://github.com/davidhalter/jedi-vim.git
 [submodule "emacs.d/modes/python"]
 	path = emacs.d/modes/python
 	url = git://github.com/emacsmirror/python-mode.git
-[submodule "emacs.d/modes/js2"]
-	path = emacs.d/modes/js2
-	url = git://github.com/mooz/js2-mode.git
-[submodule "emacs.d/modes/web"]
-	path = emacs.d/modes/web
-	url = git://github.com/fxbois/web-mode.git
 [submodule "vim/bundle/gitgutter"]
 	path = vim/bundle/gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
@@ -73,6 +58,3 @@
 [submodule "emacs.d/modes/powerline"]
 	path = emacs.d/modes/powerline
 	url = git://github.com/milkypostman/powerline.git
-[submodule "emacs.d/modes/git-gutter"]
-	path = emacs.d/modes/git-gutter
-	url = https://github.com/nonsequitur/git-gutter-plus.git
