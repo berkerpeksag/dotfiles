@@ -42,6 +42,10 @@ def usage():
     exit('Usage: python {0} <DIR>'.format(__file__))
 
 if __name__ == '__main__':
-    if len(argv) != 2 or not isinstance(argv[1], basestring):
+    if len(argv) == 1:
+        dir_path = '.'
+    elif len(argv) > 2:
         usage()
-    main(argv[1])
+    else:
+        dir_path = argv[1]
+    main(dir_path)
