@@ -77,6 +77,9 @@
 ;; highlight matching closing brackets
 (show-paren-mode 1)
 
+;; for Emacs Lisp programming
+;;(eldoc-mode 1)
+
 ;; insert closing brackets automagically
 (electric-pair-mode 1)
 
