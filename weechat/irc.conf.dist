@@ -145,7 +145,7 @@ freenode.nicks = "berker"
 freenode.username = "berkerpeksag"
 freenode.realname = "Berker Peksag"
 freenode.local_hostname
-freenode.command
+freenode.command = "/msg nickserv identify <YOUR_PASSWORD>"
 freenode.command_delay
 freenode.autojoin = "#python-dev,#pyistanbul"
 freenode.autorejoin

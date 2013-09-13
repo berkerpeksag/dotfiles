@@ -80,6 +80,7 @@ scripts::
 
 config::
 	@ln -fns $(DOTFILES)/weechat	$(HOME)/.weechat
+	@cp $(HOME)/.weechat/irc.conf.dist $(HOME)/.weechat/irc.conf
 	@ln -fns $(DOTFILES)/config	$(HOME)/.config
 	@ln -fns $(DOTFILES)/themes	$(HOME)/.themes
 	@echo Misc config files are symlinked.
