@@ -14,6 +14,14 @@
       "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
+;; Add in your own as you wish:
+(defvar my-packages '(magit)
+  "A list of packages to ensure are installed at launch.")
+
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
+
 ;;; Theme
 
 ;; Alternative themes:
