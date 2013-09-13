@@ -19,6 +19,8 @@
 ;; Alternative themes:
 ;; (load-theme 'molokai t)
 ;; (load-theme 'monokai t)
+;; (load-theme 'purple-haze t)
+;; (load-theme 'emma t)
 
 (load-theme 'soothe t)
 
