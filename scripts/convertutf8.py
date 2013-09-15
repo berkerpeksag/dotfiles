@@ -27,6 +27,11 @@ def _convert_utf8(source, dir_path):
 
 
 def main(dir_path):
+    if not isinstance(dir_path, basestring):
+        if isinstance(dir_path, (list, tuple)) and len(dir_path) == 0:
+            dir_path = '.'
+        else:
+            dir_path = dir_path[0]
     if not dir_path.endswith('/'):
         dir_path += '/'
     count = 0
