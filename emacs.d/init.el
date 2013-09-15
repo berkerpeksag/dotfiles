@@ -218,6 +218,8 @@
   (interactive)
   (save-buffers-kill-emacs))
 
+(global-set-key (kbd "C-x q") 'shutdown-server)
+
 
 (defun find-user-init-file ()
   "Edit the user-init-file, in another window"
