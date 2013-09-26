@@ -58,3 +58,6 @@
 [submodule "emacs.d/modes/powerline"]
 	path = emacs.d/modes/powerline
 	url = git://github.com/milkypostman/powerline.git
+[submodule "emacs.d/modes/hy-mode"]
+	path = emacs.d/modes/hy-mode
+	url = https://github.com/hylang/hy-mode.git

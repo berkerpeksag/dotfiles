@@ -33,6 +33,8 @@
 
 ;;; Modes
 
+(require 'hy-mode)
+
 (require 'powerline)
 (powerline-default-theme)
 
