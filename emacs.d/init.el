@@ -154,6 +154,7 @@
  '(cua-mode t nil (cua-base))
  '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(indicate-empty-lines t)
+ '(icomplete-mode t)
  '(safe-local-variable-values
    (quote ((eval add-hook (quote write-file-hooks) (quote time-stamp)))))
  '(save-place t nil (saveplace))
