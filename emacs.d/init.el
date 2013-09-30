@@ -45,6 +45,7 @@
  "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
  (cons '("\\.md" . markdown-mode) auto-mode-alist))
+(add-hook 'markdown-mode-hook 'turn-on-auto-fill)
 
 (autoload 'python-mode "python-mode"
  "Python Mode." t)
@@ -62,6 +63,8 @@
 (golden-ratio-enable)
 
 ;;; Settings
+
+(setq-default fill-column 80)
 
 ;; highlight matching closing brackets
 (show-paren-mode 1)
