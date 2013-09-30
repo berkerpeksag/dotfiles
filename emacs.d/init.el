@@ -38,6 +38,7 @@
 (require 'powerline)
 (powerline-default-theme)
 
+(require 'whitespace)
 (setq whitespace-style '(face empty tabs lines-tail trailing))
 (global-whitespace-mode t)
 
