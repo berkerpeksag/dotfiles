@@ -2,9 +2,6 @@
 username = Berker Peksag <berker.peksag@gmail.com>
 verbose = True
 
-[alias]
-try = push -f ssh://hg.mozilla.org/try
-
 [extensions]
 color =
 progress =
@@ -24,9 +21,6 @@ revert = --no-backup
 git = True
 showfunc = True
 unified = 8
-
-[paths]
-try = ssh://berker.peksag@gmail.com@hg.mozilla.org/try/
 
 [pager]
 pager = LESS='FSRX' less
