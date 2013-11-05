@@ -16,6 +16,7 @@ qdiff = -p -U 8
 qnew = -U
 commit = -v
 revert = --no-backup
+import = --no-commit
 
 [diff]
 git = True
