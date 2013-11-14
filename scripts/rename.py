@@ -10,13 +10,15 @@ extensions = {'jpg'}
 
 def do_rename(prefix, path):
     for root, dirs, files in os.walk(path):
-        for file in files:
-            srcpath = os.path.join(path, file)
-            destpath = os.path.join(path, prefix + file)
-            try:
-                shutil.move(srcpath, destpath)
-            finally:
-                print('{} copied to {}.'.format(srcpath, destpath))
+        for filename in files:
+            ext = os.path.splitext(filename)[1][1:].lower()
+            if ext in extensions:
+                srcpath = os.path.join(path, filename)
+                destpath = os.path.join(path, prefix + filename)
+                try:
+                    shutil.move(srcpath, destpath)
+                finally:
+                    print('{} copied to {}.'.format(srcpath, destpath))
     print('Done!')
 
 
