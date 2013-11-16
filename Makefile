@@ -84,6 +84,7 @@ config::
 	@ln -fns $(DOTFILES)/config	$(HOME)/.config
 	@ln -fns $(DOTFILES)/themes	$(HOME)/.themes
 	@echo Misc config files are symlinked.
+	@ln -fs $(DOTFILES)/gedrc	$(HOME)/.gedrc
 
 clean::
 	@rm -rf ~/.weechat ~/.gitconfig ~/.bashrc ~/.bash_aliases ~/.themes
