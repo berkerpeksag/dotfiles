@@ -197,6 +197,13 @@
 (global-set-key (kbd "C-x C-r") 'rename-current-buffer-file)
 
 
+(defun pdb-set-trace ()
+  (interactive)
+  (insert "import pdb; pdb.set_trace()\n"))
+
+(global-set-key (kbd "C-x C-p") 'pdb-set-trace)
+
+
 ;; A function to create new functions that look for a specific pattern
 ;; http://whattheemacsd.com/key-bindings.el-04.html
 (require 'find-file-in-project)
