@@ -157,6 +157,7 @@
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(fringe-mode (quote (nil . 0)) nil (fringe))
+ '(hy-mode-inferior-lisp-command "hy --spy")
  '(indicate-empty-lines t)
  '(icomplete-mode t)
  '(safe-local-variable-values
