@@ -34,6 +34,7 @@
 ;;; Modes
 
 (require 'hy-mode)
+(setq hy-mode-inferior-lisp-command "hy --spy")
 
 (require 'powerline)
 (powerline-default-theme)
@@ -83,6 +84,27 @@
 ; and C-k to commands that operate by visual lines instead of logical
 ; lines.
 (global-visual-line-mode 1) ; 1 for on, 0 for off.
+
+(column-number-mode t)
+(cua-mode t)
+(transient-mark-mode 1) ; No region when it is not highlighted
+(icomplete-mode t)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+
+(set-fringe-mode 0)
+(set-scroll-bar-mode 'right) ; replace 'right with 'left to place it to the left)
+
+(setq-default save-place t)
+(setq-default indent-tabs-mode nil)
+
+(setq cua-auto-tabify-rectangles nil) ; Don't tabify after rectangle commands
+(setq cua-keep-region-after-copy t) ; Standard Windows behaviour
+(setq indicate-empty-lines t)
+(setq tabs-width 4)
+(setq require-final-newline t) ; Add newline at end of files
+(setq uniquify-buffer-name-style 'post-forward)
+(setq uniquify-separator ":")
 
 ;; save session state when you quit emacs
 (setq
@@ -151,25 +173,7 @@
 ;; Start with maximized window
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
-;;; Customization
-
-(custom-set-variables
- '(column-number-mode t)
- '(cua-mode t nil (cua-base))
- '(fringe-mode (quote (nil . 0)) nil (fringe))
- '(hy-mode-inferior-lisp-command "hy --spy")
- '(indicate-empty-lines t)
- '(icomplete-mode t)
- '(safe-local-variable-values
-   (quote ((eval add-hook (quote write-file-hooks) (quote time-stamp)))))
- '(save-place t nil (saveplace))
- '(scroll-bar-mode (quote right))
- '(tool-bar-mode nil)
- '(menu-bar-mode nil)
- '(indent-tabs-mode nil)
- '(tabs-width 4)
- '(require-final-newline t) ; Add newline at end of files
- '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
+;;; Custom faces
 
 (custom-set-faces
  '(diff-added ((t (:foreground "Green"))) 'now)
