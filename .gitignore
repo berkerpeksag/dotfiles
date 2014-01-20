@@ -6,4 +6,5 @@
 emacs.d/eshell
 emacs.d/session*
 emacs.d/elpa
+emacs.d/games
 weechat/irc.conf
