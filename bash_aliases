@@ -21,7 +21,7 @@ alias tmux='tmux -2'
 # Tunnelling
 # See for a great article about SSH tunneling:
 # https://calomel.org/firefox_ssh_proxy.html
-alias work='ssh -C2qTnN -D 8080 wakefield@berkerpeksag.com'
+alias work='ssh -C2qTnN -D 8383 wakefield@berkerpeksag.com'
 
 # Emacs
 alias e='emacsclient -c'
