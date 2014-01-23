@@ -91,9 +91,10 @@
 (icomplete-mode t)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
+(scroll-bar-mode 0)
+(blink-cursor-mode 0)
 
 (set-fringe-mode 0)
-(set-scroll-bar-mode 'right) ; replace 'right with 'left to place it to the left)
 
 (setq-default save-place t)
 (setq-default indent-tabs-mode nil)
