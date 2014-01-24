@@ -62,7 +62,7 @@
 ; If you want to disable automatic resizing done by golden-ratio,
 ; just invoke (golden-ratio-disable)
 (require 'golden-ratio)
-(golden-ratio-enable)
+(golden-ratio-mode 1)
 
 ;;; Settings
 
