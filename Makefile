@@ -7,6 +7,9 @@ home:: basic scripts mozilla hg
 python:: core python-core python-tools python-config
 mozilla:: core mozilla-core mozilla-config
 
+update-submodules::
+	@git submodule foreach git pull origin master
+
 core::
 	@sudo apt-get update
 	@sudo apt-get upgrade
