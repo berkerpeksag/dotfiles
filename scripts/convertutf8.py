@@ -37,7 +37,7 @@ def main(dir_path):
     count = 0
     files = os.listdir(dir_path)
     for _file in files:
-        if _file.lower().endswith(extensions):
+        if '_utf8' not in _file and  _file.lower().endswith(extensions):
             count += 1
             _convert_utf8(_file, dir_path)
     print 'Done. {:d} file(s) converted.'.format(count)
