@@ -1,4 +1,7 @@
-;;; Paths
+;;; init.el --- The Emacs Initialization File
+;; Berker Peksag <berker.peksag@gmail.com>
+
+;; Paths
 
 (let ((default-directory "~/.emacs.d/modes/"))
   (normal-top-level-add-to-load-path '("."))
@@ -6,7 +9,7 @@
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
-;;; Packaging
+;; Packaging
 
 (require 'package)
 (add-to-list 'package-archives
@@ -22,7 +25,7 @@
   (when (not (package-installed-p p))
     (package-install p)))
 
-;;; Theme
+;; Theme
 
 ;; Alternative themes:
 ;; (load-theme 'molokai t)
@@ -31,7 +34,7 @@
 
 (load-theme 'soothe t)
 
-;;; Modes
+;; Modes
 
 (require 'hy-mode)
 (setq hy-mode-inferior-lisp-command "hy --spy")
@@ -59,12 +62,12 @@
 (require 'ido)
 (ido-mode t)
 
-; If you want to disable automatic resizing done by golden-ratio,
-; just invoke (golden-ratio-disable)
+;; If you want to disable automatic resizing done by golden-ratio,
+;; just invoke (golden-ratio-disable)
 (require 'golden-ratio)
 (golden-ratio-mode 1)
 
-;;; Settings
+;; Settings
 
 (setq-default fill-column 80)
 
@@ -79,10 +82,10 @@
 
 (global-hl-line-mode 1) ; turn on highlighting current line
 
-; Visual Line mode provides support for editing by visual lines.
-; It turns on word-wrapping in the current buffer, and rebinds C-a, C-e,
-; and C-k to commands that operate by visual lines instead of logical
-; lines.
+;; Visual Line mode provides support for editing by visual lines.
+;; It turns on word-wrapping in the current buffer, and rebinds C-a, C-e,
+;; and C-k to commands that operate by visual lines instead of logical
+;; lines.
 (global-visual-line-mode 1) ; 1 for on, 0 for off.
 
 (column-number-mode t)
@@ -117,7 +120,7 @@
  desktop-load-locked-desktop nil)
 (desktop-save-mode 1)
 
-;;; Keybindings
+;; Keybindings
 
 (global-set-key (kbd "<C-prior>") 'previous-user-buffer) ; Ctrl+PageUp
 (global-set-key (kbd "<C-next>") 'next-user-buffer) ; Ctrl+PageDown
@@ -147,7 +150,7 @@
 (global-set-key (kbd ",")
                 (lambda() (interactive) (insert ", ")))
 
-;;; Settings
+;; Settings
 
 (set-default-font "Ubuntu Mono-14")
 (set-terminal-coding-system 'utf-8)
@@ -174,15 +177,16 @@
 ;; Start with maximized window
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
-;;; Custom faces
+;; Custom faces
 
 (custom-set-faces
  '(diff-added ((t (:foreground "Green"))) 'now)
  '(diff-removed ((t (:foreground "Red"))) 'now))
 
-;;; Functions
 
-; http://whattheemacsd.com/file-defuns.el-01.html
+;; Functions
+
+;; taken from http://whattheemacsd.com/file-defuns.el-01.html
 (defun rename-current-buffer-file ()
   "Renames current buffer and file it is visiting."
   (interactive)
@@ -210,11 +214,11 @@
 (global-set-key (kbd "C-x C-p") 'pdb-set-trace)
 
 
-;; A function to create new functions that look for a specific pattern
-;; http://whattheemacsd.com/key-bindings.el-04.html
+;; taken from http://whattheemacsd.com/key-bindings.el-04.html
 (require 'find-file-in-project)
 
 (defun ffip-create-pattern-file-finder (&rest patterns)
+  "A function to create new functions that look for a specific pattern"
   (lexical-let ((patterns patterns))
     (lambda ()
       (interactive)
@@ -232,7 +236,6 @@
 
 
 ;; Shutdown Emacs server instance
-;; Usage: M-x shutdown-server
 (defun shutdown-server ()
   "Save buffers and kill the server"
   (interactive)
@@ -288,3 +291,5 @@ Also fix `backward-kill-word' so that it stops at whitespace."
     (backward-kill-word-without-spaces arg)))
 
 (global-set-key (kbd "C-w") 'kill-region-or-backward-kill-word)
+
+;;; init.el ends here
