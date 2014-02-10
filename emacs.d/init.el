@@ -259,3 +259,32 @@
                       (region-beginning) (region-end)))
      (t (comment-or-uncomment-region
          (line-beginning-position) (line-end-position))))))
+
+(global-set-key (kbd "C-c cc") 'find-user-init-file)
+
+
+;; taken from https://github.com/bdd/.emacs.d/blob/master/bdd-defuns.el
+(defun kill-region-or-backward-kill-word (arg)
+  "If mark is active kill the region else backward kill word.
+
+Traditionally Unix uses `C-w' for backward kill word. Preserve Emacs default
+of kill-region if the mark is active, otherwise fallback to `backward-kill-word'.
+Also fix `backward-kill-word' so that it stops at whitespace."
+  (interactive "p")
+
+  (defun backward-kill-word-without-spaces (arg)
+    "Wrap backward-kill-word to swallow spaces separate from words."
+
+    (if (looking-back "\\s-+") ; whitespace
+        (kill-region (point)
+                     (progn
+                       (re-search-backward "\\S-") ; not whitespace
+                       (forward-char 1)
+                       (point)))
+      (backward-kill-word arg)))
+
+  (if mark-active
+      (kill-region (point) (mark))
+    (backward-kill-word-without-spaces arg)))
+
+(global-set-key (kbd "C-w") 'kill-region-or-backward-kill-word)
