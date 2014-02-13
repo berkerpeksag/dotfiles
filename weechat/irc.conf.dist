@@ -172,16 +172,16 @@ mozilla.sasl_mechanism
 mozilla.sasl_username
 mozilla.sasl_password
 mozilla.sasl_timeout
-mozilla.autoconnect = off
+mozilla.autoconnect = on
 mozilla.autoreconnect
 mozilla.autoreconnect_delay
-mozilla.nicks = "berkerpeksag"
+mozilla.nicks = "berker"
 mozilla.username = "berkerpeksag"
 mozilla.realname = "Berker Peksag"
 mozilla.local_hostname
-mozilla.command
+mozilla.command = "/msg nickserv identify <YOUR_PASSWORD>"
 mozilla.command_delay
-mozilla.autojoin = "#sumodev,#webdev,#mdndev"
+mozilla.autojoin = "#static,#commtools"
 mozilla.autorejoin
 mozilla.autorejoin_delay
 mozilla.connection_timeout
