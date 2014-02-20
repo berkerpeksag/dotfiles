@@ -28,3 +28,5 @@ alias e='emacsclient -c'
 
 alias fap='fab'
 alias fapfapfap='fab'
+
+alias sshuttled='sudo sshuttle --dns -r wakefield@berkerpeksag.com 0/0 -D -vv'
