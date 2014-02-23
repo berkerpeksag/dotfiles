@@ -61,6 +61,3 @@
 [submodule "emacs.d/modes/hy-mode"]
 	path = emacs.d/modes/hy-mode
 	url = https://github.com/hylang/hy-mode.git
-[submodule "sshuttle"]
-	path = sshuttle
-	url = https://github.com/apenwarr/sshuttle.git
