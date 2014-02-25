@@ -10,9 +10,6 @@
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
-[submodule "vim/bundle/mozilla"]
-	path = vim/bundle/mozilla
-	url = git://github.com/mozfr/mozilla.vim.git
 [submodule "vim/bundle/pathogen"]
 	path = vim/bundle/pathogen
 	url = git://github.com/tpope/vim-pathogen.git
@@ -43,9 +40,6 @@
 [submodule "emacs.d/modes/markdown"]
 	path = emacs.d/modes/markdown
 	url = git://jblevins.org/git/markdown-mode.git
-[submodule "vim/bundle/jedi"]
-	path = vim/bundle/jedi
-	url = git://github.com/davidhalter/jedi-vim.git
 [submodule "emacs.d/modes/python"]
 	path = emacs.d/modes/python
 	url = git://github.com/emacsmirror/python-mode.git
