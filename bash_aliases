@@ -9,9 +9,6 @@ alias ..='cd ..' # Go up one directory
 alias ...='cd ../..' # Go up two directories
 alias ....='cd ../../..' # Go up three directories
 
-# Mozilla
-alias fx='dist/bin/firefox -P clean -no-remote'
-
 # Unix tools
 alias uname='python -m platform'
 
@@ -23,10 +20,5 @@ alias tmux='tmux -2'
 # https://calomel.org/firefox_ssh_proxy.html
 alias work='ssh -C2qTnN -D 8383 wakefield@berkerpeksag.com'
 
-# Emacs
-alias e='emacsclient -c'
-
 alias fap='fab'
 alias fapfapfap='fab'
-
-alias sshuttled='sudo sshuttle --dns -r wakefield@berkerpeksag.com 0/0 -D -vv'
