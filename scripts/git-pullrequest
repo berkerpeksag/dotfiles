@@ -12,8 +12,10 @@ Kullanım
 Kurulum
 -------
 
-.. warning:: ``git-pullrequest`` betiğini çalıştırmak için ``PATH``'te yer
-             alan herhangi bir klasörün içine koymak yeterlidir.
+.. warning::
+
+   ``git-pullrequest`` betiğini çalıştırmak için ``$PATH``'te yer
+   alan herhangi bir klasörün içine koymak yeterlidir.
 
 Kullanmaya başlamak için GitHub kullanıcı bilgilerinizi girmelisiniz::
 
@@ -36,7 +38,8 @@ Ayarlar
 
 """
 
-import argparse
+from __future__ import print_function
+
 import json
 import subprocess
 
@@ -52,21 +55,16 @@ CFG_USER_PASSWORD = 'pullrequest.user.password'
 CFG_REPO_BASE = 'pullrequest.repo.base'
 
 
-class GitHubConfigError(KeyError):
-    pass
-
-
 def _git_config(key, value=None, default=None):
     if value is None:
         value = ''
-    cmd_tpl = 'git config {key:s} {value:s}'
-    cmd = cmd_tpl.format(key=key, value=value)
+    cmd = 'git config {key:s} {value:s}'.format(key=key, value=value)
     run = subprocess.check_output(cmd.split(), universal_newlines=True)
     output = run.rstrip()
     if not output:
         if default is not None:
             return default
-        raise GitHubConfigError
+        raise ValueError('invalid config')
     return output
 
 
@@ -74,18 +72,21 @@ def _create_pull_request(**config):
     user, repo = config['repo'].split(':')
     url = GH_API_URL.format(user=user, repo=repo)
     auth = (_git_config(CFG_USER_NAME), _git_config(CFG_USER_PASSWORD))
-    r = requests.post(url, auth=auth, data=json.dumps(config))
-    print r.headers
-    print r.text
+    # TODO: Yeni requests'e göre çalışır hale getir
+    res = requests.post(url, auth=auth, data=json.dumps(config))
+    print(res.headers)
+    print(res.text)
 
 
 def main():
+    import argparse
+
     parser = argparse.ArgumentParser(prog='git-pullrequest')
     parser.add_argument('-i', '--issue', type=int, required=True)
     parser.add_argument('-H', '--head', type=str, required=True)
     parser.add_argument('-r', '--repo', type=str, required=True)
     parser.add_argument('-b', '--base', type=str,
-        default=_git_config(CFG_REPO_BASE, default=GH_REPO_BASE))
+                        default=_git_config(CFG_REPO_BASE, default=GH_REPO_BASE))
     args = parser.parse_args()
 
     _create_pull_request(**vars(args))
