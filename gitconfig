@@ -23,3 +23,5 @@
 	user = berkerpeksag
 [rebase]
 	autosquash = true
+[branch]
+	autosetuprebase = always
