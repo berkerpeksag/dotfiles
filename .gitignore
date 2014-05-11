@@ -3,6 +3,10 @@
 *.dat
 *.log
 *.weechatlog
+*.cer
+*.cert
+*.key
+*.pem
 emacs.d/eshell
 emacs.d/session*
 emacs.d/elpa
