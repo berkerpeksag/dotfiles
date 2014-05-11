@@ -1,5 +1,4 @@
-;;; init.el --- The Emacs Initialization File
-;; Berker Peksag <berker.peksag@gmail.com>
+;;; init.el --- My Emacs initialization file
 
 ;; Paths
 
@@ -46,36 +45,45 @@
 (setq whitespace-style '(face empty tabs lines-tail trailing))
 (global-whitespace-mode t)
 
+(require 'ido)
+(ido-mode t)
+
 (autoload 'markdown-mode "markdown-mode.el"
- "Major mode for editing Markdown files" t)
+  "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
- (cons '("\\.md" . markdown-mode) auto-mode-alist))
+  (cons '("\\.md" . markdown-mode) auto-mode-alist))
 (add-hook 'markdown-mode-hook 'turn-on-auto-fill)
 
 (autoload 'python-mode "python-mode"
- "Python Mode." t)
+  "Python Mode." t)
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 (global-linum-mode 1) ; display line numbers in margin.
-
-(require 'ido)
-(ido-mode t)
 
 ;; If you want to disable automatic resizing done by golden-ratio,
 ;; just invoke (golden-ratio-disable)
 (require 'golden-ratio)
 (golden-ratio-mode 1)
 
+
 ;; Settings
+
+(set-default-font "Ubuntu Mono-14")
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
+;; make "yes or no" "y or n"
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; Start with maximized window
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (setq-default fill-column 80)
 
 ;; highlight matching closing brackets
 (show-paren-mode 1)
-
-;; for Emacs Lisp programming
-;;(eldoc-mode 1)
 
 ;; insert closing brackets automagically
 (electric-pair-mode 1)
@@ -109,16 +117,20 @@
 (setq require-final-newline t) ; Add newline at end of files
 (setq uniquify-buffer-name-style 'post-forward)
 (setq uniquify-separator ":")
+(setq mouse-wheel-scroll-amount '(1))
 
-;; save session state when you quit emacs
+;; See: http://www.emacswiki.org/cgi-bin/wiki/CopyAndPaste#toc5
 (setq
- desktop-dirname "~"
- desktop-base-file-name "emacs.desktop"
- desktop-base-lock-name "lock"
- desktop-path (list desktop-dirname)
- desktop-save t
- desktop-load-locked-desktop nil)
-(desktop-save-mode 1)
+ ; inter-program-paste-function 'x-cut-buffer-or-selection-value
+ x-select-enable-clipboard t ; X11 Copy & Paste to/from Emacs
+ make-backup-files nil ; stop creating those backup~ files
+ auto-save-default nil) ; stop creating those #autosave# files
+
+;; Taken from http://stackoverflow.com/a/2706660/57823
+(defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
+  "Prevent annoying \"Active processes exist\" query when you quit Emacs."
+  (flet ((process-list ())) ad-do-it))
+
 
 ;; Keybindings
 
@@ -150,41 +162,8 @@
 (global-set-key (kbd ",")
                 (lambda() (interactive) (insert ", ")))
 
-;; Settings
 
-(set-default-font "Ubuntu Mono-14")
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(prefer-coding-system 'utf-8)
-
-(setq mouse-wheel-scroll-amount '(1))
-
-;; make "yes or no" "y or n"
-(fset 'yes-or-no-p 'y-or-n-p)
-
-;; See: http://www.emacswiki.org/cgi-bin/wiki/CopyAndPaste#toc5
-(setq
- ; inter-program-paste-function 'x-cut-buffer-or-selection-value
- x-select-enable-clipboard t ; X11 Copy & Paste to/from Emacs
- make-backup-files nil ; stop creating those backup~ files
- auto-save-default nil) ; stop creating those #autosave# files
-
-;; Taken from http://stackoverflow.com/a/2706660/57823
-(defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
- "Prevent annoying \"Active processes exist\" query when you quit Emacs."
- (flet ((process-list ())) ad-do-it))
-
-;; Start with maximized window
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
-
-;; Custom faces
-
-(custom-set-faces
- '(diff-added ((t (:foreground "Green"))) 'now)
- '(diff-removed ((t (:foreground "Red"))) 'now))
-
-
-;; Functions
+;; Custom defuns
 
 ;; taken from http://whattheemacsd.com/file-defuns.el-01.html
 (defun rename-current-buffer-file ()
@@ -233,15 +212,6 @@
                 (ffip-create-pattern-file-finder "*.js"))
 (global-set-key (kbd "C-x C-o py")
                 (ffip-create-pattern-file-finder "*.py"))
-
-
-;; Shutdown Emacs server instance
-(defun shutdown-server ()
-  "Save buffers and kill the server"
-  (interactive)
-  (save-buffers-kill-emacs))
-
-(global-set-key (kbd "C-x q") 'shutdown-server)
 
 
 (defun find-user-init-file ()
