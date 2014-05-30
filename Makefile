@@ -85,12 +85,11 @@ config::
 	@ln -fns $(DOTFILES)/weechat	$(HOME)/.weechat
 	@cp $(HOME)/.weechat/irc.conf.dist $(HOME)/.weechat/irc.conf
 	@ln -fns $(DOTFILES)/config	$(HOME)/.config
-	@ln -fns $(DOTFILES)/themes	$(HOME)/.themes
 	@echo Misc config files are symlinked.
 	@ln -fs $(DOTFILES)/gedrc	$(HOME)/.gedrc
 
 clean::
-	@rm -rf ~/.weechat ~/.gitconfig ~/.bashrc ~/.bash_aliases ~/.themes
+	@rm -rf ~/.weechat ~/.gitconfig ~/.bashrc ~/.bash_aliases
 	@rm -rf ~/.fonts ~/.vim ~/.vimrc ~/.emacs.d ~/.mozconfig ~/.autoenv
 	@rm -rf ~/.pythonrc.py ~/.config/terminator ~/.hgrc ~/.tmux.conf
 	@rm -rf ~/scripts .bash_profile
