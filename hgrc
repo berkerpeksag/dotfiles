@@ -1,6 +1,7 @@
 [ui]
 username = Berker Peksag <berker.peksag@gmail.com>
 verbose = True
+editor = vim
 
 [extensions]
 color =
@@ -17,6 +18,7 @@ qnew = -U
 commit = -v
 revert = --no-backup
 import = --no-commit
+status = -q
 
 [diff]
 git = True
@@ -26,3 +28,6 @@ unified = 8
 [pager]
 pager = LESS='FSRX' less
 attend = cat, diff, log, show
+
+[alias]
+lg = !$HG log --limit $1
