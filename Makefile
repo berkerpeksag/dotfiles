@@ -13,7 +13,7 @@ update-submodules::
 core::
 	@sudo apt-get update
 	@sudo apt-get upgrade
-	@sudo apt-get install git-core sqlite3 build-essential nginx emacs23 curl libcurl3 git-gui
+	@sudo apt-get install git-core sqlite3 build-essential nginx emacs24 curl libcurl3 git-gui
 	@echo Core libraries are installed.
 
 python-core::
