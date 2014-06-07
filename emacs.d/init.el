@@ -77,7 +77,7 @@
 ;; make "yes or no" "y or n"
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; Start with maximized window
+;; start with maximized window
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (setq-default fill-column 80)
@@ -109,6 +109,10 @@
 
 (setq-default save-place t)
 (setq-default indent-tabs-mode nil)
+
+;; hide welcome screen
+(setq inhibit-splash-screen t)
+(setq inhibit-startup-message t)
 
 (setq cua-auto-tabify-rectangles nil) ; Don't tabify after rectangle commands
 (setq cua-keep-region-after-copy t) ; Standard Windows behaviour
