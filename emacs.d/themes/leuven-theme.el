@@ -3,11 +3,12 @@
 ;; Copyright (C) 2003-2014 Free Software Foundation, Inc.
 
 ;; Author: Fabrice Niessen <(concat "fniessen" at-sign "pirilampo.org")>
+;; Author: Berker Peksag <berker.peksag@gmail.com>
 ;; URL: https://github.com/fniessen/emacs-leuven-theme
-;; Version: 20140520.1442
+;; Version: 20140616
 ;; Keywords: color theme
 
-;; This file is part of GNU Emacs.
+;; This file is not part of GNU Emacs.
 
 ;; GNU Emacs is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -26,6 +27,8 @@
 
 ;; This Org-enhancing color theme "leuven" ROCKS!
 ;; ... and not just for Org mode.
+;;
+;; I did some minor modifications (e.g. linum and mode-line).
 ;;
 ;; To use it, put the following in your Emacs configuration file:
 ;;
@@ -102,8 +105,8 @@ Semantic, and Ansi-Color faces are included -- and much more...")
    `(whitespace-trailing ((,class (:weight bold :foreground "yellow" :background "red1"))))
 
    ;; Mode line faces
-   `(mode-line ((,class (:box (:line-width 1 :color "#1A2F54") :foreground "#85CEEB" :background "#335EA8"))))
-   `(mode-line-inactive ((,class (:box (:line-width 1 :color "#4E4E4C") :foreground "#F0F0EF" :background "#9B9C97"))))
+   `(mode-line ((,class (:box (:line-width 2 :color "#335EA8") :foreground "#85CEEB" :background "#335EA8"))))
+   `(mode-line-inactive ((,class (:box (:line-width 2 :color "#9B9C97") :foreground "#F0F0EF" :background "#9B9C97"))))
    `(mode-line-buffer-id ((,class (:weight bold :foreground "white"))))
    `(mode-line-emphasis ((,class (:weight bold :foreground "white"))))
    `(mode-line-highlight ((,class (:foreground "yellow"))))
@@ -434,7 +437,7 @@ Semantic, and Ansi-Color faces are included -- and much more...")
    `(info-xref ((,class (:underline t :foreground "#006DAF")))) ; unvisited cross-references
    `(info-xref-visited ((,class (:underline t :foreground "magenta4")))) ; previously visited cross-references
    `(light-symbol-face ((,class (:background "#FFFFA0"))))
-   `(linum ((,class (:foreground "#828282" :background "white"))))
+   `(linum ((,class (:foreground "#828282" :background "white" :box nil :height 120))))
    `(log-view-file ((,class (:foreground "#0000CC" :background "#EAF2F5"))))
    `(lui-button-face ((,class ,link)))
    `(lui-highlight-face ((,class (:box '(:line-width 1 :color "#CC0000") :foreground "#CC0000" :background "#FFFF88")))) ; my nickname
