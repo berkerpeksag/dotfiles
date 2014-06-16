@@ -57,7 +57,7 @@
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 (global-linum-mode 1) ; display line numbers in margin.
-(setq linum-format "%4d \u2502 ")
+(setq linum-format "%6d \u2502")
 
 ;; If you want to disable automatic resizing done by golden-ratio,
 ;; just invoke (golden-ratio-disable)
