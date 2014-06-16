@@ -29,8 +29,9 @@
 ;; Alternative themes:
 ;; (load-theme 'molokai t)
 ;; (load-theme 'monokai t)
+;; (load-theme 'soothe t)
 
-(load-theme 'soothe t)
+(load-theme 'leuven t)
 
 ;; Modes
 
