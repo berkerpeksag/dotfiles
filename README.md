@@ -8,7 +8,7 @@ $ make work
 
 ### Home mode
 
-This mode includes Mozilla and CPython related configurations.
+This mode includes CPython related configurations.
 
 ```sh
 $ make home

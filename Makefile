@@ -3,9 +3,8 @@ SCRIPTS = $(DOTFILES)/scripts
 
 work:: basic
 basic:: emacs tmux bash git config python vim
-home:: basic scripts mozilla hg
+home:: basic scripts
 python:: core python-core python-tools python-config
-mozilla:: core mozilla-core mozilla-config
 
 update-submodules::
 	@git submodule foreach git pull origin master
@@ -13,7 +12,7 @@ update-submodules::
 core::
 	@sudo apt-get update
 	@sudo apt-get upgrade
-	@sudo apt-get install git-core sqlite3 build-essential nginx emacs24 curl libcurl3 git-gui
+	@sudo apt-get install git-core mercurial sqlite3 build-essential nginx emacs24 curl libcurl3 git-gui
 	@echo Core libraries are installed.
 
 python-core::
@@ -31,14 +30,6 @@ python-config::
 	@ln -fs $(DOTFILES)/pypirc-dist $(HOME)/.pypirc
 	@ln -fns $(DOTFILES)/autoenv	$(HOME)/.autoenv
 	@echo Python config files are symlinked.
-
-mozilla-core::
-	@sudo apt-get install mercurial
-	@echo Mozilla dependencies are installed.
-
-mozilla-config::
-	@ln -fs $(DOTFILES)/mozconfig $(HOME)/.mozconfig
-	@echo .mozconfig is symlinked.
 
 emacs::
 	@ln -fns $(DOTFILES)/emacs.d	$(HOME)/.emacs.d
@@ -90,7 +81,7 @@ config::
 
 clean::
 	@rm -rf ~/.weechat ~/.gitconfig ~/.bashrc ~/.bash_aliases
-	@rm -rf ~/.fonts ~/.vim ~/.vimrc ~/.emacs.d ~/.mozconfig ~/.autoenv
+	@rm -rf ~/.fonts ~/.vim ~/.vimrc ~/.emacs.d ~/.autoenv
 	@rm -rf ~/.pythonrc.py ~/.config/terminator ~/.hgrc ~/.tmux.conf
 	@rm -rf ~/scripts .bash_profile
 
