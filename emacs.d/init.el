@@ -27,10 +27,9 @@
 ;; Theme
 
 ;; Alternative themes:
-;; (load-theme 'molokai t)
 ;; (load-theme 'soothe t)
 
-(load-theme 'leuven t)
+(load-theme 'molokai t)
 
 ;; Modes
 
@@ -56,7 +55,7 @@
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 (global-linum-mode 1) ; display line numbers in margin.
-(setq linum-format "%6d \u2502")
+(setq linum-format "%6d ")
 
 ;; If you want to disable automatic resizing done by golden-ratio,
 ;; just invoke (golden-ratio-disable)
