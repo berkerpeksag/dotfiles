@@ -12,7 +12,7 @@ update-submodules::
 core::
 	@sudo apt-get update
 	@sudo apt-get upgrade
-	@sudo apt-get install git-core mercurial sqlite3 build-essential nginx emacs24 curl libcurl3 git-gui
+	@sudo apt-get install git-core mercurial sqlite3 build-essential curl libcurl3 git-gui terminator
 	@echo Core libraries are installed.
 
 python-core::
