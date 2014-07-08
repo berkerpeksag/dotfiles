@@ -11,7 +11,6 @@ update-submodules::
 
 core::
 	@sudo apt-get update
-	@sudo apt-get upgrade
 	@sudo apt-get install git-core mercurial sqlite3 build-essential curl libcurl3 git-gui terminator
 	@echo Core libraries are installed.
 
@@ -21,8 +20,6 @@ python-core::
 
 python-tools::
 	@sudo pip install virtualenv
-	@sudo apt-get install terminator
-	@ln -fns $(DOTFILES)/config/terminator	$(HOME)/.config/terminator
 	@echo Python tools are installed.
 
 python-config::
@@ -78,6 +75,7 @@ config::
 	@ln -fns $(DOTFILES)/config	$(HOME)/.config
 	@echo Misc config files are symlinked.
 	@ln -fs $(DOTFILES)/gedrc	$(HOME)/.gedrc
+	@ln -fns $(DOTFILES)/config/terminator	$(HOME)/.config/terminator
 
 clean::
 	@rm -rf ~/.weechat ~/.gitconfig ~/.bashrc ~/.bash_aliases
