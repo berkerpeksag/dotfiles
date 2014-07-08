@@ -16,6 +16,7 @@ core::
 
 python-core::
 	@sudo apt-get install -y python-sqlite python-setuptools python-pip python-dev
+	@sudo apt-get build-dep python3
 	@echo Python environment is installed.
 
 python-tools::
