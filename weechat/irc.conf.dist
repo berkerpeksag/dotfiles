@@ -147,7 +147,7 @@ freenode.realname = "Berker Peksag"
 freenode.local_hostname
 freenode.command = "/msg nickserv identify <YOUR_PASSWORD>"
 freenode.command_delay
-freenode.autojoin = "#python-dev,#pyistanbul,#hy,#django-dev,#mediagoblin"
+freenode.autojoin = "#python-dev,#pyistanbul,#hy,#django-dev,#mediagoblin,##lkd"
 freenode.autorejoin
 freenode.autorejoin_delay
 freenode.connection_timeout
@@ -158,37 +158,3 @@ freenode.away_check_max_nicks
 freenode.default_msg_part
 freenode.default_msg_quit
 freenode.notify
-mozilla.addresses = "irc.mozilla.org"
-mozilla.proxy
-mozilla.ipv6
-mozilla.ssl
-mozilla.ssl_cert
-mozilla.ssl_priorities
-mozilla.ssl_dhkey_size
-mozilla.ssl_verify
-mozilla.password
-mozilla.capabilities
-mozilla.sasl_mechanism
-mozilla.sasl_username
-mozilla.sasl_password
-mozilla.sasl_timeout
-mozilla.autoconnect = off
-mozilla.autoreconnect
-mozilla.autoreconnect_delay
-mozilla.nicks = "berker"
-mozilla.username = "berkerpeksag"
-mozilla.realname = "Berker Peksag"
-mozilla.local_hostname
-mozilla.command = "/msg nickserv identify <YOUR_PASSWORD>"
-mozilla.command_delay
-mozilla.autojoin = "#static,#commtools"
-mozilla.autorejoin
-mozilla.autorejoin_delay
-mozilla.connection_timeout
-mozilla.anti_flood_prio_high
-mozilla.anti_flood_prio_low
-mozilla.away_check
-mozilla.away_check_max_nicks
-mozilla.default_msg_part
-mozilla.default_msg_quit
-mozilla.notify
