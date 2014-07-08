@@ -11,7 +11,7 @@ update-submodules::
 
 core::
 	@sudo apt-get update
-	@sudo apt-get install -y git-core mercurial sqlite3 build-essential curl libcurl3 git-gui terminator weechat
+	@sudo apt-get install -y git-core mercurial sqlite3 build-essential curl libcurl3 git-gui terminator weechat vim
 	@echo Core libraries are installed.
 
 python-core::
