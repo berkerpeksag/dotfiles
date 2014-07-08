@@ -2,10 +2,8 @@ if [[ -n "$PS1" ]] ; then
 
 # {{{ Paths
 
-GAE_HOME=/home/berker/google/appengine
-export JAVA_HOME=/usr/lib/jvm/java-6-sun
 export SCRIPTS_HOME=/home/berker/dotfiles/scripts/
-PATH=$PATH:$GAE_HOME:$JAVA_HOME/bin:$SCRIPTS_HOME
+PATH=$PATH:$SCRIPTS_HOME
 export PATH
 
 export PYTHONSTARTUP=$HOME/.pythonrc.py
@@ -14,7 +12,6 @@ export PYTHONSTARTUP=$HOME/.pythonrc.py
 
 # {{{ Settings
 
-export EDITOR="emacsclient -c"
 export PIP_DOWNLOAD_CACHE=~/.pip-cache
 
 # }}}
