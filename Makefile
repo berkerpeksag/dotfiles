@@ -11,11 +11,11 @@ update-submodules::
 
 core::
 	@sudo apt-get update
-	@sudo apt-get install git-core mercurial sqlite3 build-essential curl libcurl3 git-gui terminator
+	@sudo apt-get install -y git-core mercurial sqlite3 build-essential curl libcurl3 git-gui terminator weechat
 	@echo Core libraries are installed.
 
 python-core::
-	@sudo apt-get install python-sqlite python-setuptools python-pip python-dev
+	@sudo apt-get install -y python-sqlite python-setuptools python-pip python-dev
 	@echo Python environment is installed.
 
 python-tools::
