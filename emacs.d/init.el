@@ -18,9 +18,6 @@
 
 ;; Theme
 
-;; Alternative themes:
-;; (load-theme 'soothe t)
-
 (load-theme 'molokai t)
 
 ;; Modes
