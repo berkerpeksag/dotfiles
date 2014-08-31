@@ -52,3 +52,6 @@
 [submodule "emacs.d/modes/hy-mode"]
 	path = emacs.d/modes/hy-mode
 	url = https://github.com/hylang/hy-mode.git
+[submodule "emacs.d/modes/deft"]
+	path = emacs.d/modes/deft
+	url = git://jblevins.org/git/deft.git
