@@ -38,13 +38,6 @@
   (cons '("\\.md" . markdown-mode) auto-mode-alist))
 (add-hook 'markdown-mode-hook 'turn-on-auto-fill)
 
-(require 'deft)
-(setq deft-extension "md")
-(setq deft-text-mode 'markdown-mode)
-(setq deft-directory "~/hacking/notes")
-(setq deft-use-filename-as-title t)
-(global-set-key [f8] 'deft)
-
 (autoload 'python-mode "python-mode"
   "Python Mode." t)
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
