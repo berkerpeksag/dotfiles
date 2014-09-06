@@ -183,9 +183,6 @@ autocmd BufNewFile,BufReadPost *.html set shiftwidth=2
 
 
 " Nerdtree
-"" Open a NERDTree automatically when vim starts up
-"autocmd vimenter * NERDTree
-
 "" Map the toggle command :NERDTreeToggle to the F2 key
 map <F2> :NERDTreeToggle<CR>
 
