@@ -177,13 +177,6 @@
 (global-set-key (kbd "C-x C-r") 'rename-current-buffer-file)
 
 
-(defun pdb-set-trace ()
-  (interactive)
-  (insert "import pdb; pdb.set_trace()\n"))
-
-(global-set-key (kbd "C-x C-p") 'pdb-set-trace)
-
-
 (defun find-user-init-file ()
   "Edit the user-init-file, in another window"
   (interactive)
