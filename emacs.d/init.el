@@ -40,11 +40,6 @@
   (cons '("\\.md" . markdown-mode) auto-mode-alist))
 (add-hook 'markdown-mode-hook 'turn-on-auto-fill)
 
-(autoload 'python-mode "python-mode"
-  "Python Mode." t)
-(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
-(add-to-list 'interpreter-mode-alist '("python" . python-mode))
-
 (global-linum-mode 1) ; display line numbers in margin.
 (setq linum-format "%6d ")
 

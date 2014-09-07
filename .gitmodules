@@ -40,9 +40,6 @@
 [submodule "emacs.d/modes/markdown"]
 	path = emacs.d/modes/markdown
 	url = git://jblevins.org/git/markdown-mode.git
-[submodule "emacs.d/modes/python"]
-	path = emacs.d/modes/python
-	url = git://github.com/emacsmirror/python-mode.git
 [submodule "vim/bundle/gitgutter"]
 	path = vim/bundle/gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
