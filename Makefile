@@ -25,7 +25,7 @@ python-tools::
 
 python-config::
 	@ln -fs $(DOTFILES)/pythonrc.py $(HOME)/.pythonrc.py
-	@ln -fs $(DOTFILES)/pypirc-dist $(HOME)/.pypirc
+	@cp $(DOTFILES)/pypirc-dist $(HOME)/.pypirc
 	@ln -fns $(DOTFILES)/autoenv	$(HOME)/.autoenv
 	@echo Python config files are symlinked.
 
