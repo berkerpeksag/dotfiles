@@ -147,7 +147,7 @@ freenode.realname = "Berker Peksag"
 freenode.local_hostname
 freenode.command = "/msg nickserv identify <YOUR_PASSWORD>"
 freenode.command_delay
-freenode.autojoin = "#python-dev,#pyistanbul,#hy,#mediagoblin,##lkd,#pypa-dev,#django-dev"
+freenode.autojoin = "#python-dev,#pyistanbul,#hy,#mediagoblin,##lkd,#pypa-dev,#django-dev,#gunicorn"
 freenode.autorejoin
 freenode.autorejoin_delay
 freenode.connection_timeout
