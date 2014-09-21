@@ -233,12 +233,10 @@ Also fix `backward-kill-word' so that it stops at whitespace."
   (let ((bol (save-excursion (beginning-of-line) (point)))
         eol)
     (save-excursion
-
       ;; don't use forward-line for this, because you would have
       ;; to check whether you are at the end of the buffer
       (end-of-line)
       (setq eol (point))
-
       ;; store the line and disable the recording of undo information
       (let ((line (buffer-substring bol eol))
             (buffer-undo-list t)
@@ -247,13 +245,9 @@ Also fix `backward-kill-word' so that it stops at whitespace."
         (while (> count 0)
           (newline)         ;; because there is no newline in 'line'
           (insert line)
-          (setq count (1- count)))
-        )
-
+          (setq count (1- count))))
       ;; create the undo information
-      (setq buffer-undo-list (cons (cons eol (point)) buffer-undo-list)))
-    ) ; end-of-let
-
+      (setq buffer-undo-list (cons (cons eol (point)) buffer-undo-list))))
   ;; put the point in the lowest line and return
   (next-line arg))
 
