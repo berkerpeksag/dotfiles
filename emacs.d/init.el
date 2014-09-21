@@ -180,20 +180,6 @@
 (global-set-key (kbd "C-c I") 'find-user-init-file)
 
 
-(defun comment-or-uncomment-line-or-region ()
-  "Toggles commenting on the current line if no region is defined,
-   otherwise toggles comments on the region."
-  (interactive "*")
-  (let ((use-empty-active-region t) (mark-even-if-inactive nil))
-    (cond
-     ((use-region-p) (comment-or-uncomment-region
-                      (region-beginning) (region-end)))
-     (t (comment-or-uncomment-region
-         (line-beginning-position) (line-end-position))))))
-
-(global-set-key (kbd "C-c cc") 'comment-or-uncomment-line-or-region)
-
-
 ;; taken from https://github.com/bdd/.emacs.d/blob/master/bdd-defuns.el
 (defun kill-region-or-backward-kill-word (arg)
   "If mark is active kill the region else backward kill word.
