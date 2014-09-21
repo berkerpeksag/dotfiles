@@ -191,7 +191,7 @@
      (t (comment-or-uncomment-region
          (line-beginning-position) (line-end-position))))))
 
-(global-set-key (kbd "C-c cc") 'find-user-init-file)
+(global-set-key (kbd "C-c cc") 'comment-or-uncomment-line-or-region)
 
 
 ;; taken from https://github.com/bdd/.emacs.d/blob/master/bdd-defuns.el
