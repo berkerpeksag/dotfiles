@@ -11,28 +11,9 @@
 ;; the Free Software Foundation, either version 3 of the License, or
 ;; (at your option) any later version.
 
-;; This program is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
-
-;; You should have received a copy of the GNU General Public License
-;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-;;; Commentary:
-;;
-;; This is another molokai dark theme for Emacs 24.
-;; Equiped with my favorites.
-
-;;; Requirements:
-;;
-;; Emacs 24
-
-;;; Code:
 (deftheme molokai "The molokai color theme for Emacs 24")
 
 (let ((class '((class color) (min-colors 89)))
-      ;; molokai palette
       (molokai-white          "#ffffff")
       (molokai-fg             "#f8f8f0")
       (molokai-red            "#ff0000")
@@ -70,8 +51,6 @@
       (molokai-dodgerblue     "#13354a"))
   (custom-theme-set-faces
    'molokai
-
-   ;; base
    `(default ((t (:background ,molokai-bg :foreground ,molokai-fg))))
    `(cursor ((t (:background ,molokai-fg :foreground ,molokai-bg))))
    `(fringe ((t (:foreground ,molokai-base02 :background ,molokai-bg))))
@@ -80,7 +59,6 @@
              (t :inverse-video t)))
    `(warning ((t (:foreground ,molokai-palevioletred :weight bold))))
 
-   ;; font lock
    `(font-lock-builtin-face ((t (:foreground ,molokai-chartreuse))))
    `(font-lock-comment-face ((t (:foreground ,molokai-base01))))
    `(font-lock-comment-delimiter-face ((t (:foreground ,molokai-base01))))
@@ -97,7 +75,6 @@
    `(font-lock-variable-name-face ((t (:foreground ,molokai-orange))))
    `(font-lock-warning-face ((t (:foreground ,molokai-palevioletred :weight bold))))
 
-   ;; mode line
    `(mode-line ((t (:foreground ,molokai-fg
                                 :background ,molokai-base03
                                 :box nil))))
@@ -106,23 +83,13 @@
                                          :background ,molokai-base02
                                          :box nil))))
 
-   ;; search
    `(isearch ((t (:foreground ,molokai-dark :background ,molokai-wheat :weight bold))))
    `(isearch-fail ((t (:foreground ,molokai-wine :background ,molokai-darkwine))))
 
-   ;; linum-mode
    `(linum ((t (:foreground ,molokai-grey-2 :background ,molokai-grey+5))))
 
-   ;; hl-line-mode
    `(hl-line-face ((,class (:background ,molokai-grey+5)) (t :weight bold)))
    `(hl-line ((,class (:background ,molokai-grey+5)) (t :weight bold)))
-
-   ;; TODO
-   ;; ido-mode
-   ;; flycheck
-   ;; show-paren
-   ;; rainbow-delimiters
-   ;; highlight-symbols
    ))
 
 ;;; autoload
