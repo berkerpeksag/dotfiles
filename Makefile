@@ -3,7 +3,7 @@ SCRIPTS = $(DOTFILES)/scripts
 
 work:: basic
 basic:: emacs tmux bash git config python vim
-home:: basic scripts
+home:: clean basic scripts
 python:: core python-core python-tools python-config hg
 
 update-submodules::
