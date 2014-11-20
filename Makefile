@@ -2,7 +2,7 @@ DOTFILES = $(PWD)
 SCRIPTS = $(DOTFILES)/scripts
 
 work:: basic
-basic:: emacs tmux bash git config python vim
+basic:: emacs tmux bash git config python vim weechat
 home:: clean basic scripts
 python:: core python-core python-tools python-config hg
 
@@ -70,9 +70,11 @@ scripts::
 	@ln -fns $(DOTFILES)/scripts	$(HOME)/scripts
 	@echo scripts/ is symlinked.
 
-config::
+weechat::
 	@ln -fns $(DOTFILES)/weechat	$(HOME)/.weechat
 	@cp $(HOME)/.weechat/irc.conf.dist $(HOME)/.weechat/irc.conf
+
+config::
 	@ln -fns $(DOTFILES)/config	$(HOME)/.config
 	@echo Misc config files are symlinked.
 	@ln -fs $(DOTFILES)/gedrc	$(HOME)/.gedrc
