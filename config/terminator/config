@@ -13,6 +13,7 @@
     font = Monaco for Powerline 10
     custom_command = tmux
     scrollbar_position = hidden
+    login_shell = True
     icon_bell = False
     copy_on_selection = True
 [layouts]
