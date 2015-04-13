@@ -19,6 +19,7 @@ commit = -v
 revert = --no-backup
 import = --no-commit
 status = -q
+import = --no-commit
 
 [diff]
 git = True
