@@ -181,6 +181,8 @@ autocmd BufWritePost *.py call Flake8()
 "" Convert indentation to 2 spaces in HTML files
 autocmd BufNewFile,BufReadPost *.html set shiftwidth=2
 
+" JavaScript
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 " Nerdtree
 "" Map the toggle command :NERDTreeToggle to the F2 key
