@@ -110,9 +110,6 @@ set wildignore+=*.o " Ignore object files
 " Visual autocomplete for command menu
 set wildmenu
 
-" Redraw only when we need to
-set lazyredraw
-
 
 " Custom keybindings
 let mapleader = ","
