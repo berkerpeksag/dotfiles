@@ -107,6 +107,12 @@ set wildignore+=*.pyc " Ignore Python compiled files
 set wildignore+=*.swp " Ignore vim backups
 set wildignore+=*.o " Ignore object files
 
+" Visual autocomplete for command menu
+set wildmenu
+
+" Redraw only when we need to
+set lazyredraw
+
 
 " Custom keybindings
 let mapleader = ","
@@ -126,9 +132,15 @@ inoremap <Right> <nop>
 inoremap jj <Esc>
 
 "" Row based j and k
-map k gk
-map j gj
+nnoremap k gk
+nnoremap j gj
 
+"" Turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
+"" Move to beginning/end of line
+nnoremap B ^
+nnoremap E $
 
 " Line wrapping
 set wrap
@@ -140,6 +152,8 @@ set colorcolumn=79
 " Indentation
 "" Use spaces instead of tabs
 set expandtab
+"" Number of spaces in tab when editing
+set softtabstop=4
 "" Sets display width of tabs
 set tabstop=4
 "" Sets indentation with
@@ -160,8 +174,6 @@ set statusline+=\ [%{getcwd()}]
 
 
 " Enable filetype stuff
-filetype on
-filetype plugin on
 filetype plugin indent on
 
 
