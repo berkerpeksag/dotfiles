@@ -27,3 +27,10 @@ alias tmux='tmux -2'
 # See for a great article about SSH tunneling:
 # https://calomel.org/firefox_ssh_proxy.html
 alias work='ssh -C2qTnN -D 8383 wakefield@berkerpeksag.com'
+
+# OS X specific aliases
+
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
