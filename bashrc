@@ -101,5 +101,3 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 fi
-
-source ~/.autoenv/activate.sh
