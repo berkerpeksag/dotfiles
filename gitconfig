@@ -6,7 +6,7 @@
 [core]
 	filemode = false
 	editor = vim
-	excludesfile = /home/berker/dotfiles/global_gitignore
+	excludesfile = ~/dotfiles/global_gitignore
 [status]
 	showUntrackedFiles = no
 [alias]
