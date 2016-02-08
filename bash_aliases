@@ -23,6 +23,9 @@ alias uname='python -m platform'
 # Tmux
 alias tmux='tmux -2'
 
+# GDB
+alias gdb='gdb -tui'
+
 # Tunnelling
 # See for a great article about SSH tunneling:
 # https://calomel.org/firefox_ssh_proxy.html
