@@ -1,6 +1,6 @@
-syntax enable
+set nocompatible
 set background=dark
 
-filetype on
-filetype plugin on
+syntax enable
+
 filetype plugin indent on
