@@ -32,3 +32,5 @@ attend = cat, diff, log, show
 
 [alias]
 lg = !$HG log --limit $1
+locale_commits = !$HG outgoing -l 1
+reset_upstream = !$HG strip 'roots(outgoing())'
