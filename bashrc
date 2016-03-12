@@ -25,6 +25,10 @@ export GIT_COMMITTER_EMAIL="berker.peksag@gmail.com"
 
 # {{{ Helpers
 
+kport() {
+    kill `sudo lsof -t -i:"$1"`
+}
+
 pathremove() {
     local IFS=':'
     local NEWPATH
