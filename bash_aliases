@@ -24,7 +24,7 @@ alias uname='python -m platform'
 alias tmux='tmux -2'
 
 # GDB
-# alias gdb='gdb -tui'
+alias gdb='gdb -tui'
 
 # Tunnelling
 # See for a great article about SSH tunneling:
