@@ -183,6 +183,7 @@ autocmd FileType python let python_highlight_all = 1
 autocmd FileType python let python_slow_sync = 1
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType python set completeopt=menu
+autocmd FileType python nnoremap <buffer> <silent> <leader>r :w<CR> :exec '!python' shellescape(@%, 1)<cr>
 """ Run the Flake8 check every time you write a Python file
 autocmd BufWritePost *.py call Flake8()
 
