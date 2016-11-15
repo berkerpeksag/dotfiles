@@ -2,7 +2,7 @@ if [[ -n "$PS1" ]] ; then
 
 # {{{ Paths
 
-export SCRIPTS_HOME=/home/berker/dotfiles/scripts/
+export SCRIPTS_HOME=/home/berker/dotfiles/scripts
 PATH=$PATH:$SCRIPTS_HOME
 export PATH
 
