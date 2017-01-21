@@ -26,7 +26,6 @@ python-tools::
 python-config::
 	@ln -fs $(DOTFILES)/pythonrc.py $(HOME)/.pythonrc.py
 	@cp $(DOTFILES)/pypirc-dist $(HOME)/.pypirc
-	@ln -fns $(DOTFILES)/autoenv	$(HOME)/.autoenv
 	@ln -fs $(DOTFILES)/flake8	$(HOME)/.config/flake8
 	@echo Python config files are symlinked.
 
@@ -83,7 +82,7 @@ config::
 
 clean::
 	@rm -rf ~/.weechat ~/.gitconfig ~/.bashrc ~/.bash_aliases
-	@rm -rf ~/.fonts ~/.vim ~/.vimrc ~/.emacs.d ~/.autoenv
+	@rm -rf ~/.fonts ~/.vim ~/.vimrc ~/.emacs.d
 	@rm -rf ~/.pythonrc.py ~/.config/terminator ~/.hgrc ~/.tmux.conf
 	@rm -rf ~/scripts .bash_profile
 
