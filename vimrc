@@ -188,8 +188,6 @@ autocmd FileType python nnoremap <buffer> <silent> <leader>r :w<CR> :exec '!pyth
 """ Run the Flake8 check every time you write a Python file
 autocmd BufWritePost *.py call Flake8()
 
-let g:flake8_show_quickfix=0
-
 " HTML
 "" Convert indentation to 2 spaces in HTML files
 autocmd BufNewFile,BufReadPost *.html set shiftwidth=2
