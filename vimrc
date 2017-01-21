@@ -104,6 +104,7 @@ set backspace=indent,eol,start
 set wildmode=list:longest
 set wildignore+=.git,.hg,.svn " Ignore version control repos
 set wildignore+=*.pyc " Ignore Python compiled files
+set wildignore+=__pycache__
 set wildignore+=*.swp " Ignore vim backups
 set wildignore+=*.o " Ignore object files
 
@@ -183,9 +184,11 @@ autocmd FileType python let python_highlight_all = 1
 autocmd FileType python let python_slow_sync = 1
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType python set completeopt=menu
-autocmd FileType python nnoremap <buffer> <silent> <leader>r :w<CR> :exec '!python' shellescape(@%, 1)<cr>
+autocmd FileType python nnoremap <buffer> <silent> <leader>r :w<CR> :exec '!python3' shellescape(@%, 1)<cr>
 """ Run the Flake8 check every time you write a Python file
 autocmd BufWritePost *.py call Flake8()
+
+let g:flake8_show_quickfix=0
 
 " HTML
 "" Convert indentation to 2 spaces in HTML files
