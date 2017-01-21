@@ -27,6 +27,7 @@ python-config::
 	@ln -fs $(DOTFILES)/pythonrc.py $(HOME)/.pythonrc.py
 	@cp $(DOTFILES)/pypirc-dist $(HOME)/.pypirc
 	@ln -fns $(DOTFILES)/autoenv	$(HOME)/.autoenv
+	@ln -fs $(DOTFILES)/flake8	$(HOME)/.config/flake8
 	@echo Python config files are symlinked.
 
 emacs::
