@@ -140,6 +140,13 @@ nnoremap <leader><space> :nohlsearch<CR>
 nnoremap B ^
 nnoremap E $
 
+"" Move the current line to down and up in normal and
+"" insert modes
+nnoremap <leader>mj :.m+1<CR>==
+nnoremap <leader>mk :.m.-2<CR>==
+inoremap <leader>mj <Esc>:.m+1<CR>==gi
+inoremap <leader>mk <Esc>:. m-2<CR>==gi
+
 " Line wrapping
 set wrap
 set textwidth=79
