@@ -26,7 +26,6 @@ python-tools::
 python-config::
 	@ln -fs $(DOTFILES)/pythonrc.py $(HOME)/.pythonrc.py
 	@cp $(DOTFILES)/pypirc-dist $(HOME)/.pypirc
-	@ln -fs $(DOTFILES)/flake8	$(HOME)/.config/flake8
 	@echo Python config files are symlinked.
 
 emacs::
@@ -75,15 +74,16 @@ weechat::
 	@cp $(HOME)/.weechat/irc.conf.dist $(HOME)/.weechat/irc.conf
 
 config::
-	@ln -fns $(DOTFILES)/config	$(HOME)/.config
-	@echo Misc config files are symlinked.
 	@ln -fs $(DOTFILES)/gedrc	$(HOME)/.gedrc
 	@ln -fns $(DOTFILES)/config/terminator	$(HOME)/.config/terminator
+	@ln -fs $(DOTFILES)/config/flake8	$(HOME)/.config/flake8
+	@echo Misc config files are symlinked.
 
 clean::
 	@rm -rf ~/.weechat ~/.gitconfig ~/.bashrc ~/.bash_aliases
 	@rm -rf ~/.fonts ~/.vim ~/.vimrc ~/.emacs.d
 	@rm -rf ~/.pythonrc.py ~/.config/terminator ~/.hgrc ~/.tmux.conf
-	@rm -rf ~/scripts .bash_profile
+	@rm -rf ~/scripts ~/.bash_profile
+	@rm -f ~/.config/flake8
 
 .PHONY: clean config scripts
