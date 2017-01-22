@@ -1,10 +1,10 @@
 DOTFILES = $(PWD)
 SCRIPTS = $(DOTFILES)/scripts
 
-work:: basic
-basic:: emacs tmux bash git config python vim weechat
-home:: clean basic scripts
-python:: core python-core python-tools python-config hg
+work:: clean basic
+basic:: core bash git config python vim tmux
+home:: clean basic scripts weechat python-hg
+python:: python-core python-tools python-config
 
 update-submodules::
 	@git submodule foreach git pull origin master
@@ -57,7 +57,7 @@ git::
 	@ln -fs $(DOTFILES)/gitconfig $(HOME)/.gitconfig
 	@echo .gitconfig and .gitignore are symlinked.
 
-hg::
+python-hg::
 	@ln -fs $(DOTFILES)/hgrc $(HOME)/.hgrc
 	@echo .hgrc is symlinked.
 
