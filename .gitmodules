@@ -34,15 +34,6 @@
 [submodule "vim/bundle/markdown"]
 	path = vim/bundle/markdown
 	url = git://github.com/tpope/vim-markdown.git
-[submodule "emacs.d/modes/markdown"]
-	path = emacs.d/modes/markdown
-	url = git://jblevins.org/git/markdown-mode.git
 [submodule "vim/bundle/gitgutter"]
 	path = vim/bundle/gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
-[submodule "emacs.d/modes/golden-ratio"]
-	path = emacs.d/modes/golden-ratio
-	url = git://github.com/roman/golden-ratio.el.git
-[submodule "emacs.d/modes/hy-mode"]
-	path = emacs.d/modes/hy-mode
-	url = https://github.com/hylang/hy-mode.git
