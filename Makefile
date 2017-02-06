@@ -28,12 +28,6 @@ python-config::
 	@cp $(DOTFILES)/pypirc-dist $(HOME)/.pypirc
 	@echo Python config files are symlinked.
 
-emacs::
-	@ln -fns $(DOTFILES)/emacs.d	$(HOME)/.emacs.d
-	@git submodule update --init --recursive
-	@echo Submodules are activated.
-	@echo Emacs is symlinked.
-
 vim:: vim-config vim-fonts
 
 vim-config::
@@ -81,7 +75,7 @@ config::
 
 clean::
 	@rm -rf ~/.weechat ~/.gitconfig ~/.bashrc ~/.bash_aliases
-	@rm -rf ~/.fonts ~/.vim ~/.vimrc ~/.emacs.d
+	@rm -rf ~/.fonts ~/.vim ~/.vimrc
 	@rm -rf ~/.pythonrc.py ~/.config/terminator ~/.hgrc ~/.tmux.conf
 	@rm -rf ~/scripts ~/.bash_profile
 	@rm -f ~/.config/flake8
