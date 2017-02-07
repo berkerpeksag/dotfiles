@@ -58,10 +58,13 @@ mkd() {
     mkdir -p "$@" && cd "$@"
 }
 
-# Create a new "Python" directory, enter it, create
-# a virtualenv and activate it
+# Create a new directory, enter it, create a virtualenv and activate it
 pymkd() {
-    mkdir -p "$@" && cd "$@" && virtualenv "venv" && source ./venv/bin/activate
+    mkdir -p "$@" && cd "$@" && python3.4 -m venv "venv" && source ./venv/bin/activate
+}
+
+cvenv() {
+    python3.4 -m venv "venv" && source ./venv/bin/activate
 }
 
 venv() {
