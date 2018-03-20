@@ -147,6 +147,9 @@ nnoremap <leader>mk :.m.-2<CR>==
 inoremap <leader>mj <Esc>:.m+1<CR>==gi
 inoremap <leader>mk <Esc>:. m-2<CR>==gi
 
+"" Create a shortcut to mute highlighting
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
 " Line wrapping
 set wrap
 set textwidth=79
