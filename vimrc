@@ -183,6 +183,10 @@ filetype plugin indent on
 
 
 " Auto commands
+
+"" Auto-save
+autocmd CursorHold,CursorHoldI * update
+
 "" Clear whitespace at the end of lines automatically
 autocmd BufWritePre * :%s/\s\+$//e
 
