@@ -189,6 +189,8 @@ filetype plugin indent on
 
 "" Auto-save
 autocmd CursorHold,CursorHoldI * update
+" TODO: Switch to this in vim 7.4:
+" autocmd TextChanged,TextChangedI <buffer> silent write
 
 "" Clear whitespace at the end of lines automatically
 autocmd BufWritePre * :%s/\s\+$//e
