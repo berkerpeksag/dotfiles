@@ -121,10 +121,10 @@ nmap <C-t> :tabnew<cr>
 imap <C-t> <ESC>:tabnew<cr>
 
 "" Disable classic L-R-T-B keys
-inoremap <Up> <nop>
-inoremap <Down> <nop>
-inoremap <Left> <nop>
-inoremap <Right> <nop>
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
 
 "" Switch to visual mode
 inoremap jj <Esc>
