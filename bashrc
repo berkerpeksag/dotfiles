@@ -96,7 +96,9 @@ export HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 shopt -s checkwinsize
 
-eval "`dircolors -b`"
+if which dircolors &> /dev/null; then
+    eval "`dircolors -b`"
+fi
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
