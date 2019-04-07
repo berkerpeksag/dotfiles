@@ -28,6 +28,7 @@ vim:: vim-config vim-fonts
 vim-config::
 	@ln -fs $(DOTFILES)/vimrc	$(HOME)/.vimrc
 	@ln -fns $(DOTFILES)/vim	$(HOME)/.vim
+	@ln -fs $(DOTFILES)/config/flake8>..$(HOME)/.config/flake8
 	@git submodule update --init --recursive
 	@echo Submodules are activated.
 	@echo Vim is symlinked.
@@ -56,7 +57,6 @@ weechat::
 
 config::
 	@ln -fns $(DOTFILES)/config/terminator	$(HOME)/.config/terminator
-	@ln -fs $(DOTFILES)/config/flake8	$(HOME)/.config/flake8
 	@echo Misc config files are symlinked.
 
 clean::
