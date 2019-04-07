@@ -3,7 +3,7 @@ DOTFILES = $(PWD)
 work:: clean basic
 basic:: core bash git config python vim tmux
 home:: clean basic scripts weechat python-hg
-python:: python-core python-tools python-config
+python:: python-core python-config
 
 update-submodules::
 	@git submodule foreach git pull origin master
@@ -17,10 +17,6 @@ python-core::
 	@sudo apt-get install -y python-sqlite python-setuptools python-pip python-dev
 	@sudo apt-get build-dep python3
 	@echo Python environment is installed.
-
-python-tools::
-	@sudo pip install virtualenv
-	@echo Python tools are installed.
 
 python-config::
 	@ln -fs $(DOTFILES)/pythonrc.py $(HOME)/.pythonrc.py
@@ -49,10 +45,6 @@ bash::
 git::
 	@ln -fs $(DOTFILES)/gitconfig $(HOME)/.gitconfig
 	@echo .gitconfig and .gitignore are symlinked.
-
-python-hg::
-	@ln -fs $(DOTFILES)/hgrc $(HOME)/.hgrc
-	@echo .hgrc is symlinked.
 
 tmux::
 	@ln -fs $(DOTFILES)/tmux.conf	$(HOME)/.tmux.conf
