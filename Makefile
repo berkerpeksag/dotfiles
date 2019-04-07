@@ -1,6 +1,7 @@
 DOTFILES = $(PWD)
 
 work:: clean basic
+work-macos:: clean-macos bash git vim python-config
 basic:: core bash git config python vim tmux
 home:: clean basic scripts weechat python-hg
 python:: python-core python-config
@@ -66,4 +67,10 @@ clean::
 	@rm -rf ~/scripts ~/.bash_profile
 	@rm -f ~/.config/flake8
 
-.PHONY: clean config scripts
+clean-macos::
+	@rm -rf ~/.gitconfig
+	@rm -rf ~/.bashrc ~/.bash_aliases ~/.bash_profile
+	@rm -rf ~/.fonts ~/.vim ~/.vimrc ~/.config/flake8
+	@rm -rf ~/.pythonrc.py
+
+.PHONY: clean config

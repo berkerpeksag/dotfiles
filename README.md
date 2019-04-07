@@ -4,6 +4,8 @@
 
 ```sh
 $ make work
+# or
+$ make work-macos
 ```
 
 ### Home mode
