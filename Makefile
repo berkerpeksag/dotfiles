@@ -1,5 +1,4 @@
 DOTFILES = $(PWD)
-SCRIPTS = $(DOTFILES)/scripts
 
 work:: clean basic
 basic:: core bash git config python vim tmux
@@ -59,16 +58,11 @@ tmux::
 	@ln -fs $(DOTFILES)/tmux.conf	$(HOME)/.tmux.conf
 	@echo tmux is symlinked.
 
-scripts::
-	@ln -fns $(DOTFILES)/scripts	$(HOME)/scripts
-	@echo scripts/ is symlinked.
-
 weechat::
 	@ln -fns $(DOTFILES)/weechat	$(HOME)/.weechat
 	@cp $(HOME)/.weechat/irc.conf.dist $(HOME)/.weechat/irc.conf
 
 config::
-	@ln -fs $(DOTFILES)/gedrc	$(HOME)/.gedrc
 	@ln -fns $(DOTFILES)/config/terminator	$(HOME)/.config/terminator
 	@ln -fs $(DOTFILES)/config/flake8	$(HOME)/.config/flake8
 	@echo Misc config files are symlinked.

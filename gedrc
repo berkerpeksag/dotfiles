@@ -1,5 +1,0 @@
-[settings]
-scripts_dir = ~/scripts
-
-[aliases]
-dizi = convertutf8 /media/XS/Torrents
