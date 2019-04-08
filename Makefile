@@ -1,7 +1,7 @@
 DOTFILES = $(PWD)
 
 work:: clean basic
-work-macos:: clean-macos bash git vim python-config
+work-macos:: clean-macos macos-specific-tasks bash git vim python-config
 basic:: core bash git config python vim tmux
 home:: clean basic scripts weechat python-hg
 python:: python-core python-config
@@ -29,7 +29,7 @@ vim:: vim-config vim-fonts
 vim-config::
 	@ln -fs $(DOTFILES)/vimrc	$(HOME)/.vimrc
 	@ln -fns $(DOTFILES)/vim	$(HOME)/.vim
-	@ln -fs $(DOTFILES)/config/flake8>..$(HOME)/.config/flake8
+	@ln -fs $(DOTFILES)/config/flake8	$(HOME)/.config/flake8
 	@git submodule update --init --recursive
 	@echo Submodules are activated.
 	@echo Vim is symlinked.
@@ -67,10 +67,19 @@ clean::
 	@rm -rf ~/scripts ~/.bash_profile
 	@rm -f ~/.config/flake8
 
+core-macos::
+	@xcode-select --install
+	@brew install bash-completion git
+
+# Apparently there is no ~/.config directory in recent macOSes.
+macos-specific-tasks::
+	@mkdir ~/.config
+
 clean-macos::
 	@rm -rf ~/.gitconfig
 	@rm -rf ~/.bashrc ~/.bash_aliases ~/.bash_profile
-	@rm -rf ~/.fonts ~/.vim ~/.vimrc ~/.config/flake8
+	@rm -rf ~/.fonts ~/.vim ~/.vimrc
 	@rm -rf ~/.pythonrc.py
+	@rm -rf ~/.config
 
 .PHONY: clean config
