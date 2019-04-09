@@ -9,12 +9,6 @@ export PYTHONSTARTUP=$HOME/.pythonrc.py
 
 # }}}
 
-# {{{ Settings
-
-export PIP_DOWNLOAD_CACHE=~/.pip-cache
-
-# }}}
-
 # {{{ Git
 
 export GIT_COMMITTER_NAME="Berker Peksag"
@@ -82,11 +76,7 @@ parse_git_branch() {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1]/"
 }
 
-parse_hg_branch() {
-    hg branch 2> /dev/null | awk '{printf "[%s]", $1}'
-}
-
-export PS1='\u@\h \[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$(parse_hg_branch)$ '
+export PS1='\u@\h \[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '
 
 # }}}
 
