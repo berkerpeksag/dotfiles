@@ -2,9 +2,8 @@ if [[ -n "$PS1" ]] ; then
 
 # {{{ Paths
 
-export SCRIPTS_HOME=/home/berker/dotfiles/scripts
-PATH=$PATH:$SCRIPTS_HOME
-export PATH
+SYSTEM_PYTHON_BIN="/Users/$USER/Library/Python/2.7/bin/"
+[[ -d "$SYSTEM_PYTHON_BIN" ]] && export PATH=$PATH:$SYSTEM_PYTHON_BIN
 
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 
