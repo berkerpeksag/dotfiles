@@ -1,0 +1,24 @@
+(tool-bar-mode 0)
+(scroll-bar-mode 0)
+(global-display-line-numbers-mode 1)
+(whitespace-mode 0)
+(ido-mode 1)
+(ido-everywhere 1)
+
+(setq-default inhibit-splash-screen t
+              make-backup-files nil
+              tab-width 4
+              indent-tabs-mode nil)
+
+(defun duplicate-line-and-move-cursor ()
+  (interactive)
+  (let ((current-column (current-column)))
+    (call-interactively 'duplicate-line)
+    (forward-line 1)
+    (move-to-column current-column)))
+
+(global-set-key (kbd "C-.") 'duplicate-line-and-move-cursor)
+
+; To separate custom-set-variables from actual configuration, do:
+; (setq custom-file "")
+; (load custom-file)
