@@ -1,9 +1,9 @@
 DOTFILES = $(PWD)
 
 work:: clean basic
-work-macos:: clean-macos macos-specific-tasks bash git vim python-config
+work-macos:: clean-macos bash git vim python-config
 basic:: core bash git config python vim tmux
-home:: clean basic scripts weechat python-hg
+home:: clean basic scripts
 python:: python-core python-config
 
 update-submodules::
@@ -11,13 +11,8 @@ update-submodules::
 
 core::
 	@sudo apt-get update
-	@sudo apt-get install -y git-core mercurial sqlite3 build-essential curl libcurl3 git-gui terminator weechat vim
+	@sudo apt-get install -y git-core sqlite3 build-essential curl libcurl3 git-gui vim
 	@echo Core libraries are installed.
-
-python-core::
-	@sudo apt-get install -y python-sqlite python-setuptools python-pip python-dev
-	@sudo apt-get build-dep python3
-	@echo Python environment is installed.
 
 python-config::
 	@ln -fs $(DOTFILES)/pythonrc.py $(HOME)/.pythonrc.py
@@ -29,7 +24,6 @@ vim:: vim-config vim-fonts
 vim-config::
 	@ln -fs $(DOTFILES)/vimrc	$(HOME)/.vimrc
 	@ln -fns $(DOTFILES)/vim	$(HOME)/.vim
-	@ln -fs $(DOTFILES)/config/flake8	$(HOME)/.config/flake8
 	@git submodule update --init --recursive
 	@echo Submodules are activated.
 	@echo Vim is symlinked.
@@ -52,28 +46,15 @@ tmux::
 	@ln -fs $(DOTFILES)/tmux.conf	$(HOME)/.tmux.conf
 	@echo tmux is symlinked.
 
-weechat::
-	@ln -fns $(DOTFILES)/weechat	$(HOME)/.weechat
-	@cp $(HOME)/.weechat/irc.conf.dist $(HOME)/.weechat/irc.conf
-
-config::
-	@ln -fns $(DOTFILES)/config/terminator	$(HOME)/.config/terminator
-	@echo Misc config files are symlinked.
-
 clean::
-	@rm -rf ~/.weechat ~/.gitconfig ~/.bashrc ~/.bash_aliases
+	@rm -rf ~/.gitconfig ~/.bashrc ~/.bash_aliases
 	@rm -rf ~/.fonts ~/.vim ~/.vimrc
-	@rm -rf ~/.pythonrc.py ~/.config/terminator ~/.hgrc ~/.tmux.conf
+	@rm -rf ~/.pythonrc.py ~/.tmux.conf
 	@rm -rf ~/scripts ~/.bash_profile
-	@rm -f ~/.config/flake8
 
 core-macos::
 	@xcode-select --install
 	@brew install bash-completion git
-
-# Apparently there is no ~/.config directory in recent macOSes.
-macos-specific-tasks::
-	@mkdir ~/.config
 
 clean-macos::
 	@rm -rf ~/.gitconfig

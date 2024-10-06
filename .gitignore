@@ -2,9 +2,7 @@
 *~
 *.dat
 *.log
-*.weechatlog
 *.cer
 *.cert
 *.key
 *.pem
-weechat/irc.conf

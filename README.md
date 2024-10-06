@@ -16,8 +16,6 @@ $ make core-macos
 
 ### Home mode
 
-This mode includes CPython related configurations.
-
 ```sh
 $ make home
 ```
