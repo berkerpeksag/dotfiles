@@ -19,6 +19,12 @@
 
 (global-set-key (kbd "C-.") 'duplicate-line-and-move-cursor)
 
+(defun reload-init-file ()
+  (interactive)
+  (load-file user-init-file))
+
+(global-set-key (kbd "C-c C-l") 'reload-init-file)
+
 ; To separate custom-set-variables from actual configuration, do:
 ; (setq custom-file "")
 ; (load custom-file)
