@@ -10,6 +10,11 @@
               tab-width 4
               indent-tabs-mode nil)
 
+(setq
+      ;; Use left alt/option as meta and the right one for stock Apple stuff
+      ns-alternate-modifier 'meta
+      ns-right-alternate-modifier 'none)
+
 (defun duplicate-line-and-move-cursor ()
   (interactive)
   (let ((current-column (current-column)))
@@ -25,6 +30,6 @@
 
 (global-set-key (kbd "C-c C-l") 'reload-init-file)
 
-; To separate custom-set-variables from actual configuration, do:
-; (setq custom-file "")
-; (load custom-file)
+;; To separate custom-set-variables from actual configuration, do:
+;; (setq custom-file "")
+;; (load custom-file)
