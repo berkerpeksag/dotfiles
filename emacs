@@ -13,7 +13,15 @@
 (setq
       ;; Use left alt/option as meta and the right one for stock Apple stuff
       ns-alternate-modifier 'meta
-      ns-right-alternate-modifier 'none)
+      ns-right-alternate-modifier 'none
+      ;; #FOO# files
+      kill-buffer-delete-auto-save-files t
+      auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
+      auto-save-timeout 5 ; seconds
+      ;; FOO~ files
+      make-backup-files nil
+      ;; .#FOO files
+      create-lockfiles nil)
 
 (defun duplicate-line-and-move-cursor ()
   (interactive)
