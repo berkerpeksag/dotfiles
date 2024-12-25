@@ -201,8 +201,6 @@ autocmd FileType python let python_slow_sync = 1
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType python set completeopt=menu
 autocmd FileType python nnoremap <buffer> <silent> <leader>r :w<CR> :exec '!python3' shellescape(@%, 1)<cr>
-""" Run the Flake8 check every time you write a Python file
-autocmd BufWritePost *.py call Flake8()
 
 " HTML
 "" Convert indentation to 2 spaces in HTML files
@@ -211,30 +209,9 @@ autocmd BufNewFile,BufReadPost *.html set shiftwidth=2
 " JavaScript
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
-" Nerdtree
-"" Map the toggle command :NERDTreeToggle to the F2 key
-map <F2> :NERDTreeToggle<CR>
-
-" Close Vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-"" Ignore list
-let NERDTreeIgnore=['\.pyc', '\.pyo', '\.pyd', '\~$', '\.bak', '\.git', '\.hg', '__pycache__', 'venv']
-
 
 " Powerline
 let g:Powerline_symbols = 'fancy'
-
-
-" Gist
-"" Detect filetype from the filename
-let g:gist_detect_filetype = 1
-
-"" Open browser after the post
-let g:gist_open_browser_after_post = 1
-
-"" Private by default
-let g:gist_post_private = 1
 
 
 " Automatically set paste mode
