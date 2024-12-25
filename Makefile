@@ -1,12 +1,9 @@
 DOTFILES = $(PWD)
 
-work:: clean basic
-basic:: core bash git config python vim emacs
-home:: clean basic
+basic:: git config python vim emacs
+home:: clean core basic bash
+work:: clean basic zsh
 python:: python-config
-
-update-submodules::
-	@git submodule foreach git pull origin master
 
 core::
 	@sudo apt update
@@ -36,12 +33,19 @@ bash::
 	@ln -fs $(DOTFILES)/bash_profile $(HOME)/.bash_profile
 	@echo .bashrc, .bash_aliases and .bash_profile are symlinked.
 
+zsh::
+	@ln -fs $(DOTFILES)/zshrc $(HOME)/.zshrc
+	@ln -fs $(DOTFILES)/zsh_aliases $(HOME)/.zsh_aliases
+	@ln -fs $(DOTFILES)/zprofile $(HOME)/.zprofile
+	@echo .zshrc, .zsh_aliases and .zprofile are symlinked.
+
 git::
 	@ln -fs $(DOTFILES)/gitconfig $(HOME)/.gitconfig
 	@echo .gitconfig and .gitignore are symlinked.
 
 clean::
-	@rm -rf ~/.gitconfig ~/.bashrc ~/.bash_aliases ~/.bash_profile
-	@rm -rf ~/.vim ~/.vimrc ~/.emacs
+	@rm -rf ~/.bashrc ~/.bash_aliases ~/.bash_profile
+	@rm -rf ~/.zshrc ~/.zsh_aliases ~/.zprofile
+	@rm -rf ~/.gitconfig ~/.vim ~/.vimrc ~/.emacs
 
 .PHONY: clean config
