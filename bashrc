@@ -2,17 +2,7 @@ if [[ -n "$PS1" ]] ; then
 
 # {{{ Paths
 
-SYSTEM_PYTHON_BIN="/Users/$USER/Library/Python/2.7/bin/"
-[[ -d "$SYSTEM_PYTHON_BIN" ]] && export PATH=$PATH:$SYSTEM_PYTHON_BIN
-
 export PYTHONSTARTUP=$HOME/.pythonrc.py
-
-# }}}
-
-# {{{ Git
-
-export GIT_COMMITTER_NAME="Berker Peksag"
-export GIT_COMMITTER_EMAIL="berker.peksag@gmail.com"
 
 # }}}
 
@@ -22,42 +12,8 @@ kport() {
     sudo kill `sudo lsof -t -i:"$1"`
 }
 
-pathremove() {
-    local IFS=':'
-    local NEWPATH
-    local DIR
-    local PATHVARIABLE=${2:-PATH}
-    for DIR in ${!PATHVARIABLE} ; do
-        if [ "$DIR" != "$1" ] ; then
-            NEWPATH=${NEWPATH:+$NEWPATH:}$DIR
-        fi
-    done
-    export $PATHVARIABLE="$NEWPATH"
-}
-
-unckecked_pathappend() {
-    pathremove "$1" "$2"
-    local PATHVARIABLE=${2:-PATH}
-    export $PATHVARIABLE="${!PATHVARIABLE:+${!PATHVARIABLE}:}$1"
-}
-
-pathappend() {
-    test ! -d "${1}" && return 0
-    unckecked_pathappend "$1" "$2"
-}
-
-# Create a new directory and enter it
 mkd() {
     mkdir -p "$@" && cd "$@"
-}
-
-# Create a new directory, enter it, create a virtualenv and activate it
-pymkd() {
-    mkdir -p "$@" && cd "$@" && python3.4 -m venv "venv" && source ./venv/bin/activate
-}
-
-cvenv() {
-    python3.4 -m venv "venv" && source ./venv/bin/activate
 }
 
 venv() {

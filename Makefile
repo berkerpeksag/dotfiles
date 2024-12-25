@@ -1,9 +1,8 @@
 DOTFILES = $(PWD)
 
 work:: clean basic
-work-macos:: clean-macos bash git vim python-config
 basic:: core bash git config python vim
-home:: clean basic scripts
+home:: clean basic
 python:: python-core python-config
 
 update-submodules::
@@ -43,18 +42,6 @@ git::
 
 clean::
 	@rm -rf ~/.gitconfig ~/.bashrc ~/.bash_aliases
-	@rm -rf ~/.fonts ~/.vim ~/.vimrc
-	@rm -rf ~/scripts ~/.bash_profile
-
-core-macos::
-	@xcode-select --install
-	@brew install bash-completion git
-
-clean-macos::
-	@rm -rf ~/.gitconfig
-	@rm -rf ~/.bashrc ~/.bash_aliases ~/.bash_profile
-	@rm -rf ~/.fonts ~/.vim ~/.vimrc
-	@rm -rf ~/.pythonrc.py
-	@rm -rf ~/.config
+	@rm -rf ~/.fonts ~/.vim ~/.vimrc ~/.bash_profile
 
 .PHONY: clean config
