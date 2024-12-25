@@ -1,16 +1,16 @@
 DOTFILES = $(PWD)
 
 work:: clean basic
-basic:: core bash git config python vim
+basic:: core bash git config python vim emacs
 home:: clean basic
-python:: python-core python-config
+python:: python-config
 
 update-submodules::
 	@git submodule foreach git pull origin master
 
 core::
-	@sudo apt-get update
-	@sudo apt-get install -y git-core sqlite3 build-essential curl libcurl3 git-gui vim
+	@sudo apt update
+	@sudo apt install -y build-essential git git-gui vim emacs
 	@echo Core libraries are installed.
 
 python-config::
@@ -30,6 +30,10 @@ vim-fonts::
 	@ln -fns $(DOTFILES)/fonts	$(HOME)/.fonts
 	@echo .fonts are symlinked.
 
+emacs::
+	@ln -fs $(DOTFILES)/emacs	$(HOME)/.emacs
+	@echo Emacs is symlinked.
+
 bash::
 	@ln -fs $(DOTFILES)/bashrc $(HOME)/.bashrc
 	@ln -fs $(DOTFILES)/bash_aliases $(HOME)/.bash_aliases
@@ -41,7 +45,7 @@ git::
 	@echo .gitconfig and .gitignore are symlinked.
 
 clean::
-	@rm -rf ~/.gitconfig ~/.bashrc ~/.bash_aliases
-	@rm -rf ~/.fonts ~/.vim ~/.vimrc ~/.bash_profile
+	@rm -rf ~/.gitconfig ~/.bashrc ~/.bash_aliases ~/.bash_profile
+	@rm -rf ~/.fonts ~/.vim ~/.vimrc ~/.emacs
 
 .PHONY: clean config
