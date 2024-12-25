@@ -2,7 +2,7 @@ DOTFILES = $(PWD)
 
 work:: clean basic
 work-macos:: clean-macos bash git vim python-config
-basic:: core bash git config python vim tmux
+basic:: core bash git config python vim
 home:: clean basic scripts
 python:: python-core python-config
 
@@ -16,7 +16,6 @@ core::
 
 python-config::
 	@ln -fs $(DOTFILES)/pythonrc.py $(HOME)/.pythonrc.py
-	@cp $(DOTFILES)/pypirc-dist $(HOME)/.pypirc
 	@echo Python config files are symlinked.
 
 vim:: vim-config vim-fonts
@@ -42,14 +41,9 @@ git::
 	@ln -fs $(DOTFILES)/gitconfig $(HOME)/.gitconfig
 	@echo .gitconfig and .gitignore are symlinked.
 
-tmux::
-	@ln -fs $(DOTFILES)/tmux.conf	$(HOME)/.tmux.conf
-	@echo tmux is symlinked.
-
 clean::
 	@rm -rf ~/.gitconfig ~/.bashrc ~/.bash_aliases
 	@rm -rf ~/.fonts ~/.vim ~/.vimrc
-	@rm -rf ~/.pythonrc.py ~/.tmux.conf
 	@rm -rf ~/scripts ~/.bash_profile
 
 core-macos::
