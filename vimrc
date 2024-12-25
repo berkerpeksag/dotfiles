@@ -4,16 +4,13 @@ set nocompatible
 " Terminal color settings
 set t_Co=256
 
-
 " Activate Pathogen
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
-
 " Default to UTF-8 encoding
 set encoding=utf8
 set fileencoding=utf8
-
 
 " Syntax formatting for languages
 syntax enable
@@ -21,7 +18,6 @@ set background=dark
 
 " Color scheme
 colorscheme molokai
-
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -111,7 +107,6 @@ set wildignore+=*.o " Ignore object files
 " Visual autocomplete for command menu
 set wildmenu
 
-
 " Custom keybindings
 let mapleader = ","
 let g:mapleader = ","
@@ -156,7 +151,6 @@ set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=79
 
-
 " Indentation
 "" Use spaces instead of tabs
 set expandtab
@@ -171,7 +165,6 @@ set autoindent
 "" Remembers previous indent when creating new lines
 set smartindent
 
-
 " Statusline
 "" File name
 set statusline=%<%f\
@@ -180,10 +173,8 @@ set statusline+=%{fugitive#statusline()}
 "" Current dir
 set statusline+=\ [%{getcwd()}]
 
-
 " Enable filetype stuff
 filetype plugin indent on
-
 
 " Auto commands
 
@@ -209,11 +200,6 @@ autocmd BufNewFile,BufReadPost *.html set shiftwidth=2
 " JavaScript
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
-
-" Powerline
-let g:Powerline_symbols = 'fancy'
-
-
 " Automatically set paste mode
 " https://coderwall.com/p/if9mda
 let &t_SI .= "\<Esc>[?2004h"
@@ -226,7 +212,6 @@ function! XTermPasteBegin()
   set paste
   return ""
 endfunction
-
 
 function! RenameFile()
     let old_name = expand('%')
