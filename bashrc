@@ -1,12 +1,6 @@
 if [[ -n "$PS1" ]] ; then
 
-# {{{ Paths
-
 export PYTHONSTARTUP=$HOME/.pythonrc.py
-
-# }}}
-
-# {{{ Helpers
 
 kport() {
     sudo kill `sudo lsof -t -i:"$1"`
@@ -24,20 +18,13 @@ dvenv() {
     deactivate
 }
 
-# }}}
-
-# {{{ Prompt
-
 parse_git_branch() {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1]/"
 }
 
 export PS1='\u@\h \[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '
 
-# }}}
-
 export HISTCONTROL=ignoreboth:erasedups
-
 shopt -s histappend
 shopt -s checkwinsize
 
