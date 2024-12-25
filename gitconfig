@@ -14,18 +14,12 @@
 	di = diff
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	st = status -unormal
-	gsu = submodule update --init --recursive
-	pr = !sh -c \"git fetch upstream pull/${1}/head:pr/${1} && git checkout pr/${1}\" -
-	pushf = push --force-with-lease
-	g = grep --break --heading --line-number
 [branch "master"]
 	rebase = true
 [help]
 	autocorrect = 1
 [push]
 	default = tracking
-[github]
-	user = berkerpeksag
 [rebase]
 	autosquash = true
 [branch]
