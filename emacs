@@ -6,10 +6,12 @@
 (ido-mode 1)
 (ido-everywhere 1)
 (global-hl-line-mode 1)
+(global-display-fill-column-indicator-mode 1)
 
 (setq-default inhibit-startup-screen t
               make-backup-files nil
               tab-width 4
+              fill-column 120
               indent-tabs-mode nil)
 
 (setq
