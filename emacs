@@ -21,7 +21,8 @@
       ;; FOO~ files
       make-backup-files nil
       ;; .#FOO files
-      create-lockfiles nil)
+      create-lockfiles nil
+      vc-follow-symlinks nil)
 
 (defun duplicate-line-and-move-cursor ()
   (interactive)
