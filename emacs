@@ -7,6 +7,8 @@
 (ido-everywhere 1)
 (global-hl-line-mode 1)
 (global-display-fill-column-indicator-mode 1)
+(cua-mode t) ; Normal cut, copy, paste, and undo.
+(setq cua-keep-region-after-copy t)
 
 (setq-default inhibit-startup-screen t
               make-backup-files nil
