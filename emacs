@@ -1,3 +1,4 @@
+; -*- mode: emacs-lisp;-*-
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
@@ -10,7 +11,8 @@
 (cua-mode t) ; Normal cut, copy, paste, and undo.
 (setq cua-keep-region-after-copy t)
 
-(setq-default inhibit-startup-screen t
+(setq-default
+              inhibit-startup-screen t
               make-backup-files nil
               tab-width 4
               fill-column 120
