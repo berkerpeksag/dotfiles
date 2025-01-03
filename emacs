@@ -40,6 +40,15 @@
 (global-set-key (kbd "C-c b") 'end-of-buffer)
 (global-set-key (kbd "<f5>") 'revert-buffer-quick)
 
+;; duplicate-line is available in Emacs 29.1, but Debian only has 28.2.
+(unless (fboundp 'duplicate-line)
+  (defun duplicate-line ()
+    (interactive)
+    (let ((current-line (thing-at-point 'line t)))
+      (save-excursion
+        (end-of-line)
+        (insert "\n" current-line)))))
+
 (defun duplicate-line-and-move-cursor ()
   (interactive)
   (let ((current-column (current-column)))
