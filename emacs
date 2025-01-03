@@ -9,7 +9,6 @@
 (global-hl-line-mode 1)
 (global-display-fill-column-indicator-mode 1)
 (cua-mode t) ; Normal cut, copy, paste, and undo.
-(setq cua-keep-region-after-copy t)
 
 (setq-default
               inhibit-startup-screen t
@@ -19,6 +18,7 @@
               indent-tabs-mode nil)
 
 (setq
+      cua-keep-region-after-copy t
       ;; Use left alt/option as meta and the right one for stock Apple stuff
       ns-alternate-modifier 'meta
       ns-right-alternate-modifier 'none
