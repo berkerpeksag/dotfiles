@@ -35,6 +35,11 @@
       file-preserve-symlinks-on-save t
       vc-follow-symlinks nil)
 
+;; Custom key bindings for builtin functions.
+(global-set-key (kbd "C-c g") 'goto-line)
+(global-set-key (kbd "C-c b") 'end-of-buffer)
+(global-set-key (kbd "<f5>") 'revert-buffer-quick)
+
 (defun duplicate-line-and-move-cursor ()
   (interactive)
   (let ((current-column (current-column)))
