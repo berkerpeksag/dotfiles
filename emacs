@@ -73,26 +73,38 @@
     (or (bound-and-true-p css-indent-offset) tab-width))
    (t tab-width)))
 
-(defun normal-indent-region (begin end)
-  "Indent the selected region or current line by the appropriate indentation width."
-  (interactive "r")
-  (let* ((indent-size (get-indentation-width))
-         (deactivate-mark nil))
-    (if (use-region-p)
-        (indent-rigidly begin end indent-size)
-      (indent-rigidly (line-beginning-position) (line-end-position) indent-size))))
+(defun smart-indent-region ()
+  "Indent region or current line based on context."
+  (interactive)
+  (if (use-region-p)
+      (let* ((indent-size (get-indentation-width))
+             (deactivate-mark nil))
+        (indent-rigidly (region-beginning) (region-end) indent-size))
+    (cond
+     ;; On empty lines, insert tabs or call the default indentation function.
+     ((looking-at "^[[:space:]]*$")
+      (call-interactively 'indent-for-tab-command))
+     ;; For non-empty lines, apply our custom indentation.
+     (t
+      (let ((indent-size (get-indentation-width)))
+        (indent-rigidly (line-beginning-position) (line-end-position) indent-size))))))
 
-(defun normal-dedent-region (begin end)
-  "Dedent the selected region or current line by the appropriate indentation width."
-  (interactive "r")
-  (let* ((indent-size (get-indentation-width))
-         (deactivate-mark nil))
-    (if (use-region-p)
-        (indent-rigidly begin end (- indent-size))
+(defun smart-dedent-region ()
+  "Dedent region or current line based on context."
+  (interactive)
+  (if (use-region-p)
+      (let* ((indent-size (get-indentation-width))
+             (deactivate-mark nil))
+        (indent-rigidly (region-beginning) (region-end) (- indent-size)))
+    (let ((indent-size (get-indentation-width)))
       (indent-rigidly (line-beginning-position) (line-end-position) (- indent-size)))))
 
-(global-set-key (kbd "<tab>") 'normal-indent-region)
-(global-set-key (kbd "<backtab>") 'normal-dedent-region)
+(defun setup-indent-keys ()
+  (local-set-key (kbd "<tab>") 'smart-indent-region)
+  (local-set-key (kbd "<backtab>") 'smart-dedent-region))
+
+(dolist (hook '(prog-mode-hook text-mode-hook))
+  (add-hook hook 'setup-indent-keys))
 
 (defun reload-init-file ()
   (interactive)
