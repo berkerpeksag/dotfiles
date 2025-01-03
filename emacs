@@ -9,6 +9,7 @@
 (global-hl-line-mode 1)
 (global-display-fill-column-indicator-mode 1)
 (cua-mode t) ; Normal cut, copy, paste, and undo.
+(global-auto-revert-mode 1)
 
 (setq-default
               inhibit-startup-screen t
