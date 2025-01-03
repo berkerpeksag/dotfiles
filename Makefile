@@ -7,7 +7,7 @@ python:: python-config
 
 core::
 	@sudo apt update
-	@sudo apt install -y build-essential git git-gui vim emacs
+	@sudo apt install -y build-essential bash-completion git git-gui vim emacs
 	@echo Core libraries are installed.
 
 python-config::
