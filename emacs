@@ -58,6 +58,42 @@
 
 (global-set-key (kbd "C-.") 'duplicate-line-and-move-cursor)
 
+(defun get-indentation-width ()
+  "Determine the appropriate indentation width based on the current major mode."
+  (cond
+   ((eq major-mode 'python-mode)
+    (or (bound-and-true-p python-indent-offset) tab-width))
+   ((eq major-mode 'js-mode)
+    (or (bound-and-true-p js-indent-level) tab-width))
+   ((eq major-mode 'c-mode)
+    (or (bound-and-true-p c-basic-offset) tab-width))
+   ((eq major-mode 'html-mode)
+    (or (bound-and-true-p sgml-basic-offset) tab-width))
+   ((eq major-mode 'css-mode)
+    (or (bound-and-true-p css-indent-offset) tab-width))
+   (t tab-width)))
+
+(defun normal-indent-region (begin end)
+  "Indent the selected region or current line by the appropriate indentation width."
+  (interactive "r")
+  (let* ((indent-size (get-indentation-width))
+         (deactivate-mark nil))
+    (if (use-region-p)
+        (indent-rigidly begin end indent-size)
+      (indent-rigidly (line-beginning-position) (line-end-position) indent-size))))
+
+(defun normal-dedent-region (begin end)
+  "Dedent the selected region or current line by the appropriate indentation width."
+  (interactive "r")
+  (let* ((indent-size (get-indentation-width))
+         (deactivate-mark nil))
+    (if (use-region-p)
+        (indent-rigidly begin end (- indent-size))
+      (indent-rigidly (line-beginning-position) (line-end-position) (- indent-size)))))
+
+(global-set-key (kbd "<tab>") 'normal-indent-region)
+(global-set-key (kbd "<backtab>") 'normal-dedent-region)
+
 (defun reload-init-file ()
   (interactive)
   (load-file user-init-file))
