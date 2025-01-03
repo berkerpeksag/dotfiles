@@ -42,17 +42,9 @@ set hlsearch
 
 " If you are in foo/bar.py and want to edit foo/baz.py you only have to do
 " :e baz.py.
-"
-" If you then substitute :e with :b it will only complete to files that were
-" already open. Because this also supports partial matches, very often a :b
-" baz is enough to go to the baz.py file.
 set autochdir
 
-" Manage multiple buffers effectively:
-"
-" 1) The current buffer can be put to the background without writing to disk;
-" 2) When a background buffer becomes current again, marks and undo-history are
-"    remembered.
+" Open another file without saving the current one first
 set hidden
 
 " Never ever let Vim write a backup file!
@@ -85,8 +77,6 @@ set titleold=""
 set titlestring=Vim:\ %F
 
 " Short prompt. No more |Press ENTER or type command to continue|.
-"
-" See for more info :help shortmess
 set shortmess=atI
 
 " All operations work with the OS clipboard. No need for \"+, \"*
@@ -98,10 +88,8 @@ set backspace=indent,eol,start
 " Tab completion settings
 "" Wilcard matches show a list, matching the longest first
 set wildmode=list:longest
-set wildignore+=.git,.hg,.svn " Ignore version control repos
-set wildignore+=*.pyc " Ignore Python compiled files
+set wildignore+=.git " Ignore version control repos
 set wildignore+=__pycache__
-set wildignore+=*.swp " Ignore vim backups
 set wildignore+=*.o " Ignore object files
 
 " Visual autocomplete for command menu
@@ -168,8 +156,6 @@ set smartindent
 " Statusline
 "" File name
 set statusline=%<%f\
-"" Git current branch
-set statusline+=%{fugitive#statusline()}
 "" Current dir
 set statusline+=\ [%{getcwd()}]
 
@@ -179,9 +165,7 @@ filetype plugin indent on
 " Auto commands
 
 "" Auto-save
-autocmd CursorHold,CursorHoldI * update
-" TODO: Switch to this in vim 7.4:
-" autocmd TextChanged,TextChangedI <buffer> silent write
+autocmd TextChanged,TextChangedI <buffer> silent write
 
 "" Clear whitespace at the end of lines automatically
 autocmd BufWritePre * :%s/\s\+$//e

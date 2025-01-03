@@ -1,6 +1,0 @@
-set nocompatible
-set background=dark
-
-syntax enable
-
-filetype plugin indent on
