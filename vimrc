@@ -97,7 +97,6 @@ set wildmenu
 
 " Custom keybindings
 let mapleader = ","
-let g:mapleader = ","
 
 "" Create a new tab like Firefox
 nmap <C-t> :tabnew<cr>
@@ -148,10 +147,6 @@ set softtabstop=4
 set tabstop=4
 "" Sets indentation with
 set shiftwidth=4
-"" Turns on auto-indenting
-set autoindent
-"" Remembers previous indent when creating new lines
-set smartindent
 
 " Statusline
 "" File name
@@ -177,11 +172,8 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType python set completeopt=menu
 autocmd FileType python nnoremap <buffer> <silent> <leader>r :w<CR> :exec '!python3' shellescape(@%, 1)<cr>
 
-" HTML
-"" Convert indentation to 2 spaces in HTML files
-autocmd BufNewFile,BufReadPost *.html set shiftwidth=2
 
-" JavaScript
+"" JavaScript
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 " Automatically set paste mode
