@@ -6,7 +6,7 @@
 [core]
 	filemode = false
 	editor = vim
-	excludesfile = ~/dotfiles/global_gitignore
+	excludesfile = ~/projects/dotfiles/global_gitignore
 	autocrlf = input
 [status]
 	showUntrackedFiles = no

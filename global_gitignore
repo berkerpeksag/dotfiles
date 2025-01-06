@@ -22,3 +22,11 @@ vendor
 
 # Node :(
 node_modules/
+
+*.a
+*.o
+*.so*
+*.out
+*.log
+*.status
+*.tmp
