@@ -19,6 +19,7 @@
               indent-tabs-mode nil)
 
 (setq
+      whitespace-line-column fill-column
       cua-keep-region-after-copy t
       ;; Use left alt/option as meta and the right one for stock Apple stuff
       ns-alternate-modifier 'meta
@@ -39,6 +40,7 @@
 (global-set-key (kbd "C-c g") 'goto-line)
 (global-set-key (kbd "C-c b") 'end-of-buffer)
 (global-set-key (kbd "<f5>") 'revert-buffer-quick)
+(global-set-key (kbd "C-c w") 'whitespace-mode)
 
 ;; duplicate-line is available in Emacs 29.1, but Debian only has 28.2.
 (unless (fboundp 'duplicate-line)
