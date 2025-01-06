@@ -43,6 +43,22 @@
 (global-set-key (kbd "<f5>") 'revert-buffer-quick)
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 
+(defun my-query-replace-advice (orig-fun &rest args)
+  "Extend query-replace to cover entire buffer if no region is active."
+  (unless (nth 3 args)
+    (setf (nth 3 args)
+          (if (region-active-p)
+              (region-beginning)
+            (point-min))))
+  (unless (nth 4 args)
+    (setf (nth 4 args)
+          (if (region-active-p)
+              (region-end)
+            (point-max))))
+  (apply orig-fun args))
+
+(advice-add 'query-replace :around #'my-query-replace-advice)
+
 ;; duplicate-line is available in Emacs 29.1, but Debian only has 28.2.
 (unless (fboundp 'duplicate-line)
   (defun duplicate-line ()
