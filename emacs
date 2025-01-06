@@ -20,6 +20,7 @@
 
 (setq
       whitespace-line-column fill-column
+      tags-revert-without-query t
       cua-keep-region-after-copy t
       ;; Use left alt/option as meta and the right one for stock Apple stuff
       ns-alternate-modifier 'meta
