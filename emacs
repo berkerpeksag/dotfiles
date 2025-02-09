@@ -43,6 +43,12 @@
 (global-set-key (kbd "<f5>") 'revert-buffer-quick)
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 
+(defun delete-trailing-whitespaces-before-save ()
+  (when (derived-mode-p 'prog-mode)
+    (delete-trailing-whitespace)))
+
+(add-hook 'before-save-hook 'delete-trailing-whitespaces-before-save)
+
 (defun my-query-replace-advice (orig-fun &rest args)
   "Extend query-replace to cover entire buffer if no region is active."
   (unless (nth 3 args)
