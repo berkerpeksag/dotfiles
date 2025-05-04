@@ -1,3 +1,5 @@
+setopt PROMPT_SUBST
+
 if [ -f '/Users/berker.peksag/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/berker.peksag/google-cloud-sdk/path.zsh.inc'; fi
 if [ -f '/Users/berker.peksag/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/berker.peksag/google-cloud-sdk/completion.zsh.inc'; fi
 
