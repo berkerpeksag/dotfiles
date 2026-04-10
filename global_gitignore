@@ -4,12 +4,8 @@ __pycache__
 .tox
 
 # Virtualenv
-venv
-bin/
-include/
-lib/
-local/
-man/
+venv/
+.venv/
 
 # Django
 vendor
@@ -30,3 +26,14 @@ node_modules/
 *.log
 *.status
 *.tmp
+
+# OCaml
+_build/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Claude Code
+.claude/
