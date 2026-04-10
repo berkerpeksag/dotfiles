@@ -1,13 +1,14 @@
-if [[ -n "$PS1" ]] ; then
-
+export PATH="$HOME/.local/bin:$HOME/scripts:$PATH"
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 
+case $- in *i*) ;; *) return;; esac
+
 kport() {
-    sudo kill `sudo lsof -t -i:"$1"`
+    sudo kill $(sudo lsof -t -i:"$1")
 }
 
 mkd() {
-    mkdir -p "$@" && cd "$@"
+    mkdir -p "$1" && cd "$1"
 }
 
 venv() {
@@ -69,7 +70,7 @@ shopt -s histappend
 shopt -s checkwinsize
 
 if hash dircolors 2> /dev/null; then
-    eval "`dircolors -b`"
+    eval "$(dircolors -b)"
 fi
 
 if [ -f ~/.bash_aliases ]; then
@@ -78,6 +79,4 @@ fi
 
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
-fi
-
 fi
