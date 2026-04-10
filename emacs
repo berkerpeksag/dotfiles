@@ -1,9 +1,14 @@
 ; -*- mode: emacs-lisp;-*-
+
+;; Set width to 50% for both the startup frame and all future frames.
+;; Set at the top to trigger the resize as early as possible during startup.
+(add-to-list 'initial-frame-alist '(width . 0.5))
+(add-to-list 'default-frame-alist '(width . 0.5))
+
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
 (global-display-line-numbers-mode 1)
-(whitespace-mode 0)
 (ido-mode 1)
 (ido-everywhere 1)
 (global-hl-line-mode 1)
@@ -11,9 +16,14 @@
 (cua-mode t) ; Normal cut, copy, paste, and undo.
 (global-auto-revert-mode 1)
 
+(let ((diff-gutter-path "~/projects/recreational-programming/emacs/diff-gutter"))
+  (when (file-directory-p diff-gutter-path)
+    (add-to-list 'load-path diff-gutter-path)
+    (require 'diff-gutter)
+    (global-diff-gutter-mode t)))
+
 (setq-default
               inhibit-startup-screen t
-              make-backup-files nil
               tab-width 4
               fill-column 120
               indent-tabs-mode nil)
@@ -35,13 +45,9 @@
       create-lockfiles nil
       require-final-newline t
       file-preserve-symlinks-on-save t
-      vc-follow-symlinks nil)
-
-;; Custom key bindings for builtin functions.
-(global-set-key (kbd "C-c g") 'goto-line)
-(global-set-key (kbd "C-c b") 'end-of-buffer)
-(global-set-key (kbd "<f5>") 'revert-buffer-quick)
-(global-set-key (kbd "C-c w") 'whitespace-mode)
+      vc-follow-symlinks t
+      ring-bell-function 'ignore
+      use-short-answers t)
 
 (defun delete-trailing-whitespaces-before-save ()
   (when (derived-mode-p 'prog-mode)
@@ -80,8 +86,6 @@
     (call-interactively 'duplicate-line)
     (forward-line 1)
     (move-to-column current-column)))
-
-(global-set-key (kbd "C-.") 'duplicate-line-and-move-cursor)
 
 (defun get-indentation-width ()
   "Determine the appropriate indentation width based on the current major mode."
@@ -135,4 +139,14 @@
   (interactive)
   (load-file user-init-file))
 
+;; Custom key bindings for builtin functions.
+(global-set-key (kbd "C-c g") 'goto-line)
+(global-set-key (kbd "C-c b") 'end-of-buffer)
+(global-set-key (kbd "<f5>") 'revert-buffer-quick)
+(global-set-key (kbd "C-c w") 'whitespace-mode)
+(global-set-key (kbd "C-c F") 'find-file-other-window)
+(global-set-key (kbd "C-c B") 'ido-switch-buffer-other-window)
+
+;; Key bindings for custom functions.
+(global-set-key (kbd "C-.") 'duplicate-line-and-move-cursor)
 (global-set-key (kbd "C-c C-l") 'reload-init-file)
