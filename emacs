@@ -22,6 +22,24 @@
     (require 'diff-gutter)
     (global-diff-gutter-mode t)))
 
+(defface my-section-heading
+  '((t :foreground "white"
+       :background "#b388cc"
+       :weight bold
+       :height 1.3))
+  "Face for = section headings.")
+
+(defface my-entry-heading
+  '((t :foreground "purple" :weight bold))
+  "Face for == entry headings.")
+
+(add-hook 'text-mode-hook
+          (lambda ()
+            (font-lock-add-keywords
+             nil
+             '(("^= .*$" 0 'my-section-heading t)
+               ("^==.*$" 0 'my-entry-heading t)))))
+
 (setq-default
               inhibit-startup-screen t
               tab-width 4
